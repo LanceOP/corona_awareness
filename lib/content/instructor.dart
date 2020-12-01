@@ -3,7 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_inappwebview/flutter_inappwebview.dart';
 import 'package:translator/translator.dart';
-
+import 'package:google_fonts/google_fonts.dart';
 class Instructor extends StatefulWidget {
   Instructor({Key key}) : super(key: key);
 
@@ -39,8 +39,8 @@ class _InstructorState extends State<Instructor> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text("Instructor Page"),
-          backgroundColor: Colors.green,
+          title: Text("Educators",style: GoogleFonts.montserrat(fontWeight: FontWeight.bold),),
+          centerTitle: true,
         ),
         body: ListView(
           children: [

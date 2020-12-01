@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:nice_button/NiceButton.dart';
-
+import 'package:google_fonts/google_fonts.dart';
 import 'Retired.dart';
 import 'college.dart';
 import 'highschool.dart';
@@ -9,14 +9,14 @@ import 'instructor.dart';
 import 'job.dart';
 import 'middleschool.dart';
 
-
 class Content extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       initialRoute: '/',
-    routes: {
+    debugShowCheckedModeBanner: false,
+      routes: {
       '/': (context) => HomeRoute(), // mutiple page navigation
       '/first': (context) => MiddleSchool(),
       '/second': (context) => HighSchool(),
@@ -38,62 +38,65 @@ class HomeRoute extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Content'),
+        title: Text('Content',style: GoogleFonts.montserrat(fontWeight: FontWeight.bold),),
+        centerTitle: true,
         backgroundColor: Colors.lightBlue,
       ),
-      body: Container(
-          alignment: Alignment.center,
-          child: ListView(
-            
-            children: <Widget>[
-    SizedBox(height: 10,),        
+      body: Padding(
+        padding: const EdgeInsets.fromLTRB(0,45,0,0),
+        child: Container(
+            alignment: Alignment.center,
+            child: ListView(
+
+              children: <Widget>[
+    SizedBox(height: 10,),
     NiceButton(
     radius: 40,
     padding: const EdgeInsets.all(15),
     text: "Middle School",
     gradientColors: [Color(0xff5b86e5), Color(0xff36d1dc)],
     onPressed: () {
-      Navigator.push(context, MaterialPageRoute(builder: (context) => MiddleSchool()));
-      },
+        Navigator.push(context, MaterialPageRoute(builder: (context) => MiddleSchool()));
+        },
     ),
     SizedBox(height: 10,),
     NiceButton(
     radius: 40,
     padding: const EdgeInsets.all(15),
-    text: "High School",
+    text: "High School Students",
     gradientColors: [Color(0xff5b86e5), Color(0xff36d1dc)],
     onPressed: () {
-      Navigator.push(context, MaterialPageRoute(builder: (context) => HighSchool()));
+        Navigator.push(context, MaterialPageRoute(builder: (context) => HighSchool()));
     },
     ),
     SizedBox(height: 10,),
     NiceButton(
     radius: 40,
     padding: const EdgeInsets.all(15),
-    text: "College",
+    text: "College Students",
     gradientColors: [Color(0xff5b86e5), Color(0xff36d1dc)],
     onPressed: () {
-      Navigator.push(context, MaterialPageRoute(builder: (context) => College()));
+        Navigator.push(context, MaterialPageRoute(builder: (context) => College()));
     },
     ),
     SizedBox(height: 10,),
     NiceButton(
     radius: 40,
     padding: const EdgeInsets.all(15),
-    text: "Instructor",
+    text: "Educators",
     gradientColors: [Color(0xff5b86e5), Color(0xff36d1dc)],
     onPressed: () {
-      Navigator.push(context, MaterialPageRoute(builder: (context) => Instructor()));
-      },
+        Navigator.push(context, MaterialPageRoute(builder: (context) => Instructor()));
+        },
     ),
     SizedBox(height: 10,),
     NiceButton(
     radius: 40,
     padding: const EdgeInsets.all(15),
-    text: "Job",
+    text: "Job Seeker",
     gradientColors: [Color(0xff5b86e5), Color(0xff36d1dc)],
     onPressed: () {
-      Navigator.push(context, MaterialPageRoute(builder: (context) => Job()));
+        Navigator.push(context, MaterialPageRoute(builder: (context) => Job()));
      }
     ),
     SizedBox(height: 10,),
@@ -103,21 +106,22 @@ class HomeRoute extends StatelessWidget {
     text: "Housewives",
     gradientColors: [Color(0xff5b86e5), Color(0xff36d1dc)],
     onPressed: () {
-      Navigator.push(context, MaterialPageRoute(builder: (context) => Housewives()));
+        Navigator.push(context, MaterialPageRoute(builder: (context) => Housewives()));
     },
     ),
     SizedBox(height: 10,),
     NiceButton(
     radius: 40,
     padding: const EdgeInsets.all(15),
-    text: "Retired",
+    text: "Retired People",
     gradientColors: [Color(0xff5b86e5), Color(0xff36d1dc)],
     onPressed: () {
-      Navigator.push(context, MaterialPageRoute(builder: (context) => Retired()));
-       },
+        Navigator.push(context, MaterialPageRoute(builder: (context) => Retired()));
+         },
     ),
-            ],
-          ),
+              ],
+            ),
+        ),
       ),
     );
   }

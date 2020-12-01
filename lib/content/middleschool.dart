@@ -3,7 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_inappwebview/flutter_inappwebview.dart';
 import 'package:translator/translator.dart';
-
+import 'package:google_fonts/google_fonts.dart';
 class MiddleSchool extends StatefulWidget {
   MiddleSchool({Key key}) : super(key: key);
 
@@ -35,8 +35,8 @@ class _MiddleSchoolState extends State<MiddleSchool> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text("Middle School Page"),
-          backgroundColor: Colors.green,
+          title: Text("Middle School Students",style: GoogleFonts.montserrat(fontWeight: FontWeight.bold),),
+          centerTitle: true,
         ),
         body: ListView(
           children: [

@@ -3,7 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_inappwebview/flutter_inappwebview.dart';
 import 'package:translator/translator.dart';
-
+import 'package:google_fonts/google_fonts.dart';
 class College extends StatefulWidget {
   College({Key key}) : super(key: key);
 
@@ -38,8 +38,8 @@ class _CollegeState extends State<College> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text("College Page"),
-          backgroundColor: Colors.green,
+          title: Text("College Students",style: GoogleFonts.montserrat(fontWeight: FontWeight.bold),),
+          centerTitle: true,
         ),
         body: ListView(
           children: [

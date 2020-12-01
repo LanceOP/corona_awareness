@@ -3,7 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_inappwebview/flutter_inappwebview.dart';
 import 'package:translator/translator.dart';
-
+import 'package:google_fonts/google_fonts.dart';
 class Retired extends StatefulWidget {
   Retired({Key key}) : super(key: key);
 
@@ -42,8 +42,8 @@ class _RetiredState extends State<Retired> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text("Retired Page"),
-          backgroundColor: Colors.green,
+          title: Text("Retired People",style: GoogleFonts.montserrat(fontWeight: FontWeight.bold),),
+          centerTitle: true,
         ),
         body: ListView(
           children: [

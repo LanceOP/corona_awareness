@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_inappwebview/flutter_inappwebview.dart';
 import 'package:translator/translator.dart';
 import 'language_codes.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class HighSchool extends StatefulWidget {
   HighSchool({Key key}) : super(key: key);
@@ -39,8 +40,8 @@ class _HighSchoolState extends State<HighSchool> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text("High School Page"),
-          backgroundColor: Colors.green,
+          title: Text("High School Students",style: GoogleFonts.montserrat(fontWeight: FontWeight.bold),),
+          centerTitle: true,
         ),
         body: ListView(
           children: [
