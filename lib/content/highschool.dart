@@ -40,7 +40,7 @@ class _HighSchoolState extends State<HighSchool> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text("High School Students",style: GoogleFonts.montserrat(fontWeight: FontWeight.bold),),
+          title: Text("College Students",style: GoogleFonts.montserrat(fontWeight: FontWeight.bold),),
           centerTitle: true,
         ),
         body: ListView(

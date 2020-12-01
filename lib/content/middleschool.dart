@@ -35,7 +35,7 @@ class _MiddleSchoolState extends State<MiddleSchool> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text("Middle School Students",style: GoogleFonts.montserrat(fontWeight: FontWeight.bold),),
+          title: Text("School Students",style: GoogleFonts.montserrat(fontWeight: FontWeight.bold),),
           centerTitle: true,
         ),
         body: ListView(

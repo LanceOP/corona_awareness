@@ -38,7 +38,7 @@ class _CollegeState extends State<College> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text("College Students",style: GoogleFonts.montserrat(fontWeight: FontWeight.bold),),
+          title: Text("Higher Education Students",style: GoogleFonts.montserrat(fontWeight: FontWeight.bold),),
           centerTitle: true,
         ),
         body: ListView(

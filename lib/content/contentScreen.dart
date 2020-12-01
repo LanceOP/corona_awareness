@@ -53,7 +53,7 @@ class HomeRoute extends StatelessWidget {
     NiceButton(
     radius: 40,
     padding: const EdgeInsets.all(15),
-    text: "Middle School",
+    text: "School Students",
     gradientColors: [Color(0xff5b86e5), Color(0xff36d1dc)],
     onPressed: () {
         Navigator.push(context, MaterialPageRoute(builder: (context) => MiddleSchool()));
@@ -63,7 +63,7 @@ class HomeRoute extends StatelessWidget {
     NiceButton(
     radius: 40,
     padding: const EdgeInsets.all(15),
-    text: "High School Students",
+    text: "College Students",
     gradientColors: [Color(0xff5b86e5), Color(0xff36d1dc)],
     onPressed: () {
         Navigator.push(context, MaterialPageRoute(builder: (context) => HighSchool()));
@@ -73,7 +73,7 @@ class HomeRoute extends StatelessWidget {
     NiceButton(
     radius: 40,
     padding: const EdgeInsets.all(15),
-    text: "College Students",
+    text: "Higher Education",
     gradientColors: [Color(0xff5b86e5), Color(0xff36d1dc)],
     onPressed: () {
         Navigator.push(context, MaterialPageRoute(builder: (context) => College()));
@@ -93,7 +93,7 @@ class HomeRoute extends StatelessWidget {
     NiceButton(
     radius: 40,
     padding: const EdgeInsets.all(15),
-    text: "Job Seeker",
+    text: "Employees",
     gradientColors: [Color(0xff5b86e5), Color(0xff36d1dc)],
     onPressed: () {
         Navigator.push(context, MaterialPageRoute(builder: (context) => Job()));
