@@ -157,7 +157,7 @@ class _MiddleSchoolState extends State<MiddleSchool> {
               ],
             ),
             Padding(
-              padding: EdgeInsets.all(20),
+              padding: EdgeInsets.all(10),
               child : _loading
                   ? Center(child: CircularProgressIndicator())
                   : Column(children: <Widget>[
@@ -167,38 +167,38 @@ class _MiddleSchoolState extends State<MiddleSchool> {
                     Image.network("https://i0.wp.com/marketscale.com/industries/wp-content/uploads/2020/07/Online-Remote-Learning-768x513-1.jpg"),
 
                     Padding(
-              padding: EdgeInsets.all(20),
-              child: Text(translatedText1 ?? ""),
+              padding: EdgeInsets.all(10),
+              child: Text(translatedText1 ?? "", style: TextStyle(fontSize: 18)),
             ),
 
             Padding(
-              padding: EdgeInsets.all(20),
-              child: Text(translatedText2 ?? ""),
+              padding: EdgeInsets.all(10),
+              child: Text(translatedText2 ?? "", style: TextStyle(fontSize: 18)),
             ),
 
             Padding(
-              padding: EdgeInsets.all(20),
+              padding: EdgeInsets.all(10),
               child : Text(translatedTh2 ?? "", style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
             ),
 
             Padding(
-              padding: EdgeInsets.all(20),
-              child: Text(translatedText3 ?? ""),
+              padding: EdgeInsets.all(10),
+              child: Text(translatedText3 ?? "", style: TextStyle(fontSize: 18)),
             ),
 
             Padding(
-              padding: EdgeInsets.all(20),
-              child: Text(translatedText4 ?? ""),
+              padding: EdgeInsets.all(10),
+              child: Text(translatedText4 ?? "", style: TextStyle(fontSize: 18)),
             ),
 
             Padding(
-              padding: EdgeInsets.all(20),
-              child: Text(translatedText5 ?? ""),
+              padding: EdgeInsets.all(10),
+              child: Text(translatedText5 ?? "", style: TextStyle(fontSize: 18)),
             ),
 
             Padding(
-              padding: EdgeInsets.all(20),
-              child: Text(translatedText6 ?? ""),
+              padding: EdgeInsets.all(10),
+              child: Text(translatedText6 ?? "", style: TextStyle(fontSize: 18)),
             ),
 
 

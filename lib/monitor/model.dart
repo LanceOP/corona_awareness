@@ -1,8 +1,11 @@
+import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class Metric {
-  int temperature;
-  int spo2;
+  double temperature;
+  double spo2;
+  String mobile;
 }
 
 /*int timeInMillis = 1586348737122;
@@ -36,6 +39,7 @@ class Singleton {
 class MetricStore {
   static final MetricStore _metricStore = MetricStore._internal();
 
+  final databaseReference = FirebaseDatabase.instance.reference();
   factory MetricStore(){
     return _metricStore;
   }
@@ -43,12 +47,28 @@ class MetricStore {
   MetricStore._internal();
 
   List<MetricRow> metrics =  List<MetricRow>();
+  Metric metric_value = Metric();
 
-  store(Metric metric, int timeInMillis) {
+
+  store(Metric metric, int timeInMillis) async {
     Metric copy = Metric();
     copy.temperature = metric.temperature;
     copy.spo2 = metric.spo2;
+    copy.mobile = metric.mobile;
+  this.metric_value = metric;
+
     this.metrics.insert(0, MetricRow(copy, timeInMillis));
+
+    databaseReference.child(copy.mobile).set({
+    'body_temp': metric.temperature,
+    'spO2': metric.spo2,
+    'date_time': DateTime.now().toIso8601String()
+  });
+
+  SharedPreferences prefs = await SharedPreferences.getInstance();
+   prefs.setString("mobile", metric.mobile);
+
+   
   }
 
   fetchLatest(){
@@ -59,14 +79,33 @@ class MetricStore {
     }
   }
 
-  fetch(double timeInMillis) {
+  Future<List<MetricRow>> fetch(double timeInMillis) async {
      List<MetricRow> returnList = List<MetricRow>();
-     for(MetricRow i in this.metrics){
-       if(i.timeInMillis >= timeInMillis){
-         returnList.add(i);
-       }
-     }
-     // select * from table whet
+    //  for(MetricRow i in this.metrics){
+    //    if(i.timeInMillis >= timeInMillis){
+    //      returnList.add(i);
+    //    }
+    //  }
+
+
+    Metric copy = Metric();
+    copy.mobile = this.metric_value.mobile;
+    print(copy.mobile);    
+  //   await databaseReference.child(this.metric_value.mobile).child('body_temp').once().then((DataSnapshot snapshot) {
+          
+  //   copy.temperature = snapshot.value;
+    
+  // });
+
+    await  databaseReference.child(this.metric_value.mobile).child('spO2').once().then((DataSnapshot snapshot) {
+          
+    copy.spo2 = snapshot.value;
+    
+  });
+
+
+  MetricRow metricRow = MetricRow(copy, timeInMillis.toInt());
+    returnList.add(metricRow);
      return returnList;
   }
 

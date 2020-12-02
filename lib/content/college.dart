@@ -22,6 +22,9 @@ class _CollegeState extends State<College> {
   String translatedText5;
   String translatedText6;
   String translatedText7;
+  String translatedText8;
+  String translatedText9;
+  String translatedText10;
   String translatedTh1;
   String translatedTh2;
   
@@ -38,7 +41,7 @@ class _CollegeState extends State<College> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text("Higher Education Students",style: GoogleFonts.montserrat(fontWeight: FontWeight.bold),),
+          title: Text("College Students",style: GoogleFonts.montserrat(fontWeight: FontWeight.bold),),
           centerTitle: true,
         ),
         body: ListView(
@@ -114,6 +117,18 @@ class _CollegeState extends State<College> {
                                 LanguageCodes.collegeText7,
                                 to: LanguageCodes.launguage_codes[newValue]);
 
+                                Translation translated8 = await translator.translate(
+                                LanguageCodes.collegeText8,
+                                to: LanguageCodes.launguage_codes[newValue]);
+
+                                Translation translated9 = await translator.translate(
+                                LanguageCodes.collegeText9,
+                                to: LanguageCodes.launguage_codes[newValue]);
+
+                                Translation translated10 = await translator.translate(
+                                LanguageCodes.collegeText10,
+                                to: LanguageCodes.launguage_codes[newValue]);
+
                                 Translation translatedh1 = await translator.translate(
                                 LanguageCodes.collegeh1,
                                 to: LanguageCodes.launguage_codes[newValue]);
@@ -131,6 +146,10 @@ class _CollegeState extends State<College> {
                               translatedText5 = translated5.text;
                               translatedText6 = translated6.text;
                               translatedText7 = translated7.text;
+                              translatedText8 = translated8.text;
+                              translatedText9 = translated9.text;
+                              translatedText10 = translated10.text;
+
                               translatedTh1 = translatedh1.text;
                               translatedTh2 = translatedh2.text;
                               _loading = false;
@@ -161,7 +180,7 @@ class _CollegeState extends State<College> {
             ),
             Padding(
 
-              padding: EdgeInsets.all(20),
+              padding: EdgeInsets.all(10),
               child : _loading
                   ? Center(child: CircularProgressIndicator())
                   : Column(children: <Widget>[
@@ -170,30 +189,55 @@ class _CollegeState extends State<College> {
                   ),
 
                   Padding(
-              padding: EdgeInsets.all(20),
-              child: Text(translatedText1 ?? ""),
+              padding: EdgeInsets.all(10),
+              child: Text(translatedText1 ?? "", style: TextStyle(fontSize: 18)),
             ),
 
             Image.network('https://cdn.thewire.in/wp-content/uploads/2020/03/23184336/coronavirus-lockdown-1600x982.jpg'),
 
             Padding(
-              padding: EdgeInsets.all(20),
-              child: Text(translatedText2 ?? ""),
+              padding: EdgeInsets.all(10),
+              child: Text(translatedText2 ?? "", style: TextStyle(fontSize: 18)),
             ),
 
             Padding(
-              padding: EdgeInsets.all(20),
+              padding: EdgeInsets.all(10),
               child: Text(translatedTh2 ?? "", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),),
             ),
 
             Padding(
-              padding: EdgeInsets.all(20),
-              child: Text(translatedText3 ?? ""),
+              padding: EdgeInsets.all(10),
+              child: Text(translatedText3 ?? "", style: TextStyle(fontSize: 18)),
             ),
 
             Padding(
-              padding: EdgeInsets.all(20),
-              child: Text(translatedText4 ?? ""),
+              padding: EdgeInsets.all(10),
+              child: Text(translatedText5 ?? "", style: TextStyle(fontSize: 18)),
+            ),
+
+            Padding(
+              padding: EdgeInsets.all(10),
+              child: Text(translatedText6 ?? "", style: TextStyle(fontSize: 18)),
+            ),
+
+            Padding(
+              padding: EdgeInsets.all(10),
+              child: Text(translatedText7 ?? "", style: TextStyle(fontSize: 18)),
+            ),
+
+            Padding(
+              padding: EdgeInsets.all(10),
+              child: Text(translatedText8 ?? "", style: TextStyle(fontSize: 18)),
+            ),
+
+            Padding(
+              padding: EdgeInsets.all(10),
+              child: Text(translatedText9 ?? "", style: TextStyle(fontSize: 18)),
+            ),
+
+            Padding(
+              padding: EdgeInsets.all(10),
+              child: Text(translatedText10 ?? "", style: TextStyle(fontSize: 18)),
             ),
 
                   ],) 

@@ -42,7 +42,7 @@ class _RetiredState extends State<Retired> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text("Retired People",style: GoogleFonts.montserrat(fontWeight: FontWeight.bold),),
+          title: Text("Senior Citizens",style: GoogleFonts.montserrat(fontWeight: FontWeight.bold),),
           centerTitle: true,
         ),
         body: ListView(
@@ -58,7 +58,7 @@ class _RetiredState extends State<Retired> {
  Container(
    height: MediaQuery.of(context).size.height*0.4,
                   child: InAppWebView(
-                    initialUrl: LanguageCodes.ytmidschool,
+                    initialUrl: LanguageCodes.ytretired,
                     
                     onLoadStart: (InAppWebViewController controller, String url) {
 
@@ -204,7 +204,7 @@ class _RetiredState extends State<Retired> {
               ],
             ),
             Padding(
-              padding: EdgeInsets.all(20),
+              padding: EdgeInsets.all(10),
               child: Column(children: <Widget>[
                 Text(translatedTh1 ?? "Please Select Language", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),  
                   ),
@@ -212,60 +212,60 @@ class _RetiredState extends State<Retired> {
                  Image.network("https://media2.s-nbcnews.com/j/newscms/2020_17/3322721/200424-helping-seniors-al-0943_40686507b94677088f93ed2cb2780dac.fit-2000w.jpg"),
 
                  Padding(
-              padding: EdgeInsets.all(20),
-              child: Text(translatedText1 ?? ""),
+              padding: EdgeInsets.all(10),
+              child: Text(translatedText1 ?? "", style: TextStyle(fontSize: 18)),
             ), 
             Padding(
-              padding: EdgeInsets.all(20),
-              child: Text(translatedText2 ?? ""),
+              padding: EdgeInsets.all(10),
+              child: Text(translatedText2 ?? "", style: TextStyle(fontSize: 18)),
             ),
             Padding(
-              padding: EdgeInsets.all(20),
+              padding: EdgeInsets.all(10),
               child: Text(translatedTh2 ?? "", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
             ),
             Padding(
-              padding: EdgeInsets.all(20),
-              child: Text(translatedText3 ?? ""),
+              padding: EdgeInsets.all(10),
+              child: Text(translatedText3 ?? "", style: TextStyle(fontSize: 18)),
             ),
             Padding(
-              padding: EdgeInsets.all(20),
+              padding: EdgeInsets.all(10),
               child: Text(translatedTh3 ?? "", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
             ),
             Padding(
-              padding: EdgeInsets.all(20),
-              child: Text(translatedText4 ?? ""),
+              padding: EdgeInsets.all(10),
+              child: Text(translatedText4 ?? "", style: TextStyle(fontSize: 18)),
             ),
             Padding(
-              padding: EdgeInsets.all(20),
+              padding: EdgeInsets.all(10),
               child: Text(translatedTh4 ?? "", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
             ),
             Padding(
-              padding: EdgeInsets.all(20),
-              child: Text(translatedText5 ?? ""),
+              padding: EdgeInsets.all(10),
+              child: Text(translatedText5 ?? "", style: TextStyle(fontSize: 18)),
             ),
             Padding(
-              padding: EdgeInsets.all(20),
+              padding: EdgeInsets.all(10),
               child: Text(translatedTh5 ?? "", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
             ),
             Padding(
-              padding: EdgeInsets.all(20),
-              child: Text(translatedText6 ?? ""),
+              padding: EdgeInsets.all(10),
+              child: Text(translatedText6 ?? "", style: TextStyle(fontSize: 18)),
             ),
             Padding(
-              padding: EdgeInsets.all(20),
+              padding: EdgeInsets.all(10),
               child: Text(translatedTh6 ?? "", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
             ),
             Padding(
-              padding: EdgeInsets.all(20),
-              child: Text(translatedText7 ?? ""),
+              padding: EdgeInsets.all(10),
+              child: Text(translatedText7 ?? "", style: TextStyle(fontSize: 18)),
             ),
             Padding(
-              padding: EdgeInsets.all(20),
+              padding: EdgeInsets.all(10),
               child: Text(translatedTh7 ?? "", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
             ),
             Padding(
-              padding: EdgeInsets.all(20),
-              child: Text(translatedText8 ?? ""),
+              padding: EdgeInsets.all(10),
+              child: Text(translatedText8 ?? "", style: TextStyle(fontSize: 18)),
             ),
 
 

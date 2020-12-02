@@ -1,18 +1,63 @@
+import 'package:aware/motivation/mainScreen.dart';
+import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'model.dart';
 import 'constantsResultWindow.dart';
 
-class History extends StatelessWidget {
+class History extends StatefulWidget {
+  @override
+  _HistoryState createState() => _HistoryState();
+}
+
+class _HistoryState extends State<History> {
   MetricStore store =  MetricStore();
-//  History({this.store});
+
+ List<MetricRow> rows = List<MetricRow>();
+  String temp = '';
+  String spO2 = '';
+  String mobile = '';
+  DateTime date = DateTime.now();
+ final databaseReference = FirebaseDatabase.instance.reference();
+ 
+  getRows() async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    String mobile_number = prefs.getString("mobile");
+    await databaseReference.child(mobile_number).child('body_temp').once().then((DataSnapshot snapshot) {
+          
+    temp = snapshot.value.toString();
+    
+  });
+
+    await  databaseReference.child(mobile_number).child('spO2').once().then((DataSnapshot snapshot) {
+          
+    spO2 = snapshot.value.toString();
+    
+  });
+
+  await  databaseReference.child(mobile_number).child('date_time').once().then((DataSnapshot snapshot) {
+          
+    date = DateTime.parse(snapshot.value.toString());
+    
+  });
+
+  setState(() {
+    mobile = mobile_number;
+    temp = temp;
+    spO2 = spO2;
+  });
+  } 
+ @override
+  void initState() {
+    // TODO: implement initState
+    getRows();
+    super.initState();
+  }
   @override
   Widget build(BuildContext context) {
 
-    List<MetricRow> rows  = store.fetch(0);
-    if(rows == null){
-      rows = List<MetricRow>();
-    }
+      
 
   //  MetricRow latest = this.store.fetchLatest();
   //   final List<Map<String, String>> listOfColumns = [
@@ -38,29 +83,13 @@ class History extends StatelessWidget {
               DataColumn(label: Text('Spo2')),
               DataColumn(label: Text('Date')),
             ],
-            rows:
-            rows // Loops through dataColumnText, each iteration assigning the value to element
-                .map(
-              ((element) => DataRow(
+            rows: [DataRow(
                 cells: <DataCell>[
-                  DataCell(Text(element.metric.temperature.toString())), //Extracting from Map element the value
-                  DataCell(Text(element.metric.spo2.toString())),
-                  DataCell(Text(element.getFormattedDate())),
+                  DataCell(Text(temp.toString())), //Extracting from Map element the value
+                  DataCell(Text(spO2.toString())),
+                  DataCell(Text(date.day.toString() + "/" + date.month.toString() + "/" + date.year.toString() + " " + date.hour.toString() + ":" + date.minute.toString()))
                 ],
-              )),
-            )
-                .toList(),
-            // listOfColumns // Loops through dataColumnText, each iteration assigning the value to element
-            //     .map(
-            //   ((element) => DataRow(
-            //     cells: <DataCell>[
-            //       DataCell(Text(element["Name"])), //Extracting from Map element the value
-            //       DataCell(Text(element["Number"])),
-            //       DataCell(Text(element["State"])),
-            //     ],
-            //   )),
-            // )
-            //     .toList(),
+              )]
           ),
         ],
         ),

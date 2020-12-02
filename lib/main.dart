@@ -14,7 +14,6 @@ import 'package:aware/covid_track/network_helper.dart';
 import 'package:aware/covid_track/state_screen.dart';
 import 'package:aware/covid_track/symptoms_page.dart';
 import 'package:aware/covid_track/telephone_nos.dart';
-import 'package:aware/covid_track/video_screen.dart';
 import 'package:aware/covid_track/prevention.dart';
 import 'package:aware/ui/screens/health.dart';
 import 'package:aware/ui/screens/news_page.dart';

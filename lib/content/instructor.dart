@@ -172,7 +172,7 @@ class _InstructorState extends State<Instructor> {
             ),
             Padding(
 
-              padding: EdgeInsets.all(20),
+              padding: EdgeInsets.all(10),
               child : _loading
                   ? Center(child: CircularProgressIndicator())
                   : Column(children: <Widget>[
@@ -181,44 +181,44 @@ class _InstructorState extends State<Instructor> {
 
                     Image.network('https://cdn.kastatic.org/ka-perseus-images/cce2aab9f08bb70fa8f98ad7eada4ddafc0d8de2.png'),
 
-                    Padding(padding: EdgeInsets.all(20),
+                    Padding(padding: EdgeInsets.all(10),
                   child : Text(translatedTh2 ??"", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
                   ),
 
-                  Padding(padding: EdgeInsets.all(20),
-                  child : Text(translatedText1 ??""),
+                  Padding(padding: EdgeInsets.all(10),
+                  child : Text(translatedText1 ??"", style: TextStyle(fontSize: 18)),
                   ),
 
-                  Padding(padding: EdgeInsets.all(20),
+                  Padding(padding: EdgeInsets.all(10),
                   child : Text(translatedTh3 ??"", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
                   ),
 
-                  Padding(padding: EdgeInsets.all(20),
-                  child : Text(translatedText2 ??""),
+                  Padding(padding: EdgeInsets.all(10),
+                  child : Text(translatedText2 ??"", style: TextStyle(fontSize: 18)),
                   ),
 
-                  Padding(padding: EdgeInsets.all(20),
+                  Padding(padding: EdgeInsets.all(10),
                   child : Text(translatedTh4 ??"", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
                   ),
 
-                  Padding(padding: EdgeInsets.all(20),
-                  child : Text(translatedText3 ??""),
+                  Padding(padding: EdgeInsets.all(10),
+                  child : Text(translatedText3 ??"", style: TextStyle(fontSize: 18)),
                   ),
 
-                  Padding(padding: EdgeInsets.all(20),
+                  Padding(padding: EdgeInsets.all(10),
                   child : Text(translatedTh5 ??"", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
                   ),
 
-                  Padding(padding: EdgeInsets.all(20),
-                  child : Text(translatedText4 ??""),
+                  Padding(padding: EdgeInsets.all(10),
+                  child : Text(translatedText4 ??"", style: TextStyle(fontSize: 18)),
                   ),
 
-                  Padding(padding: EdgeInsets.all(20),
+                  Padding(padding: EdgeInsets.all(10),
                   child : Text(translatedTh6 ??"", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
                   ),
 
-                  Padding(padding: EdgeInsets.all(20),
-                  child : Text(translatedText5 ??""),
+                  Padding(padding: EdgeInsets.all(10),
+                  child : Text(translatedText5 ??"", style: TextStyle(fontSize: 18)),
                   ),
                 
                   ],)

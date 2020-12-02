@@ -40,7 +40,7 @@ class _HighSchoolState extends State<HighSchool> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text("College Students",style: GoogleFonts.montserrat(fontWeight: FontWeight.bold),),
+          title: Text("Higher Education Students",style: GoogleFonts.montserrat(fontWeight: FontWeight.bold),),
           centerTitle: true,
         ),
         body: ListView(
@@ -172,55 +172,55 @@ class _HighSchoolState extends State<HighSchool> {
               ],
             ),
             Padding(
-              padding: EdgeInsets.all(20),
+              padding: EdgeInsets.all(10),
               child: _loading
                   ? Center(child: CircularProgressIndicator())
                   : Column(children: <Widget>[
                     Text(translatedTh1 ?? "Please Select Language", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),  
                   ),
 
-                  Image.network("https://static.india.com/wp-content/uploads/2020/08/school-1.jpg"),
+                  Image.network("https://images.livemint.com/rf/Image-621x414/LiveMint/Period2/2018/08/06/Photos/Processed/classroom-kSVE--621x414@LiveMint.jpg"),
 
                   Padding(
-              padding: EdgeInsets.all(20),
-              child: Text(translatedText1 ?? ""),
+              padding: EdgeInsets.all(10),
+              child: Text(translatedText1 ?? "", style: TextStyle(fontSize: 18)),
             ), 
             Padding(
-              padding: EdgeInsets.all(20),
-              child: Text(translatedText2 ?? ""),
+              padding: EdgeInsets.all(10),
+              child: Text(translatedText2 ?? "", style: TextStyle(fontSize: 18)),
             ),
 
             Padding(
-              padding: EdgeInsets.all(20),
+              padding: EdgeInsets.all(10),
               child: Text(translatedTh2 ?? "", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
             ),
             Padding(
-              padding: EdgeInsets.all(20),
-              child: Text(translatedText3 ?? ""),
+              padding: EdgeInsets.all(10),
+              child: Text(translatedText3 ?? "", style: TextStyle(fontSize: 18)),
             ),
             Padding(
-              padding: EdgeInsets.all(20),
+              padding: EdgeInsets.all(10),
               child: Text(translatedTh3 ?? "", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
             ),
             Padding(
-              padding: EdgeInsets.all(20),
-              child: Text(translatedText4 ?? ""),
+              padding: EdgeInsets.all(10),
+              child: Text(translatedText4 ?? "", style: TextStyle(fontSize: 18)),
             ),
             Padding(
-              padding: EdgeInsets.all(20),
+              padding: EdgeInsets.all(10),
               child: Text(translatedTh4 ?? "", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
             ),
             Padding(
-              padding: EdgeInsets.all(20),
-              child: Text(translatedText5 ?? ""),
+              padding: EdgeInsets.all(10),
+              child: Text(translatedText5 ?? "", style: TextStyle(fontSize: 18)),
             ),
             Padding(
-              padding: EdgeInsets.all(20),
+              padding: EdgeInsets.all(10),
               child: Text(translatedTh5 ?? "", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
             ),
             Padding(
-              padding: EdgeInsets.all(20),
-              child: Text(translatedText6 ?? ""),
+              padding: EdgeInsets.all(10),
+              child: Text(translatedText6 ?? "", style: TextStyle(fontSize: 18)),
             ),
 
 

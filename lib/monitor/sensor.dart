@@ -53,9 +53,11 @@ class _TestFormState extends State<TestForm> {
   MetricStore store = MetricStore();
   var txtController1 = TextEditingController();
   var txtController2 = TextEditingController();
+  var txtController3 = TextEditingController();
   void txtClear(){
     txtController1.clear();
     txtController2.clear();
+    txtController3.clear();
   }
 
   @override
@@ -81,7 +83,7 @@ class _TestFormState extends State<TestForm> {
               },
               onSaved: (String value){
                  setState(() {
-                   metric.temperature = int.parse(value);
+                   metric.temperature = double.parse(value);
                  });
               },
               keyboardType: TextInputType.number,
@@ -104,12 +106,36 @@ class _TestFormState extends State<TestForm> {
               },
               onSaved: (String value){
                 setState(() {
-                  metric.spo2 = int.parse(value);
+                  metric.spo2 = double.parse(value);
                 });
 
               },
               keyboardType: TextInputType.number,
               controller: txtController2,
+            ),
+          ),
+          SizedBox(height:15,),
+          Padding(
+            padding: const EdgeInsets.fromLTRB(25,0,25,0),
+            child: TextFormField(
+              decoration: InputDecoration(
+                labelText: 'Mobile No',
+                border: OutlineInputBorder(),
+              ),
+              validator: (String value){
+                if(value.isEmpty){
+                  return 'Enter valid mobile no';
+                }
+                return null;
+              },
+              onSaved: (String value){
+                setState(() {
+                  metric.mobile = value;
+                });
+
+              },
+              keyboardType: TextInputType.number,
+              controller: txtController3,
             ),
           ),
 

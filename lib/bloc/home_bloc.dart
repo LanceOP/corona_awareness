@@ -29,7 +29,7 @@ class HomeBloc extends Bloc<DataEvent, DataState> {
   @override
   Stream<DataState> mapEventToState(DataEvent event) async* {
     yield DataLoading();
-    final apiRepository = ApiRepository();
+    final apiRepository = ApiRepository(apiClient: null);
 
     final data = await apiRepository.fetchTopHeadlinesNews();
     if (data.error == null) {

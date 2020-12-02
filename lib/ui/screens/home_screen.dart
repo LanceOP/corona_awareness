@@ -1,15 +1,14 @@
 import 'package:bottom_navy_bar/bottom_navy_bar.dart';
 import 'package:aware/covid_track/state_screen.dart';
-import 'package:aware/ui/screens/dashboard.dart';
-import 'package:aware/ui/screens/details.dart';
+
 import 'package:aware/ui/screens/health.dart';
-import 'package:aware/ui/screens/indian_states.dart';
+
 import 'package:aware/ui/screens/news_page.dart';
-import 'package:aware/ui/screens/zones.dart';
+
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:aware/covid_track/loading_page.dart';
+
 
 //FontAwesome Icons
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -47,7 +46,7 @@ class _HomeScreenState extends State<HomeScreen> {
             setState(() => _currentIndex = index);
           },
           children: <Widget>[
-            DashBoard(),
+            
             StateScreen(),
             Health(),
             NewsScreen(),

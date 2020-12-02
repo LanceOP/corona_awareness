@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "739901453301",
+    "firebase_url": "https://covid-19-monitor-c23e4.firebaseio.com",
+    "project_id": "covid-19-monitor-c23e4",
+    "storage_bucket": "covid-19-monitor-c23e4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:739901453301:android:a3d4b4aa2c0fb9e749a6bc",
+        "android_client_info": {
+          "package_name": "com.example.aware"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "739901453301-e7c3emvb000s929p7hubacqp0jvgl70h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBm454QILd0kc9jgoqSFyANncVbaO1sgwQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "739901453301-e7c3emvb000s929p7hubacqp0jvgl70h.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

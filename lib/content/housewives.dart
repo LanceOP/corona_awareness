@@ -137,36 +137,36 @@ class _HousewivesState extends State<Housewives> {
               ],
             ),
             Padding(
-              padding: EdgeInsets.all(20),
+              padding: EdgeInsets.all(10),
               child: _loading
                   ? Center(child: CircularProgressIndicator())
                   : Column(children: <Widget>[
                     Text(translatedTh1 ?? "Please select the language", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25) 
                   ),
 
-                  Padding(padding: EdgeInsets.all(20),
-                  child : Text(translatedText1 ??""),
+                  Padding(padding: EdgeInsets.all(10),
+                  child : Text(translatedText1 ??"", style: TextStyle(fontSize: 18)),
                   ),
 
                   Image.network('https://images.yourstory.com/cs/4/8e7cc4102d6c11e9aa979329348d4c3e/Homemaker-Corona-1585571681072.png'),
 
-                  Padding(padding: EdgeInsets.all(20),
+                  Padding(padding: EdgeInsets.all(10),
                   
-                  child: Text(translatedText2 ?? ""),
+                  child: Text(translatedText2 ?? "", style: TextStyle(fontSize: 18)),
                   ),
                   
-                  Padding(padding: EdgeInsets.all(20),
-                  child : Text(translatedText3 ??""),
+                  Padding(padding: EdgeInsets.all(10),
+                  child : Text(translatedText3 ??"", style: TextStyle(fontSize: 18)),
                   ),
 
                   Image.network('https://images.yourstory.com/cs/4/8e7cc4102d6c11e9aa979329348d4c3e/WhatsAppImage2020-03-29at12-1585571851633.jpeg'),
 
-                  Padding(padding: EdgeInsets.all(20),
-                  child: Text(translatedText4 ??""),
+                  Padding(padding: EdgeInsets.all(10),
+                  child: Text(translatedText4 ??"", style: TextStyle(fontSize: 18)),
                   ),
 
-                  Padding(padding: EdgeInsets.all(20),
-                  child: Text(translatedText5 ??""),
+                  Padding(padding: EdgeInsets.all(10),
+                  child: Text(translatedText5 ??"", style: TextStyle(fontSize: 18)),
                   ), 
 
  

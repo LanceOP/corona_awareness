@@ -57,7 +57,7 @@ class HomeRoute extends StatelessWidget {
     gradientColors: [Color(0xff5b86e5), Color(0xff36d1dc)],
     onPressed: () {
         Navigator.push(context, MaterialPageRoute(builder: (context) => MiddleSchool()));
-        },
+        }, background: null,
     ),
     SizedBox(height: 10,),
     NiceButton(
@@ -66,8 +66,8 @@ class HomeRoute extends StatelessWidget {
     text: "College Students",
     gradientColors: [Color(0xff5b86e5), Color(0xff36d1dc)],
     onPressed: () {
-        Navigator.push(context, MaterialPageRoute(builder: (context) => HighSchool()));
-    },
+        Navigator.push(context, MaterialPageRoute(builder: (context) => College()));
+    }, background: null,
     ),
     SizedBox(height: 10,),
     NiceButton(
@@ -76,8 +76,8 @@ class HomeRoute extends StatelessWidget {
     text: "Higher Education",
     gradientColors: [Color(0xff5b86e5), Color(0xff36d1dc)],
     onPressed: () {
-        Navigator.push(context, MaterialPageRoute(builder: (context) => College()));
-    },
+        Navigator.push(context, MaterialPageRoute(builder: (context) => HighSchool()));
+    }, background: null,
     ),
     SizedBox(height: 10,),
     NiceButton(
@@ -87,7 +87,7 @@ class HomeRoute extends StatelessWidget {
     gradientColors: [Color(0xff5b86e5), Color(0xff36d1dc)],
     onPressed: () {
         Navigator.push(context, MaterialPageRoute(builder: (context) => Instructor()));
-        },
+        }, background: null,
     ),
     SizedBox(height: 10,),
     NiceButton(
@@ -97,7 +97,7 @@ class HomeRoute extends StatelessWidget {
     gradientColors: [Color(0xff5b86e5), Color(0xff36d1dc)],
     onPressed: () {
         Navigator.push(context, MaterialPageRoute(builder: (context) => Job()));
-     }
+     }, background: null,
     ),
     SizedBox(height: 10,),
     NiceButton(
@@ -107,17 +107,17 @@ class HomeRoute extends StatelessWidget {
     gradientColors: [Color(0xff5b86e5), Color(0xff36d1dc)],
     onPressed: () {
         Navigator.push(context, MaterialPageRoute(builder: (context) => Housewives()));
-    },
+    }, background: null,
     ),
     SizedBox(height: 10,),
     NiceButton(
     radius: 40,
     padding: const EdgeInsets.all(15),
-    text: "Retired People",
+    text: "Senior Citizens",
     gradientColors: [Color(0xff5b86e5), Color(0xff36d1dc)],
     onPressed: () {
         Navigator.push(context, MaterialPageRoute(builder: (context) => Retired()));
-         },
+         }, background: null,
     ),
               ],
             ),

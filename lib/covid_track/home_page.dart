@@ -6,7 +6,7 @@ import 'constants.dart';
 import 'state_screen.dart';
 import 'network_helper.dart';
 import 'box_display.dart';
-import 'video_screen.dart';
+
 import 'gesture_box.dart';
 import 'symptoms_page.dart';
 import 'helpline_page.dart';
@@ -211,7 +211,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   GestureBox(
                   callBack: () {
                     Navigator.push(context, MaterialPageRoute(builder: (context) {
-                      return VideoBox(videoId: "OZcRD9fV7jo",);
+                      return ;
                     }));
                   },
                   title: 'Coronavirus',
@@ -239,7 +239,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   GestureBox(
                     callBack: () {
                       Navigator.push(context, MaterialPageRoute(builder: (context) {
-                        return VideoBox(videoId: "8c_UJwLq8PI",);
+                        return ;
                       }));
                     },
                     title: 'Coronavirus',

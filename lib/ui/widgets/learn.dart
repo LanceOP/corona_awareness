@@ -1,4 +1,4 @@
-import 'package:aware/ui/screens/precautions.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -135,12 +135,7 @@ class _LearnState extends State<Learn> {
             image: _buildImage('streamline-gtf-medicines'),
             decoration: pageDecoration,
           ),
-          PageViewModel(
-            title: "Beaware of Online Scams",
-            bodyWidget: Precautions(),
-            // image: _buildImage('streamline-gtf-medicines'),
-            decoration: de,
-          ),
+          
         ],
 
         onDone: () => {},

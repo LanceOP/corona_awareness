@@ -9,8 +9,8 @@ class Result1 extends StatelessWidget {
   String checkFever(){
     MetricRow latest = store.fetchLatest();
     if(latest != null){
-      int temp = latest.metric.temperature;
-      int spo2 = latest.metric.spo2;
+      double temp = latest.metric.temperature;
+      double spo2 = latest.metric.spo2;
       if((temp>=36 && temp<=37) && (spo2>=90 && spo2<=100)){
         return 'You don\'t have risk of Covid-19 infection';
       }else if((temp>37 || temp<36) && (spo2<90 || spo2>100))
