@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'model.dart';
 import 'constantsResultWindow.dart';
 
@@ -23,7 +24,7 @@ class History extends StatelessWidget {
 //  DataTableWidget(this.listOfColumns);     // Getting the data from outside, on initialization
       return Scaffold(
         appBar: AppBar(
-          title: Text('History'),
+          title: Text('History',style: GoogleFonts.montserrat(fontWeight: FontWeight.bold),),
           centerTitle: true,
         ),
         body: ListView(children: <Widget>[

@@ -11,7 +11,7 @@ class BoxDisplay extends StatelessWidget {
   Widget build(BuildContext context) {
     return Expanded(
       child: Card(
-        elevation: 5,
+        elevation: 0,
         semanticContainer: true,
         child: Container(
           child:Column(
@@ -22,7 +22,7 @@ class BoxDisplay extends StatelessWidget {
                 style: TextStyle(
                   color: color,
                   fontSize: 20,
-                  fontFamily: 'PT Sans Narrow',
+                  fontFamily: 'Roboto',
                 ),
                 textAlign: TextAlign.start,),
               ),
@@ -32,7 +32,7 @@ class BoxDisplay extends StatelessWidget {
                   color: color,
                   fontWeight: FontWeight.bold,
                   fontSize: 25,
-                  fontFamily: 'PT Sans Narrow',
+                  fontFamily: 'Roboto',
                 ),
                 textAlign: TextAlign.right,),
             ],

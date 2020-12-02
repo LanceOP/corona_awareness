@@ -126,7 +126,7 @@ class WidgetTitle extends StatelessWidget {
         text: TextSpan(
           children: [
             TextSpan(
-              text: 'Health News\n',
+              text: 'C News\n',
               style: Theme.of(context).textTheme.title.merge(
                     GoogleFonts.montserrat(
                       fontWeight: FontWeight.bold,

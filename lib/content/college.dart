@@ -3,7 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_inappwebview/flutter_inappwebview.dart';
 import 'package:translator/translator.dart';
-import 'package:google_fonts/google_fonts.dart';
+
 class College extends StatefulWidget {
   College({Key key}) : super(key: key);
 
@@ -38,8 +38,8 @@ class _CollegeState extends State<College> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text("Higher Education Students",style: GoogleFonts.montserrat(fontWeight: FontWeight.bold),),
-          centerTitle: true,
+          title: Text("College Page"),
+          backgroundColor: Colors.green,
         ),
         body: ListView(
           children: [
@@ -171,14 +171,14 @@ class _CollegeState extends State<College> {
 
                   Padding(
               padding: EdgeInsets.all(20),
-              child: Text(translatedText1 ?? ""),
+              child: Text(translatedText1 ?? "", style: TextStyle(fontSize: 18)),
             ),
 
             Image.network('https://cdn.thewire.in/wp-content/uploads/2020/03/23184336/coronavirus-lockdown-1600x982.jpg'),
 
             Padding(
               padding: EdgeInsets.all(20),
-              child: Text(translatedText2 ?? ""),
+              child: Text(translatedText2 ?? "", style: TextStyle(fontSize: 18)),
             ),
 
             Padding(
@@ -188,12 +188,12 @@ class _CollegeState extends State<College> {
 
             Padding(
               padding: EdgeInsets.all(20),
-              child: Text(translatedText3 ?? ""),
+              child: Text(translatedText3 ?? "", style: TextStyle(fontSize: 18)),
             ),
 
             Padding(
               padding: EdgeInsets.all(20),
-              child: Text(translatedText4 ?? ""),
+              child: Text(translatedText4 ?? "", style: TextStyle(fontSize: 18)),
             ),
 
                   ],) 

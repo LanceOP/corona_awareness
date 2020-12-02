@@ -3,7 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_inappwebview/flutter_inappwebview.dart';
 import 'package:translator/translator.dart';
-import 'package:google_fonts/google_fonts.dart';
+
 
 class Job extends StatefulWidget {
   Job({Key key}) : super(key: key);
@@ -36,8 +36,8 @@ class _JobState extends State<Job> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text("Job Seeker",style: GoogleFonts.montserrat(fontWeight: FontWeight.bold),),
-          centerTitle: true,
+          title: Text("Job Page"),
+          backgroundColor: Colors.green,
         ),
         body: ListView(
           children: [
@@ -164,35 +164,35 @@ class _JobState extends State<Job> {
                     Text(translatedTh1 ?? "Please select the language", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25) 
                   ),
 
-                  Padding(padding: EdgeInsets.all(20),
-                  child : Text(translatedText1 ??""),
+                  Padding(padding: EdgeInsets.all(10),
+                  child : Text(translatedText1 ??"", style: TextStyle(fontSize: 18)),
                   ),
 
                   Image.network('https://www.adzuna.co.uk/wp-content/uploads/2020/03/do-not-give-up.jpg'),
 
-                  Padding(padding: EdgeInsets.all(20),
+                  Padding(padding: EdgeInsets.all(10),
                   
                   child: Text(translatedTh2 ?? "", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
                   ),
                   
-                  Padding(padding: EdgeInsets.all(20),
-                  child : Text(translatedText2 ??""),
+                  Padding(padding: EdgeInsets.all(10),
+                  child : Text(translatedText2 ??"", style: TextStyle(fontSize: 18)),
                   ),
 
-                  Padding(padding: EdgeInsets.all(20),
+                  Padding(padding: EdgeInsets.all(10),
                   child: Text(translatedTh3 ?? "", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),  ),
                   ),
 
-                  Padding(padding: EdgeInsets.all(20),
-                  child: Text(translatedText3 ??""),
+                  Padding(padding: EdgeInsets.all(10),
+                  child: Text(translatedText3 ??"", style: TextStyle(fontSize: 18)),
                   ),
                    
-                  Padding(padding: EdgeInsets.all(20),
+                  Padding(padding: EdgeInsets.all(10),
                   child: Text(translatedTh4 ?? "", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20), ),
                   ),
 
-                  Padding(padding: EdgeInsets.all(20),
-                  child: Text(translatedText4 ??""),
+                  Padding(padding: EdgeInsets.all(10),
+                  child: Text(translatedText4 ??"", style: TextStyle(fontSize: 18)),
                   ), 
 
  

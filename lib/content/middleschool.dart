@@ -3,7 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_inappwebview/flutter_inappwebview.dart';
 import 'package:translator/translator.dart';
-import 'package:google_fonts/google_fonts.dart';
+
 class MiddleSchool extends StatefulWidget {
   MiddleSchool({Key key}) : super(key: key);
 
@@ -35,8 +35,8 @@ class _MiddleSchoolState extends State<MiddleSchool> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text("School Students",style: GoogleFonts.montserrat(fontWeight: FontWeight.bold),),
-          centerTitle: true,
+          title: Text("Middle School Page"),
+          backgroundColor: Colors.green,
         ),
         body: ListView(
           children: [
@@ -168,12 +168,12 @@ class _MiddleSchoolState extends State<MiddleSchool> {
 
                     Padding(
               padding: EdgeInsets.all(20),
-              child: Text(translatedText1 ?? ""),
+              child: Text(translatedText1 ?? "", style: TextStyle(fontSize: 18)),
             ),
 
             Padding(
               padding: EdgeInsets.all(20),
-              child: Text(translatedText2 ?? ""),
+              child: Text(translatedText2 ?? "", style: TextStyle(fontSize: 18)),
             ),
 
             Padding(
@@ -183,22 +183,22 @@ class _MiddleSchoolState extends State<MiddleSchool> {
 
             Padding(
               padding: EdgeInsets.all(20),
-              child: Text(translatedText3 ?? ""),
+              child: Text(translatedText3 ?? "", style: TextStyle(fontSize: 18)),
             ),
 
             Padding(
               padding: EdgeInsets.all(20),
-              child: Text(translatedText4 ?? ""),
+              child: Text(translatedText4 ?? "", style: TextStyle(fontSize: 18)),
             ),
 
             Padding(
               padding: EdgeInsets.all(20),
-              child: Text(translatedText5 ?? ""),
+              child: Text(translatedText5 ?? "", style: TextStyle(fontSize: 18)),
             ),
 
             Padding(
               padding: EdgeInsets.all(20),
-              child: Text(translatedText6 ?? ""),
+              child: Text(translatedText6 ?? "", style: TextStyle(fontSize: 18)),
             ),
 
 

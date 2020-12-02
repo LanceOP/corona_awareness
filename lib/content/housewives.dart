@@ -3,7 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_inappwebview/flutter_inappwebview.dart';
 import 'package:translator/translator.dart';
-import 'package:google_fonts/google_fonts.dart';
+
 class Housewives extends StatefulWidget {
   Housewives({Key key}) : super(key: key);
 
@@ -34,8 +34,8 @@ class _HousewivesState extends State<Housewives> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text("Housewives",style: GoogleFonts.montserrat(fontWeight: FontWeight.bold),),
-          centerTitle: true,
+          title: Text("Housewives Page"),
+          backgroundColor: Colors.green,
         ),
         body: ListView(
           children: [
@@ -124,7 +124,7 @@ class _HousewivesState extends State<Housewives> {
                               child: Text(
                                 value,
                                 style: TextStyle(
-                                  fontSize: 16.0,
+                                  fontSize: 24.0,
                                 ),
                               ),
                             );
@@ -137,35 +137,35 @@ class _HousewivesState extends State<Housewives> {
               ],
             ),
             Padding(
-              padding: EdgeInsets.all(20),
+              padding: EdgeInsets.all(10),
               child: _loading
                   ? Center(child: CircularProgressIndicator())
                   : Column(children: <Widget>[
                     Text(translatedTh1 ?? "Please select the language", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25) 
                   ),
 
-                  Padding(padding: EdgeInsets.all(20),
+                  Padding(padding: EdgeInsets.all(10),
                   child : Text(translatedText1 ??""),
                   ),
 
                   Image.network('https://images.yourstory.com/cs/4/8e7cc4102d6c11e9aa979329348d4c3e/Homemaker-Corona-1585571681072.png'),
 
-                  Padding(padding: EdgeInsets.all(20),
+                  Padding(padding: EdgeInsets.all(10),
                   
                   child: Text(translatedText2 ?? ""),
                   ),
                   
-                  Padding(padding: EdgeInsets.all(20),
+                  Padding(padding: EdgeInsets.all(10),
                   child : Text(translatedText3 ??""),
                   ),
 
                   Image.network('https://images.yourstory.com/cs/4/8e7cc4102d6c11e9aa979329348d4c3e/WhatsAppImage2020-03-29at12-1585571851633.jpeg'),
 
-                  Padding(padding: EdgeInsets.all(20),
+                  Padding(padding: EdgeInsets.all(10),
                   child: Text(translatedText4 ??""),
                   ),
 
-                  Padding(padding: EdgeInsets.all(20),
+                  Padding(padding: EdgeInsets.all(10),
                   child: Text(translatedText5 ??""),
                   ), 
 

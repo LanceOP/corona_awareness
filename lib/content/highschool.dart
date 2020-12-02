@@ -4,7 +4,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_inappwebview/flutter_inappwebview.dart';
 import 'package:translator/translator.dart';
 import 'language_codes.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class HighSchool extends StatefulWidget {
   HighSchool({Key key}) : super(key: key);
@@ -40,8 +39,8 @@ class _HighSchoolState extends State<HighSchool> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text("College Students",style: GoogleFonts.montserrat(fontWeight: FontWeight.bold),),
-          centerTitle: true,
+          title: Text("Higher Education Students"),
+          backgroundColor: Colors.green,
         ),
         body: ListView(
           children: [
@@ -79,7 +78,7 @@ class _HighSchoolState extends State<HighSchool> {
                         child: DropdownButton<String>(
                           hint: Text(
                             "English",
-                            style: TextStyle(fontSize: 18),
+                            style: TextStyle(fontSize: 16),
                           ),
                           iconDisabledColor: Colors.transparent,
                           value: _currentSelectedValue,
@@ -179,48 +178,48 @@ class _HighSchoolState extends State<HighSchool> {
                     Text(translatedTh1 ?? "Please Select Language", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),  
                   ),
 
-                  Image.network("https://static.india.com/wp-content/uploads/2020/08/school-1.jpg"),
+                  Image.network("https://www.indiaeducation.net/imagesvr_ce/4134/slide_5462f7d765225.jpg"),
 
                   Padding(
-              padding: EdgeInsets.all(20),
-              child: Text(translatedText1 ?? ""),
+              padding: EdgeInsets.all(10),
+              child: Text(translatedText1 ?? "", style: TextStyle(fontSize: 18)),
             ), 
             Padding(
-              padding: EdgeInsets.all(20),
-              child: Text(translatedText2 ?? ""),
+              padding: EdgeInsets.all(10),
+              child: Text(translatedText2 ?? "", style: TextStyle(fontSize: 18)),
             ),
 
             Padding(
-              padding: EdgeInsets.all(20),
+              padding: EdgeInsets.all(10),
               child: Text(translatedTh2 ?? "", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
             ),
             Padding(
-              padding: EdgeInsets.all(20),
-              child: Text(translatedText3 ?? ""),
+              padding: EdgeInsets.all(10),
+              child: Text(translatedText3 ?? "", style: TextStyle(fontSize: 18)),
             ),
             Padding(
-              padding: EdgeInsets.all(20),
+              padding: EdgeInsets.all(10),
               child: Text(translatedTh3 ?? "", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
             ),
             Padding(
-              padding: EdgeInsets.all(20),
-              child: Text(translatedText4 ?? ""),
+              padding: EdgeInsets.all(10),
+              child: Text(translatedText4 ?? "", style: TextStyle(fontSize: 18)),
             ),
             Padding(
-              padding: EdgeInsets.all(20),
+              padding: EdgeInsets.all(10),
               child: Text(translatedTh4 ?? "", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
             ),
             Padding(
-              padding: EdgeInsets.all(20),
-              child: Text(translatedText5 ?? ""),
+              padding: EdgeInsets.all(10),
+              child: Text(translatedText5 ?? "", style: TextStyle(fontSize: 18)),
             ),
             Padding(
-              padding: EdgeInsets.all(20),
+              padding: EdgeInsets.all(10),
               child: Text(translatedTh5 ?? "", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
             ),
             Padding(
-              padding: EdgeInsets.all(20),
-              child: Text(translatedText6 ?? ""),
+              padding: EdgeInsets.all(10),
+              child: Text(translatedText6 ?? "", style: TextStyle(fontSize: 18)),
             ),
 
 
