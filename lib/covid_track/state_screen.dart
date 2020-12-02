@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'constants.dart';
 import 'box_display.dart';
-
+import 'package:google_fonts/google_fonts.dart';
 class StateScreen extends StatefulWidget {
   final districtData;
   final stateName;
@@ -77,21 +77,21 @@ class _StateScreenState extends State<StateScreen> {
           ),
           DataColumn(
             label: Text(
-              'Active',
+              '   Active',
               style: cTitle(Colors.red),
             ),
             numeric: true,
           ),
           DataColumn(
             label: Text(
-              'Deaths',
+              '  Deaths',
               style: cTitle(Colors.blue),
             ),
             numeric: true,
           ),
           DataColumn(
             label: Text(
-              'Recovered',
+              '  Recovered',
               style: cTitle(Colors.green),
             ),
             numeric: true,
@@ -106,19 +106,19 @@ class _StateScreenState extends State<StateScreen> {
   topCard() {
     return Card(
       elevation: 0,
-      color: Colors.blueAccent,
+     // color: Colors.blueAccent,
       child: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
             Text(
-              ' ${widget.stateName}',
+              '                   ${widget.stateName}',
               style: TextStyle(
-                color: Colors.white,
+                color: Colors.black,
                 fontSize: 25,
                 fontWeight: FontWeight.bold,
-                fontFamily: 'Balsamiq Sans',
+                fontFamily: 'Roboto',
               ),
               textAlign: TextAlign.start,
             ),
@@ -151,7 +151,8 @@ class _StateScreenState extends State<StateScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Covid19 Tracker'),
+        title: Text('District',style: GoogleFonts.montserrat(fontWeight: FontWeight.bold)),
+        centerTitle: true,
       ),
       body: SingleChildScrollView(
         child: Column(
@@ -183,11 +184,12 @@ class _StateScreenState extends State<StateScreen> {
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: Text(
-        'District wise Statistics',
+        '            District wise Cases',
         style: TextStyle(
           fontSize: 25,
           fontWeight: FontWeight.bold,
-          fontFamily: 'Balsamiq Sans',
+          //fontFamily: 'Balsamiq Sans',
+          fontFamily: 'Roboto',
           color: Colors.black,
         ),
         textAlign: TextAlign.start,

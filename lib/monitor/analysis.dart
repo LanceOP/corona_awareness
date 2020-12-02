@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:charts_flutter/flutter.dart'as charts;
+import 'package:google_fonts/google_fonts.dart';
 import 'package:fl_chart/fl_chart.dart';
 import 'package:intl/intl.dart';
 import 'package:aware/monitor//model.dart';
@@ -8,7 +9,7 @@ class Analysis extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title:Text('Analysis'),
+        title:Text('Analysis',style: GoogleFonts.montserrat(fontWeight: FontWeight.bold),),
         centerTitle: true,
       ),
    //   body: /*LineChartWidget()*/ /*SimpleTimeSeriesChart.withSampleData()*/,
@@ -27,7 +28,7 @@ class Analysis extends StatelessWidget {
                 ),
 
                 onPressed: (){
-
+                  Navigator.push(context,MaterialPageRoute(builder: (context) => SimpleTimeSeriesChart.withSampleData()));
                 },
               ),
               RaisedButton(
@@ -69,7 +70,7 @@ class SimpleTimeSeriesChart extends StatelessWidget {
   //  print(DateTime.now());
     return Scaffold(
       appBar: AppBar(
-        title: Text('Body Temperature Graph'),
+        title: Text('%SpO2 Graph'),
       ),
       body:charts.TimeSeriesChart(
           seriesList,

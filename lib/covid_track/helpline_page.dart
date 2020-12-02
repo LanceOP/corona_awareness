@@ -14,7 +14,7 @@ class _HelpLineState extends State<HelpLine> {
     return TextStyle(
       fontSize: size,
       fontWeight: FontWeight.bold,
-      fontFamily: 'Arvo',
+      fontFamily: 'Roboto',
       color: Colors.black,
     );
   }
@@ -78,7 +78,7 @@ class _HelpLineState extends State<HelpLine> {
                     color: Colors.redAccent,
                     fontSize: 20,
                     fontWeight: FontWeight.bold,
-                    fontFamily: 'Balsamiq Sans',
+                    fontFamily: 'Roboto',
                   ),
                   textAlign: TextAlign.start,
                 ),

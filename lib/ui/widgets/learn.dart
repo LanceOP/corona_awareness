@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -14,8 +13,8 @@ class _LearnState extends State<Learn> {
 
   Widget _buildImage(String assetName) {
     return Align(
-      child: SvgPicture.asset('assets/svg/$assetName.svg', width: 150.0),
-      alignment: Alignment.bottomRight,
+      child: SvgPicture.asset('assets/myth/$assetName.svg', width: 160.0,height: 500,),
+      alignment: Alignment.center,
     );
   }
 
@@ -24,124 +23,100 @@ class _LearnState extends State<Learn> {
     const bodyStyle = TextStyle(fontSize: 15.0);
     var pageDecoration = PageDecoration(
       titleTextStyle:
-          GoogleFonts.montserrat(fontSize: 26.0, fontWeight: FontWeight.w700),
+          GoogleFonts.montserrat(fontSize: 25.0, fontWeight: FontWeight.w500),
       bodyTextStyle: bodyStyle,
       descriptionPadding: EdgeInsets.fromLTRB(16.0, 0.0, 16.0, 16.0),
       pageColor: Colors.white,
     );
-    var de = PageDecoration(
-      titleTextStyle:
-          GoogleFonts.montserrat(fontSize: 20.0, fontWeight: FontWeight.w500),
-      pageColor: Colors.white,
-    );
     return Scaffold(
+      appBar: AppBar(
+        title: Text('Myth Buster',style: GoogleFonts.montserrat(fontWeight: FontWeight.bold),),
+        centerTitle: true,
+      ),
       body: IntroductionScreen(
         key: introKey,
         pages: [
           PageViewModel(
             title:
-                "Hot and humid climates do not make it easier for COVID-19 to spread.",
+                "COVID-19 can be transmitted through goods so if you feel its surface is contaminated clean with disinfectant and wash your hands after touching it.",
             body: '',
-            image: _buildImage('streamline-gtf-hot-climates'),
+            image: _buildImage('myth1'),
             decoration: pageDecoration,
           ),
           PageViewModel(
-            title: "COVID-19 is not transmitted by mosquitoes.",
+            title: "COVID-19 can not be transmitted by mosquitoes.",
             body: "",
-            image: _buildImage('streamline-gtf-mosquito'),
+            image: _buildImage('myth2'),
             decoration: pageDecoration,
           ),
           PageViewModel(
-            title: "Cold weather does not kill COVID-19 or other diseases.",
+            title: "Wash your clothes using detergent or soap in 60-90°C water and dry clothes in the sun",
             body: "",
-            image: _buildImage('streamline-gtf-cold-weather'),
+            image: _buildImage('myth3'),
             decoration: pageDecoration,
           ),
           PageViewModel(
-            title: "Hot baths cannot prevent people from getting COVID-19.",
+            title: "Drinking alcohol doesn't help in preventing coronavirus.",
             body: "",
-            image: _buildImage('streamline-gtf-bath'),
-            // footer: RaisedButton(
-            //   onPressed: () {
-            //     introKey.currentState?.animateScroll(0);
-            //   },
-            //   // child: const Text(
-            //   //   'FooButton',
-            //   //   style: TextStyle(color: Colors.white),
-            //   // ),
-            //   color: Colors.lightBlue,
-            //   shape: RoundedRectangleBorder(
-            //     borderRadius: BorderRadius.circular(8.0),
-            //   ),
-            // ),
+            image: _buildImage('myth4'),
             decoration: pageDecoration,
           ),
           PageViewModel(
-            title: "Hand dryers do not kill the new coronavirus.",
+            title: "Coronavirus can be transmitted in any kind of climate.",
             body: '',
-            image: _buildImage('streamline-gtf-hand-dryer'),
+            image: _buildImage('myth5'),
             decoration: pageDecoration,
           ),
           PageViewModel(
-            title: "Ultraviolet (UV) lamps do not kill the new coronavirus.",
+            title: "It may take the virus 1-14 days to incubate and cause symptoms so digital thermometes cannot be used to identify asymptomatic patients.",
             body: "",
-            image: _buildImage('streamline-gtf-uv-lamp'),
+            image: _buildImage('myth6'),
             decoration: pageDecoration,
           ),
           PageViewModel(
             title:
-                "Spraying alcohol or chlorine on your body does not kill the new coronavirus.",
+                "Don't use UV bulbs for disinfecting on your hands because it may irritate your skin.",
             body: "",
-            image: _buildImage('streamline-gtf-spray'),
+            image: _buildImage('myth7'),
             decoration: pageDecoration,
           ),
           PageViewModel(
             title:
                 "Eating garlic does not prevent people from getting COVID-19.",
             body: "",
-            image: _buildImage('streamline-gtf-garlic-2'),
+            image: _buildImage('myth8'),
             decoration: pageDecoration,
           ),
           PageViewModel(
             title:
-                "Rinsing the nose with saline does not prevent people from getting COVID-19.",
+                "Eating garlic does not prevent people from getting COVID-19.",
             body: "",
-            image: _buildImage('streamline-gtf-pneumonia-vaccine'),
+            image: _buildImage('myth9'),
             decoration: pageDecoration,
           ),
           PageViewModel(
             title:
-                "Thermal scanners cannot detect if people are infected with COVID-19 when they do not have a fever.",
+                "Pneumonia vaccine should not be used to prevent COVID-19",
             body: "",
-            image: _buildImage('streamline-gtf-thermal-scanner'),
+            image: _buildImage('myth10'),
             decoration: pageDecoration,
           ),
           PageViewModel(
-            title: "The new coronavirus affects people of all ages.",
+            title: "Rinsing the nose with saline does not prevent people from getting COVID-19.",
             body: "",
-            image: _buildImage('streamline-gtf-elderly'),
+            image: _buildImage('myth11'),
             decoration: pageDecoration,
           ),
           PageViewModel(
-            title: "Antibiotics do not prevent or treat COVID-19.",
+            title: "There is no drug that can prevent or treat COVID-19.",
             body: "",
-            image: _buildImage('streamline-gtf-antibiotics'),
+            image: _buildImage('myth12'),
             decoration: pageDecoration,
           ),
-          PageViewModel(
-            title:
-                "Currently, there's no medicine that's recommended for preventing or treating the new coronavirus.",
-            body: "",
-            image: _buildImage('streamline-gtf-medicines'),
-            decoration: pageDecoration,
-          ),
-          
         ],
 
         onDone: () => {},
 
-        // onSkip: () => _onIntroEnd(context), // You can override onSkip callback
-        // showSkipButton: true,
         skipFlex: 8,
         nextFlex: 15,
 
@@ -150,8 +125,7 @@ class _LearnState extends State<Learn> {
           Icons.arrow_forward,
           color: Colors.grey,
         ),
-        // onSkip: () {},
-        // showSkipButton: true,
+
         dotsFlex: 0,
 
         next: const Icon(Icons.arrow_forward),

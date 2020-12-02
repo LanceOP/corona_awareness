@@ -8,7 +8,7 @@ class LanguageCodes{
   static String ytinsturctor = "https://www.youtube.com/watch?v=esB6d5azGUc";
   static String ytjob = "https://www.youtube.com/watch?v=L4gEpPOhpAY";
   static String ythousewife = "https://www.youtube.com/watch?v=Z684BDjwTPw";
-  static String ytretired = "https://www.youtube.com/watch?v=AofS0CL-ULA";
+  static String ytretured = "https://www.youtube.com/watch?v=AofS0CL-ULA";
 
 
  static Map<String, String> launguage_codes = {'English': 'en', 'Hindi': 'hi', 'Marathi': 'mr', 'Punjabi': 'pa', 'Telugu': 'te', 'Tamil': 'ta'};
@@ -46,7 +46,7 @@ class LanguageCodes{
   static String collegeText8 = "Reward yourself : Focusing on studying during a pandemic, especially under quarantine or shelter-in-place orders, comes with particular difficulties. If you’ve managed to study and focus for the duration of your goal time, be sure to reward yourself! The reward could be an extra hour of binge-watching your favorite show, eating an indulgent dessert, taking a nap or anything else that you enjoy. This will reinforce good study habits and, of course, it will be a well-deserved treat.";
   static String collegeText9 = "Keep reading : Whether you’re reading for pleasure or for reference, keep at it. Reading has been proven to help with vocabulary, grammar and comprehension on standardised tests. It will also help to stimulate your mind in your downtime.";
   static String collegeText10 = "When coming up with your study plan, be sure to set goals that you can actually achieve. If you plan to study for three hours a day while perhaps also juggling a full-time job that you’re now trying to do from home, you may fall short and lose motivation. Read some of our study and time management tips to help determine a manageable study schedule.";
-  
+
 
   static String instructorh1 = "Remote Learning Tips by Instructors, for Instructors";
   static String instructorh2 = "Could you walk us through a “day in the life” for you, as schools are shut down indefinitely?";

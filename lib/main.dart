@@ -1,29 +1,23 @@
+import 'package:aware/covid_track/protective.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'dart:io';
-import 'package:carousel_slider/carousel_slider.dart';
 import 'package:fl_chart/fl_chart.dart';
 import 'package:aware/covid_track/box_display.dart';
 import 'package:aware/covid_track/constants.dart';
 import 'package:aware/covid_track/gesture_box.dart';
 import 'package:aware/covid_track/helpline_page.dart';
-import 'package:aware/covid_track/home_page.dart';
 import 'package:aware/covid_track/indicator.dart';
 import 'package:aware/covid_track/loading_page.dart';
 import 'package:aware/covid_track/network_helper.dart';
 import 'package:aware/covid_track/state_screen.dart';
 import 'package:aware/covid_track/symptoms_page.dart';
-import 'package:aware/covid_track/telephone_nos.dart';
 import 'package:aware/covid_track/prevention.dart';
 import 'package:aware/ui/screens/health.dart';
 import 'package:aware/ui/screens/news_page.dart';
-import 'package:aware/motivation/data.dart';
-import 'package:aware/motivation/textcontroller.dart';
-import 'package:aware/motivation/textdisplay.dart';
 import 'package:aware/motivation/mainScreen.dart';
 import 'package:aware/monitor/sensor.dart';
 import 'package:aware/content/contentScreen.dart';
-
+import 'package:aware/ui/widgets/learn.dart';
 
 void main() {
   runApp(MaterialApp(
@@ -176,7 +170,7 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
           DataColumn(
             label: Text(
-              'Active',
+              '  Active',
               style: cTitle(Colors.red),
             ),
             numeric: true,
@@ -197,8 +191,8 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
           DataColumn(
             label: Text(
-              'Last update time',
-              style: cTitle(Colors.black),
+              '  Updated time',
+              style: cTitle(Colors.grey),
             ),
             numeric: true,
           ),
@@ -278,65 +272,41 @@ class _HomeScreenState extends State<HomeScreen> {
                   SizedBox(
                     width: 5.0,
                   ),
-                  SizedBox(
-                    width: 5.0,
+                  GestureBox(
+                    callBack: () {
+                      Navigator.push(context, MaterialPageRoute(builder: (context) {
+                        return Protective();
+                      }));
+                    },
+                    title: 'PROTECTIVE',
+                    color: Colors.white,
+                    text: 'Measures',
+                    bgColor: Colors.blueGrey,
                   ),
+                  SizedBox(
+                    height: 5.0,
+                  ),
+                  GestureBox(
+                    callBack: () {
+                      Navigator.push(context, MaterialPageRoute(builder: (context) {
+                        return Learn();
+                      }));
+                    },
+                    title: 'COVID-19',
+                    color: Colors.white,
+                    text: 'Myths',
+                    bgColor: Colors.deepPurple,
+                  ),
+
                 ],
               ),
             ),
-            SizedBox(
-              height: 5.0,
-            ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Text(
-                'PROTECTIVE MEASURES',
-                style: TextStyle(
-                  color: Colors.brown,
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
-                  fontFamily: 'Balsamiq Sans',
-                ),
-                textAlign: TextAlign.start,
-              ),
-            ),
-            CarouselSlider(
-              options: CarouselOptions(
-                height: 200.0,
-                initialPage: 0,
-                enableInfiniteScroll: true,
-                autoPlay: true,
-                enlargeCenterPage: true,
-                autoPlayInterval: Duration(seconds: 6),
-                autoPlayAnimationDuration: Duration(milliseconds: 1500),
-                pauseAutoPlayOnTouch: true,
-                onPageChanged: (index, reason) {
-                  cardsCallBack(index);
-                },
-              ),
-              items: imgList
-                  .map(
-                    (item) =>
-                    Card(
-                      elevation: 5,
-                      semanticContainer: true,
-                      clipBehavior: Clip.antiAliasWithSaveLayer,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(10.0),
-                      ),
-                      margin: EdgeInsets.symmetric(horizontal: 10.0),
-                      child: Image.asset(
-                        item,
-                        fit: BoxFit.fill,
-                      ),
-                    ),
-              )
-                  .toList(),
-            ),
+
+
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Card(
-                elevation: 6,
+                elevation: 0,
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -348,7 +318,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           color: Colors.black,
                           fontSize: 20,
                           fontWeight: FontWeight.bold,
-                          fontFamily: 'Balsamiq Sans',
+                          fontFamily: 'Roboto',
                         ),
                         maxLines:2,
                         textAlign: TextAlign.start,
@@ -429,11 +399,11 @@ class _HomeScreenState extends State<HomeScreen> {
               height: 5.0,
             ),
             Text(
-              'State wise Statistics',
+              '  State wise Cases',
               style: TextStyle(
                 fontSize: 25,
                 fontWeight: FontWeight.bold,
-                fontFamily: 'Balsamiq Sans',
+                fontFamily: 'Roboto',
                 color: Colors.black,
               ),
               textAlign: TextAlign.start,
@@ -564,7 +534,7 @@ class _HomeScreenState extends State<HomeScreen> {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
             Text(
-              ' Total Count',
+              '                   Total Count',
               style: TextStyle(
                 color: Colors.black,
                 fontSize: 25,

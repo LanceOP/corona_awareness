@@ -5,14 +5,14 @@ import 'package:aware/monitor/analysis.dart';
 import 'package:validators/validators.dart' as validator;
 import 'model.dart';
 import 'constantsResultWindow.dart';
-
+import 'package:google_fonts/google_fonts.dart';
 class Sensor extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
     return Scaffold(
         appBar: AppBar(
-          title: Text('Monitoring'),
+          title: Text('Monitoring',style: GoogleFonts.montserrat(fontWeight: FontWeight.bold),),
           centerTitle: true,
           actions: <Widget>[
             PopupMenuButton<String>(

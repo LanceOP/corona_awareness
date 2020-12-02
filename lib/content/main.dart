@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:nice_button/NiceButton.dart';
-import 'package:google_fonts/google_fonts.dart';
+
 import 'senior.dart';
 import 'college.dart';
 import 'highEdu.dart';
@@ -9,14 +9,29 @@ import 'educator.dart';
 import 'employee.dart';
 import 'school.dart';
 
-class Content extends StatelessWidget {
+void main() => runApp(MyApp());
+
+class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      initialRoute: '/',
-    debugShowCheckedModeBanner: false,
-      routes: {
+    // title: 'Flutter Demo',
+    // theme: ThemeData(
+    //   // This is the theme of your application.
+    //   //
+    //   // Try running your application with "flutter run". You'll see the
+    //   // application has a blue toolbar. Then, without quitting the app, try
+    //   // changing the primarySwatch below to Colors.green and then invoke
+    //   // "hot reload" (press "r" in the console where you ran "flutter run",
+    //   // or simply save your changes to "hot reload" in a Flutter IDE).
+    //   // Notice that the counter didn't reset back to zero; the application
+    //   // is not restarted.
+    //   primarySwatch: Colors.blue,
+    // ),
+    // home: MyHomePage(title: 'Flutter Demo Home Page'),
+        initialRoute: '/',
+    routes: {
       '/': (context) => HomeRoute(), // mutiple page navigation
       '/first': (context) => School(),
       '/second': (context) => College(),
@@ -38,66 +53,64 @@ class HomeRoute extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Content',style: GoogleFonts.montserrat(fontWeight: FontWeight.bold),),
-        centerTitle: true,
+        title: Text('Content'),
         backgroundColor: Colors.lightBlue,
       ),
-      body: Padding(
-        padding: const EdgeInsets.fromLTRB(0,45,0,0),
-        child: Container(
-            alignment: Alignment.center,
-            child: ListView(
+      body: Container(
+          alignment: Alignment.center,
+          child: ListView(
+            
+            children: <Widget>[
+    SizedBox(height: 10,),        
+    NiceButton(
+    radius: 40,
+    padding: const EdgeInsets.all(15),
+    text: "Middle School",
+    gradientColors: [Color(0xff5b86e5), Color(0xff36d1dc)],
+    onPressed: () {
+                 Navigator.pushNamed(context, '/first');
+    },
+    ),
 
-              children: <Widget>[
     SizedBox(height: 10,),
     NiceButton(
     radius: 40,
     padding: const EdgeInsets.all(15),
-    text: "School Students",
+    text: "High School",
     gradientColors: [Color(0xff5b86e5), Color(0xff36d1dc)],
     onPressed: () {
-        Navigator.push(context, MaterialPageRoute(builder: (context) => School()));
-        },
-    ),
-    SizedBox(height: 10,),
-    NiceButton(
-    radius: 40,
-    padding: const EdgeInsets.all(15),
-    text: "College Students",
-    gradientColors: [Color(0xff5b86e5), Color(0xff36d1dc)],
-    onPressed: () {
-        Navigator.push(context, MaterialPageRoute(builder: (context) => College()));
+       Navigator.pushNamed(context, '/second');
     },
     ),
     SizedBox(height: 10,),
     NiceButton(
     radius: 40,
     padding: const EdgeInsets.all(15),
-    text: "Higher Education",
+    text: "College",
     gradientColors: [Color(0xff5b86e5), Color(0xff36d1dc)],
     onPressed: () {
-        Navigator.push(context, MaterialPageRoute(builder: (context) => HighEdu()));
+       Navigator.pushNamed(context, '/third');
     },
     ),
     SizedBox(height: 10,),
     NiceButton(
     radius: 40,
     padding: const EdgeInsets.all(15),
-    text: "Educators",
+    text: "Instructor",
     gradientColors: [Color(0xff5b86e5), Color(0xff36d1dc)],
     onPressed: () {
-        Navigator.push(context, MaterialPageRoute(builder: (context) => Instructor()));
-        }, background: null,
+      Navigator.pushNamed(context, '/fourth');
+    },
     ),
     SizedBox(height: 10,),
     NiceButton(
     radius: 40,
     padding: const EdgeInsets.all(15),
-    text: "Employees",
+    text: "Job",
     gradientColors: [Color(0xff5b86e5), Color(0xff36d1dc)],
     onPressed: () {
-        Navigator.push(context, MaterialPageRoute(builder: (context) => Employee()));
-     }
+      Navigator.pushNamed(context, '/five');
+    },
     ),
     SizedBox(height: 10,),
     NiceButton(
@@ -106,22 +119,23 @@ class HomeRoute extends StatelessWidget {
     text: "Housewives",
     gradientColors: [Color(0xff5b86e5), Color(0xff36d1dc)],
     onPressed: () {
-        Navigator.push(context, MaterialPageRoute(builder: (context) => Housewives()));
-    }, background: null,
+        Navigator.pushNamed(context, '/six');
+    },
     ),
     SizedBox(height: 10,),
     NiceButton(
     radius: 40,
     padding: const EdgeInsets.all(15),
-    text: "Senior Citizens",
+    text: "Retired",
     gradientColors: [Color(0xff5b86e5), Color(0xff36d1dc)],
     onPressed: () {
-        Navigator.push(context, MaterialPageRoute(builder: (context) => Senior()));
-         },
+       Navigator.pushNamed(context, '/seven');
+    },
     ),
-              ],
-            ),
-        ),
+          
+
+      ],
+          ),
       ),
     );
   }

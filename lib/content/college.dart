@@ -41,7 +41,7 @@ class _CollegeState extends State<College> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text("College Students",style: GoogleFonts.montserrat(fontWeight: FontWeight.bold),),
+          title: Text('College Page',style: GoogleFonts.montserrat(fontWeight: FontWeight.bold),),
           centerTitle: true,
         ),
         body: ListView(
@@ -189,14 +189,14 @@ class _CollegeState extends State<College> {
                   ),
 
                   Padding(
-              padding: EdgeInsets.all(10),
+              padding: EdgeInsets.all(20),
               child: Text(translatedText1 ?? "", style: TextStyle(fontSize: 18)),
             ),
 
             Image.network('https://cdn.thewire.in/wp-content/uploads/2020/03/23184336/coronavirus-lockdown-1600x982.jpg'),
 
             Padding(
-              padding: EdgeInsets.all(10),
+              padding: EdgeInsets.all(20),
               child: Text(translatedText2 ?? "", style: TextStyle(fontSize: 18)),
             ),
 
@@ -206,38 +206,13 @@ class _CollegeState extends State<College> {
             ),
 
             Padding(
-              padding: EdgeInsets.all(10),
+              padding: EdgeInsets.all(20),
               child: Text(translatedText3 ?? "", style: TextStyle(fontSize: 18)),
             ),
 
             Padding(
-              padding: EdgeInsets.all(10),
-              child: Text(translatedText5 ?? "", style: TextStyle(fontSize: 18)),
-            ),
-
-            Padding(
-              padding: EdgeInsets.all(10),
-              child: Text(translatedText6 ?? "", style: TextStyle(fontSize: 18)),
-            ),
-
-            Padding(
-              padding: EdgeInsets.all(10),
-              child: Text(translatedText7 ?? "", style: TextStyle(fontSize: 18)),
-            ),
-
-            Padding(
-              padding: EdgeInsets.all(10),
-              child: Text(translatedText8 ?? "", style: TextStyle(fontSize: 18)),
-            ),
-
-            Padding(
-              padding: EdgeInsets.all(10),
-              child: Text(translatedText9 ?? "", style: TextStyle(fontSize: 18)),
-            ),
-
-            Padding(
-              padding: EdgeInsets.all(10),
-              child: Text(translatedText10 ?? "", style: TextStyle(fontSize: 18)),
+              padding: EdgeInsets.all(20),
+              child: Text(translatedText4 ?? "", style: TextStyle(fontSize: 18)),
             ),
 
                   ],) 

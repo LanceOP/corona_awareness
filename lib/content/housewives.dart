@@ -34,7 +34,7 @@ class _HousewivesState extends State<Housewives> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text("Housewives",style: GoogleFonts.montserrat(fontWeight: FontWeight.bold),),
+          title: Text('Housewives Page',style: GoogleFonts.montserrat(fontWeight: FontWeight.bold),),
           centerTitle: true,
         ),
         body: ListView(
@@ -124,7 +124,7 @@ class _HousewivesState extends State<Housewives> {
                               child: Text(
                                 value,
                                 style: TextStyle(
-                                  fontSize: 16.0,
+                                  fontSize: 24.0,
                                 ),
                               ),
                             );
@@ -145,7 +145,7 @@ class _HousewivesState extends State<Housewives> {
                   ),
 
                   Padding(padding: EdgeInsets.all(10),
-                  child : Text(translatedText1 ??"", style: TextStyle(fontSize: 18)),
+                  child : Text(translatedText1 ??""),
                   ),
 
                   Image.network('https://images.yourstory.com/cs/4/8e7cc4102d6c11e9aa979329348d4c3e/Homemaker-Corona-1585571681072.png'),
@@ -156,17 +156,17 @@ class _HousewivesState extends State<Housewives> {
                   ),
                   
                   Padding(padding: EdgeInsets.all(10),
-                  child : Text(translatedText3 ??"", style: TextStyle(fontSize: 18)),
+                  child : Text(translatedText3 ??""),
                   ),
 
                   Image.network('https://images.yourstory.com/cs/4/8e7cc4102d6c11e9aa979329348d4c3e/WhatsAppImage2020-03-29at12-1585571851633.jpeg'),
 
                   Padding(padding: EdgeInsets.all(10),
-                  child: Text(translatedText4 ??"", style: TextStyle(fontSize: 18)),
+                  child: Text(translatedText4 ??""),
                   ),
 
                   Padding(padding: EdgeInsets.all(10),
-                  child: Text(translatedText5 ??"", style: TextStyle(fontSize: 18)),
+                  child: Text(translatedText5 ??""),
                   ), 
 
  

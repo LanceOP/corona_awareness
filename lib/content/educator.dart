@@ -39,7 +39,7 @@ class _InstructorState extends State<Instructor> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text("Educators",style: GoogleFonts.montserrat(fontWeight: FontWeight.bold),),
+          title: Text('Educators Page',style: GoogleFonts.montserrat(fontWeight: FontWeight.bold),),
           centerTitle: true,
         ),
         body: ListView(
@@ -158,7 +158,7 @@ class _InstructorState extends State<Instructor> {
                               child: Text(
                                 value,
                                 style: TextStyle(
-                                  fontSize: 16.0,
+                                  fontSize: 24.0,
                                 ),
                               ),
                             );

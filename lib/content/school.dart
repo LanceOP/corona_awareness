@@ -4,14 +4,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_inappwebview/flutter_inappwebview.dart';
 import 'package:translator/translator.dart';
 import 'package:google_fonts/google_fonts.dart';
-class MiddleSchool extends StatefulWidget {
-  MiddleSchool({Key key}) : super(key: key);
+class School extends StatefulWidget {
+  School({Key key}) : super(key: key);
 
   @override
-  _MiddleSchoolState createState() => _MiddleSchoolState();
+  _SchoolState createState() => _SchoolState();
 }
 
-class _MiddleSchoolState extends State<MiddleSchool> {
+class _SchoolState extends State<School> {
   final translator = GoogleTranslator();
   bool _loading = false;
   String _currentSelectedValue = 'English';
@@ -35,7 +35,7 @@ class _MiddleSchoolState extends State<MiddleSchool> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text("School Students",style: GoogleFonts.montserrat(fontWeight: FontWeight.bold),),
+          title: Text('School Page',style: GoogleFonts.montserrat(fontWeight: FontWeight.bold),),
           centerTitle: true,
         ),
         body: ListView(
@@ -167,12 +167,12 @@ class _MiddleSchoolState extends State<MiddleSchool> {
                     Image.network("https://i0.wp.com/marketscale.com/industries/wp-content/uploads/2020/07/Online-Remote-Learning-768x513-1.jpg"),
 
                     Padding(
-              padding: EdgeInsets.all(10),
+              padding: EdgeInsets.all(20),
               child: Text(translatedText1 ?? "", style: TextStyle(fontSize: 18)),
             ),
 
             Padding(
-              padding: EdgeInsets.all(10),
+              padding: EdgeInsets.all(20),
               child: Text(translatedText2 ?? "", style: TextStyle(fontSize: 18)),
             ),
 
@@ -182,22 +182,22 @@ class _MiddleSchoolState extends State<MiddleSchool> {
             ),
 
             Padding(
-              padding: EdgeInsets.all(10),
+              padding: EdgeInsets.all(20),
               child: Text(translatedText3 ?? "", style: TextStyle(fontSize: 18)),
             ),
 
             Padding(
-              padding: EdgeInsets.all(10),
+              padding: EdgeInsets.all(20),
               child: Text(translatedText4 ?? "", style: TextStyle(fontSize: 18)),
             ),
 
             Padding(
-              padding: EdgeInsets.all(10),
+              padding: EdgeInsets.all(20),
               child: Text(translatedText5 ?? "", style: TextStyle(fontSize: 18)),
             ),
 
             Padding(
-              padding: EdgeInsets.all(10),
+              padding: EdgeInsets.all(20),
               child: Text(translatedText6 ?? "", style: TextStyle(fontSize: 18)),
             ),
 

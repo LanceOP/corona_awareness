@@ -1,19 +1,18 @@
-
+import 'language_codes.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_inappwebview/flutter_inappwebview.dart';
 import 'package:translator/translator.dart';
-import 'language_codes.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class HighSchool extends StatefulWidget {
-  HighSchool({Key key}) : super(key: key);
+class Employee extends StatefulWidget {
+  Employee({Key key}) : super(key: key);
 
   @override
-  _HighSchoolState createState() => _HighSchoolState();
+  _EmployeeState createState() => _EmployeeState();
 }
 
-class _HighSchoolState extends State<HighSchool> {
+class _EmployeeState extends State<Employee> {
   final translator = GoogleTranslator();
   bool _loading = false;
   String _currentSelectedValue = 'English';
@@ -21,18 +20,15 @@ class _HighSchoolState extends State<HighSchool> {
   String translatedText2;
   String translatedText3;
   String translatedText4;
-  String translatedText5;
-  String translatedText6;
   String translatedTh1;
   String translatedTh2;
   String translatedTh3;
   String translatedTh4;
-  String translatedTh5;
 
   @override
   void initState() {
     // TODO: implement initState
-   
+    
     super.initState();
   }
 
@@ -40,15 +36,15 @@ class _HighSchoolState extends State<HighSchool> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text("Higher Education Students",style: GoogleFonts.montserrat(fontWeight: FontWeight.bold),),
-          centerTitle: true,
+          centerTitle:true ,
+            title: Text('Employee Page',style: GoogleFonts.montserrat(fontWeight: FontWeight.bold),)
         ),
         body: ListView(
           children: [
              Container(
    height: MediaQuery.of(context).size.height*0.4,
                   child: InAppWebView(
-                    initialUrl: LanguageCodes.ythighschool,
+                    initialUrl: LanguageCodes.ytjob,
                     
                     onLoadStart: (InAppWebViewController controller, String url) {
 
@@ -89,62 +85,47 @@ class _HighSchoolState extends State<HighSchool> {
                               _loading = true;
                             });
                                 Translation translated1 = await translator.translate(
-                                LanguageCodes.highSchoolh1,
+                                LanguageCodes.jobh1,
                                 to: LanguageCodes.launguage_codes[newValue]);
 
                                 Translation translated2 = await translator.translate(
-                                LanguageCodes.highSchoolText1,
+                                LanguageCodes.jobText1,
                                 to: LanguageCodes.launguage_codes[newValue]);
 
                                 Translation translated3 = await translator.translate(
-                                LanguageCodes.highSchoolText2,
+                                LanguageCodes.jobh2,
                                 to: LanguageCodes.launguage_codes[newValue]);
 
                                 Translation translated4 = await translator.translate(
-                                LanguageCodes.highSchoolh2,
+                                LanguageCodes.jobText2,
                                 to: LanguageCodes.launguage_codes[newValue]);
 
                                 Translation translated5 = await translator.translate(
-                                LanguageCodes.highSchoolText3,
+                                LanguageCodes.jobh3,
                                 to: LanguageCodes.launguage_codes[newValue]);
 
                                 Translation translated6 = await translator.translate(
-                                LanguageCodes.highSchoolh3,
+                                LanguageCodes.jobText3,
                                 to: LanguageCodes.launguage_codes[newValue]);
 
                                 Translation translated7 = await translator.translate(
-                                LanguageCodes.hightSchoolText4,
+                                LanguageCodes.jobh4,
                                 to: LanguageCodes.launguage_codes[newValue]);
 
                                 Translation translated8 = await translator.translate(
-                                LanguageCodes.highSchoolh4,
-                                to: LanguageCodes.launguage_codes[newValue]);
-
-                                Translation translated9 = await translator.translate(
-                                LanguageCodes.hightSchoolText5,
-                                to: LanguageCodes.launguage_codes[newValue]);
-
-                                Translation translated10 = await translator.translate(
-                                LanguageCodes.highSchoolh5,
-                                to: LanguageCodes.launguage_codes[newValue]);
-
-                                Translation translated11 = await translator.translate(
-                                LanguageCodes.hightSchoolText6,
+                                LanguageCodes.jobText4,
                                 to: LanguageCodes.launguage_codes[newValue]);
 
                             setState(() {
                               _currentSelectedValue = newValue;
                               translatedTh1 = translated1.text;
                               translatedText1 = translated2.text;
-                              translatedText2 = translated3.text;
-                              translatedTh2 = translated4.text;
-                              translatedText3 = translated5.text;
-                              translatedTh3 = translated6.text;
-                              translatedText4 = translated7.text;
-                              translatedTh4 = translated8.text;
-                              translatedText5 = translated9.text;
-                              translatedTh5 = translated10.text;
-                              translatedText6 = translated11.text;
+                              translatedTh2 = translated3.text;
+                              translatedText2 = translated4.text;
+                              translatedTh3 = translated5.text;
+                              translatedText3 = translated6.text;
+                              translatedTh4 = translated7.text;
+                              translatedText4 = translated8.text;
                               _loading = false;
                             });
                           },
@@ -171,61 +152,55 @@ class _HighSchoolState extends State<HighSchool> {
                 ),
               ],
             ),
+
+
+            
             Padding(
+
               padding: EdgeInsets.all(10),
-              child: _loading
+              child : _loading
                   ? Center(child: CircularProgressIndicator())
                   : Column(children: <Widget>[
-                    Text(translatedTh1 ?? "Please Select Language", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25),  
+                    Text(translatedTh1 ?? "Please select the language", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25) 
                   ),
 
-                  Image.network("https://images.livemint.com/rf/Image-621x414/LiveMint/Period2/2018/08/06/Photos/Processed/classroom-kSVE--621x414@LiveMint.jpg"),
+                  Padding(padding: EdgeInsets.all(10),
+                  child : Text(translatedText1 ??"", style: TextStyle(fontSize: 18)),
+                  ),
 
-                  Padding(
-              padding: EdgeInsets.all(10),
-              child: Text(translatedText1 ?? "", style: TextStyle(fontSize: 18)),
-            ), 
-            Padding(
-              padding: EdgeInsets.all(10),
-              child: Text(translatedText2 ?? "", style: TextStyle(fontSize: 18)),
-            ),
+                  Image.network('https://www.adzuna.co.uk/wp-content/uploads/2020/03/do-not-give-up.jpg'),
 
-            Padding(
-              padding: EdgeInsets.all(10),
-              child: Text(translatedTh2 ?? "", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
-            ),
-            Padding(
-              padding: EdgeInsets.all(10),
-              child: Text(translatedText3 ?? "", style: TextStyle(fontSize: 18)),
-            ),
-            Padding(
-              padding: EdgeInsets.all(10),
-              child: Text(translatedTh3 ?? "", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
-            ),
-            Padding(
-              padding: EdgeInsets.all(10),
-              child: Text(translatedText4 ?? "", style: TextStyle(fontSize: 18)),
-            ),
-            Padding(
-              padding: EdgeInsets.all(10),
-              child: Text(translatedTh4 ?? "", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
-            ),
-            Padding(
-              padding: EdgeInsets.all(10),
-              child: Text(translatedText5 ?? "", style: TextStyle(fontSize: 18)),
-            ),
-            Padding(
-              padding: EdgeInsets.all(10),
-              child: Text(translatedTh5 ?? "", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
-            ),
-            Padding(
-              padding: EdgeInsets.all(10),
-              child: Text(translatedText6 ?? "", style: TextStyle(fontSize: 18)),
-            ),
+                  Padding(padding: EdgeInsets.all(10),
+                  
+                  child: Text(translatedTh2 ?? "", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
+                  ),
+                  
+                  Padding(padding: EdgeInsets.all(10),
+                  child : Text(translatedText2 ??"", style: TextStyle(fontSize: 18)),
+                  ),
 
+                  Padding(padding: EdgeInsets.all(10),
+                  child: Text(translatedTh3 ?? "", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),  ),
+                  ),
 
+                  Padding(padding: EdgeInsets.all(10),
+                  child: Text(translatedText3 ??"", style: TextStyle(fontSize: 18)),
+                  ),
+                   
+                  Padding(padding: EdgeInsets.all(10),
+                  child: Text(translatedTh4 ?? "", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20), ),
+                  ),
+
+                  Padding(padding: EdgeInsets.all(10),
+                  child: Text(translatedText4 ??"", style: TextStyle(fontSize: 18)),
+                  ), 
+
+ 
                   ],),
-            )
+                  
+
+                  ),
+           
           ],
         ));
   }
