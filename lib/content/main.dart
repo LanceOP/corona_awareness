@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:nice_button/NiceButton.dart';
 
-import 'Retired.dart';
+import 'senior.dart';
 import 'college.dart';
-import 'highschool.dart';
+import 'highEdu.dart';
 import 'housewives.dart';
-import 'instructor.dart';
-import 'job.dart';
-import 'middleschool.dart';
+import 'educator.dart';
+import 'employee.dart';
+import 'school.dart';
 
 void main() => runApp(MyApp());
 
@@ -33,13 +33,13 @@ class MyApp extends StatelessWidget {
         initialRoute: '/',
     routes: {
       '/': (context) => HomeRoute(), // mutiple page navigation
-      '/first': (context) => MiddleSchool(),
-      '/second': (context) => HighSchool(),
-      '/third': (context) => College(),
+      '/first': (context) => School(),
+      '/second': (context) => College(),
+      '/third': (context) => HighEdu(),
       '/fourth': (context) => Instructor(),
-      '/five': (context) => Job(),
+      '/five': (context) => Employee(),
       '/six': (context) => Housewives(),
-      '/seven': (context) => Retired(),
+      '/seven': (context) => Senior(),
     },
 
     );

@@ -3,7 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_inappwebview/flutter_inappwebview.dart';
 import 'package:translator/translator.dart';
-
+import 'package:google_fonts/google_fonts.dart';
 class Housewives extends StatefulWidget {
   Housewives({Key key}) : super(key: key);
 
@@ -34,8 +34,8 @@ class _HousewivesState extends State<Housewives> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text("Housewives Page"),
-          backgroundColor: Colors.green,
+          title: Text('Housewives Page',style: GoogleFonts.montserrat(fontWeight: FontWeight.bold),),
+          centerTitle: true,
         ),
         body: ListView(
           children: [

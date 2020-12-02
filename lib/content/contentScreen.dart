@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:nice_button/NiceButton.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'Retired.dart';
+import 'senior.dart';
 import 'college.dart';
-import 'highschool.dart';
+import 'highEdu.dart';
 import 'housewives.dart';
-import 'instructor.dart';
-import 'job.dart';
-import 'middleschool.dart';
+import 'educator.dart';
+import 'employee.dart';
+import 'school.dart';
 
 class Content extends StatelessWidget {
   // This widget is the root of your application.
@@ -18,13 +18,13 @@ class Content extends StatelessWidget {
     debugShowCheckedModeBanner: false,
       routes: {
       '/': (context) => HomeRoute(), // mutiple page navigation
-      '/first': (context) => MiddleSchool(),
-      '/second': (context) => HighSchool(),
-      '/third': (context) => College(),
+      '/first': (context) => School(),
+      '/second': (context) => College(),
+      '/third': (context) => HighEdu(),
       '/fourth': (context) => Instructor(),
-      '/five': (context) => Job(),
+      '/five': (context) => Employee(),
       '/six': (context) => Housewives(),
-      '/seven': (context) => Retired(),
+      '/seven': (context) => Senior(),
     },
 
     );
@@ -56,7 +56,7 @@ class HomeRoute extends StatelessWidget {
     text: "School Students",
     gradientColors: [Color(0xff5b86e5), Color(0xff36d1dc)],
     onPressed: () {
-        Navigator.push(context, MaterialPageRoute(builder: (context) => MiddleSchool()));
+        Navigator.push(context, MaterialPageRoute(builder: (context) => School()));
         },
     ),
     SizedBox(height: 10,),
@@ -66,7 +66,7 @@ class HomeRoute extends StatelessWidget {
     text: "College Students",
     gradientColors: [Color(0xff5b86e5), Color(0xff36d1dc)],
     onPressed: () {
-        Navigator.push(context, MaterialPageRoute(builder: (context) => HighSchool()));
+        Navigator.push(context, MaterialPageRoute(builder: (context) => College()));
     },
     ),
     SizedBox(height: 10,),
@@ -76,7 +76,7 @@ class HomeRoute extends StatelessWidget {
     text: "Higher Education",
     gradientColors: [Color(0xff5b86e5), Color(0xff36d1dc)],
     onPressed: () {
-        Navigator.push(context, MaterialPageRoute(builder: (context) => College()));
+        Navigator.push(context, MaterialPageRoute(builder: (context) => HighEdu()));
     },
     ),
     SizedBox(height: 10,),
@@ -96,7 +96,7 @@ class HomeRoute extends StatelessWidget {
     text: "Employees",
     gradientColors: [Color(0xff5b86e5), Color(0xff36d1dc)],
     onPressed: () {
-        Navigator.push(context, MaterialPageRoute(builder: (context) => Job()));
+        Navigator.push(context, MaterialPageRoute(builder: (context) => Employee()));
      }
     ),
     SizedBox(height: 10,),
@@ -113,10 +113,10 @@ class HomeRoute extends StatelessWidget {
     NiceButton(
     radius: 40,
     padding: const EdgeInsets.all(15),
-    text: "Retired People",
+    text: "Senior Citizens",
     gradientColors: [Color(0xff5b86e5), Color(0xff36d1dc)],
     onPressed: () {
-        Navigator.push(context, MaterialPageRoute(builder: (context) => Retired()));
+        Navigator.push(context, MaterialPageRoute(builder: (context) => Senior()));
          },
     ),
               ],

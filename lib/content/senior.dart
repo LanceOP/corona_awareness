@@ -3,15 +3,15 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_inappwebview/flutter_inappwebview.dart';
 import 'package:translator/translator.dart';
-
-class Retired extends StatefulWidget {
-  Retired({Key key}) : super(key: key);
+import 'package:google_fonts/google_fonts.dart';
+class Senior extends StatefulWidget {
+  Senior({Key key}) : super(key: key);
 
   @override
-  _RetiredState createState() => _RetiredState();
+  _SeniorState createState() => _SeniorState();
 }
 
-class _RetiredState extends State<Retired> {
+class _SeniorState extends State<Senior> {
   final translator = GoogleTranslator();
   bool _loading = false;
   String _currentSelectedValue = 'English';
@@ -42,8 +42,8 @@ class _RetiredState extends State<Retired> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text("Retired Page"),
-          backgroundColor: Colors.green,
+          title: Text('Senior Citizen Page',style: GoogleFonts.montserrat(fontWeight: FontWeight.bold),),
+          centerTitle: true,
         ),
         body: ListView(
           children: [
@@ -90,7 +90,7 @@ class _RetiredState extends State<Retired> {
                         child: DropdownButton<String>(
                           hint: Text(
                             "English",
-                            style: TextStyle(fontSize: 18),
+                            style: TextStyle(fontSize:18),
                           ),
                           iconDisabledColor: Colors.transparent,
                           value: _currentSelectedValue,

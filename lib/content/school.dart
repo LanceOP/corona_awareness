@@ -3,16 +3,15 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_inappwebview/flutter_inappwebview.dart';
 import 'package:translator/translator.dart';
-
-
-class Job extends StatefulWidget {
-  Job({Key key}) : super(key: key);
+import 'package:google_fonts/google_fonts.dart';
+class School extends StatefulWidget {
+  School({Key key}) : super(key: key);
 
   @override
-  _JobState createState() => _JobState();
+  _SchoolState createState() => _SchoolState();
 }
 
-class _JobState extends State<Job> {
+class _SchoolState extends State<School> {
   final translator = GoogleTranslator();
   bool _loading = false;
   String _currentSelectedValue = 'English';
@@ -20,15 +19,15 @@ class _JobState extends State<Job> {
   String translatedText2;
   String translatedText3;
   String translatedText4;
+  String translatedText5;
+  String translatedText6;
   String translatedTh1;
   String translatedTh2;
-  String translatedTh3;
-  String translatedTh4;
-
+ 
   @override
   void initState() {
     // TODO: implement initState
-    
+
     super.initState();
   }
 
@@ -36,15 +35,15 @@ class _JobState extends State<Job> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text("Job Page"),
-          backgroundColor: Colors.green,
+          title: Text('School Page',style: GoogleFonts.montserrat(fontWeight: FontWeight.bold),),
+          centerTitle: true,
         ),
         body: ListView(
           children: [
              Container(
    height: MediaQuery.of(context).size.height*0.4,
                   child: InAppWebView(
-                    initialUrl: LanguageCodes.ytjob,
+                    initialUrl: LanguageCodes.ytmidschool,
                     
                     onLoadStart: (InAppWebViewController controller, String url) {
 
@@ -54,6 +53,7 @@ class _JobState extends State<Job> {
                     },
                   ),
                 ),
+                   
             SizedBox(height: 20),
             Row(
               children: [
@@ -84,48 +84,51 @@ class _JobState extends State<Job> {
                             setState(() {
                               _loading = true;
                             });
-                                Translation translated1 = await translator.translate(
-                                LanguageCodes.jobh1,
+                            Translation translated1 = await translator.translate(
+                                LanguageCodes.middleSchoolText1,
+                                
                                 to: LanguageCodes.launguage_codes[newValue]);
 
-                                Translation translated2 = await translator.translate(
-                                LanguageCodes.jobText1,
+                            Translation translated2 = await translator.translate(
+                                LanguageCodes.middleSchoolText2,
                                 to: LanguageCodes.launguage_codes[newValue]);
 
-                                Translation translated3 = await translator.translate(
-                                LanguageCodes.jobh2,
+                            Translation translated3 = await translator.translate(
+                                LanguageCodes.middleSchoolText3,
                                 to: LanguageCodes.launguage_codes[newValue]);
 
-                                Translation translated4 = await translator.translate(
-                                LanguageCodes.jobText2,
+                            Translation translated4 = await translator.translate(
+                                LanguageCodes.middleSchoolText4,
                                 to: LanguageCodes.launguage_codes[newValue]);
 
-                                Translation translated5 = await translator.translate(
-                                LanguageCodes.jobh3,
+                            Translation translated5 = await translator.translate(
+                                LanguageCodes.middleSchoolText5,
                                 to: LanguageCodes.launguage_codes[newValue]);
 
-                                Translation translated6 = await translator.translate(
-                                LanguageCodes.jobText3,
+                            Translation translated6 = await translator.translate(
+                                LanguageCodes.middleSchoolText6,
                                 to: LanguageCodes.launguage_codes[newValue]);
 
-                                Translation translated7 = await translator.translate(
-                                LanguageCodes.jobh4,
+                            Translation translatedh1 = await translator.translate(
+                                LanguageCodes.middleSchoolh1,
                                 to: LanguageCodes.launguage_codes[newValue]);
 
-                                Translation translated8 = await translator.translate(
-                                LanguageCodes.jobText4,
-                                to: LanguageCodes.launguage_codes[newValue]);
+                            Translation translatedh2 = await translator.translate(
+                                LanguageCodes.middleSchoolh2,
+                                to: LanguageCodes.launguage_codes[newValue]);        
 
                             setState(() {
                               _currentSelectedValue = newValue;
-                              translatedTh1 = translated1.text;
-                              translatedText1 = translated2.text;
-                              translatedTh2 = translated3.text;
-                              translatedText2 = translated4.text;
-                              translatedTh3 = translated5.text;
-                              translatedText3 = translated6.text;
-                              translatedTh4 = translated7.text;
-                              translatedText4 = translated8.text;
+                              
+                              translatedText1 = translated1.text;
+                              
+                              translatedText2 = translated2.text;
+                              translatedText3 = translated3.text;
+                              translatedText4 = translated4.text;
+                              translatedText5 = translated5.text;
+                              translatedText6 = translated6.text;
+                              translatedTh1 = translatedh1.text;
+                              translatedTh2 = translatedh2.text;
                               _loading = false;
                             });
                           },
@@ -150,57 +153,60 @@ class _JobState extends State<Job> {
                     },
                   ),
                 ),
+                
               ],
             ),
-
-
-            
             Padding(
-
               padding: EdgeInsets.all(20),
               child : _loading
                   ? Center(child: CircularProgressIndicator())
                   : Column(children: <Widget>[
-                    Text(translatedTh1 ?? "Please select the language", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25) 
-                  ),
 
-                  Padding(padding: EdgeInsets.all(10),
-                  child : Text(translatedText1 ??"", style: TextStyle(fontSize: 18)),
-                  ),
+                    Text(translatedTh1 ?? "Please select language", style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),),
 
-                  Image.network('https://www.adzuna.co.uk/wp-content/uploads/2020/03/do-not-give-up.jpg'),
+                    Image.network("https://i0.wp.com/marketscale.com/industries/wp-content/uploads/2020/07/Online-Remote-Learning-768x513-1.jpg"),
 
-                  Padding(padding: EdgeInsets.all(10),
+                    Padding(
+              padding: EdgeInsets.all(20),
+              child: Text(translatedText1 ?? "", style: TextStyle(fontSize: 18)),
+            ),
+
+            Padding(
+              padding: EdgeInsets.all(20),
+              child: Text(translatedText2 ?? "", style: TextStyle(fontSize: 18)),
+            ),
+
+            Padding(
+              padding: EdgeInsets.all(20),
+              child : Text(translatedTh2 ?? "", style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),),
+            ),
+
+            Padding(
+              padding: EdgeInsets.all(20),
+              child: Text(translatedText3 ?? "", style: TextStyle(fontSize: 18)),
+            ),
+
+            Padding(
+              padding: EdgeInsets.all(20),
+              child: Text(translatedText4 ?? "", style: TextStyle(fontSize: 18)),
+            ),
+
+            Padding(
+              padding: EdgeInsets.all(20),
+              child: Text(translatedText5 ?? "", style: TextStyle(fontSize: 18)),
+            ),
+
+            Padding(
+              padding: EdgeInsets.all(20),
+              child: Text(translatedText6 ?? "", style: TextStyle(fontSize: 18)),
+            ),
+
+
+                  ],) 
                   
-                  child: Text(translatedTh2 ?? "", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
-                  ),
                   
-                  Padding(padding: EdgeInsets.all(10),
-                  child : Text(translatedText2 ??"", style: TextStyle(fontSize: 18)),
-                  ),
-
-                  Padding(padding: EdgeInsets.all(10),
-                  child: Text(translatedTh3 ?? "", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),  ),
-                  ),
-
-                  Padding(padding: EdgeInsets.all(10),
-                  child: Text(translatedText3 ??"", style: TextStyle(fontSize: 18)),
-                  ),
-                   
-                  Padding(padding: EdgeInsets.all(10),
-                  child: Text(translatedTh4 ?? "", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20), ),
-                  ),
-
-                  Padding(padding: EdgeInsets.all(10),
-                  child: Text(translatedText4 ??"", style: TextStyle(fontSize: 18)),
-                  ), 
-
- 
-                  ],),
-                  
-
-                  ),
-           
+            ),
+  
           ],
         ));
   }
