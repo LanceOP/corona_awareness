@@ -69,7 +69,7 @@ class HomeRoute extends StatelessWidget {
     gradientColors: [Color(0xff5b86e5), Color(0xff36d1dc)],
     onPressed: () {
                  Navigator.pushNamed(context, '/first');
-    },
+    }, background: null,
     ),
 
     SizedBox(height: 10,),
@@ -80,7 +80,7 @@ class HomeRoute extends StatelessWidget {
     gradientColors: [Color(0xff5b86e5), Color(0xff36d1dc)],
     onPressed: () {
        Navigator.pushNamed(context, '/second');
-    },
+    }, background: null,
     ),
     SizedBox(height: 10,),
     NiceButton(
@@ -90,7 +90,7 @@ class HomeRoute extends StatelessWidget {
     gradientColors: [Color(0xff5b86e5), Color(0xff36d1dc)],
     onPressed: () {
        Navigator.pushNamed(context, '/third');
-    },
+    }, background: null,
     ),
     SizedBox(height: 10,),
     NiceButton(
@@ -100,7 +100,7 @@ class HomeRoute extends StatelessWidget {
     gradientColors: [Color(0xff5b86e5), Color(0xff36d1dc)],
     onPressed: () {
       Navigator.pushNamed(context, '/fourth');
-    },
+    }, background: null,
     ),
     SizedBox(height: 10,),
     NiceButton(
@@ -110,7 +110,7 @@ class HomeRoute extends StatelessWidget {
     gradientColors: [Color(0xff5b86e5), Color(0xff36d1dc)],
     onPressed: () {
       Navigator.pushNamed(context, '/five');
-    },
+    }, background: null,
     ),
     SizedBox(height: 10,),
     NiceButton(
@@ -120,7 +120,7 @@ class HomeRoute extends StatelessWidget {
     gradientColors: [Color(0xff5b86e5), Color(0xff36d1dc)],
     onPressed: () {
         Navigator.pushNamed(context, '/six');
-    },
+    }, background: null,
     ),
     SizedBox(height: 10,),
     NiceButton(
@@ -130,7 +130,7 @@ class HomeRoute extends StatelessWidget {
     gradientColors: [Color(0xff5b86e5), Color(0xff36d1dc)],
     onPressed: () {
        Navigator.pushNamed(context, '/seven');
-    },
+    }, background: null,
     ),
           
 
