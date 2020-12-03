@@ -1,4 +1,6 @@
+import 'package:aware/models/data_model.dart';
 import 'package:aware/motivation/mainScreen.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -16,39 +18,40 @@ class _HistoryState extends State<History> {
   MetricStore store =  MetricStore();
 
  List<MetricRow> rows = List<MetricRow>();
-  String temp = '';
-  String spO2 = '';
-  String mobile = '';
-  DateTime date = DateTime.now();
+  // String temp = '';
+  // String spO2 = '';
+  // String mobile = '';
+  // DateTime date = DateTime.now();
+  List<DataModel> dateModelList = [];
  final databaseReference = FirebaseDatabase.instance.reference();
  
   getRows() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     String mobile_number = prefs.getString("mobile");
-    await databaseReference.child(mobile_number).child('body_temp').once().then((DataSnapshot snapshot) {
-          
-    temp = snapshot.value.toString();
     
-  });
-
-    await  databaseReference.child(mobile_number).child('spO2').once().then((DataSnapshot snapshot) {
-          
-    spO2 = snapshot.value.toString();
-    
-  });
-
-  await  databaseReference.child(mobile_number).child('date_time').once().then((DataSnapshot snapshot) {
-          
-    date = DateTime.parse(snapshot.value.toString());
-    
-  });
+    FirebaseFirestore.instance
+        .collection(mobile_number)
+        .snapshots()
+        .listen((data) {
+      if (dateModelList != null) {
+        dateModelList.clear();
+      }
+      data.docs.forEach((doc) async {
+        if (this.mounted) {
+          setState(() {
+            dateModelList.add(DataModel(
+                doc['body_temp'].toString(),
+                doc['spO2'].toString(),
+                DateTime.parse(doc['date_time'],)));
+          });
+        }
+      });
 
   setState(() {
-    mobile = mobile_number;
-    temp = temp;
-    spO2 = spO2;
+    dateModelList = dateModelList;
   });
-  } 
+  } );
+  }
  @override
   void initState() {
     // TODO: implement initState
@@ -84,13 +87,13 @@ class _HistoryState extends State<History> {
               DataColumn(label: Text('Spo2')),
               DataColumn(label: Text('Date')),
             ],
-            rows: [DataRow(
+            rows: dateModelList.map((e) => DataRow(
                 cells: <DataCell>[
-                  DataCell(Text(temp.toString())), //Extracting from Map element the value
-                  DataCell(Text(spO2.toString())),
-                  DataCell(Text(date.day.toString() + "/" + date.month.toString() + "/" + date.year.toString() + " " + date.hour.toString() + ":" + date.minute.toString()))
+                  DataCell(Text(e.temp.toString())), //Extracting from Map element the value
+                  DataCell(Text(e.spO2.toString())),
+                  DataCell(Text(e.date.day.toString() + "/" + e.date.month.toString() + "/" + e.date.year.toString() + " " + e.date.hour.toString() + ":" + e.date.minute.toString()))
                 ],
-              )]
+              )).toList()
           ),
         ],
         ),

@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -39,7 +40,7 @@ class Singleton {
 class MetricStore {
   static final MetricStore _metricStore = MetricStore._internal();
 
-  final databaseReference = FirebaseDatabase.instance.reference();
+    final FirebaseFirestore _db = FirebaseFirestore.instance;
   factory MetricStore(){
     return _metricStore;
   }
@@ -59,11 +60,19 @@ class MetricStore {
 
     this.metrics.insert(0, MetricRow(copy, timeInMillis));
 
-    databaseReference.child(copy.mobile).set({
+_db
+            .collection(metric.mobile)
+            .doc(metric.temperature.toString())
+            .set({
     'body_temp': metric.temperature,
     'spO2': metric.spo2,
     'date_time': DateTime.now().toIso8601String()
-  });
+        });
+  //   databaseReference.child(copy.mobile).set({
+  //   'body_temp': metric.temperature,
+  //   'spO2': metric.spo2,
+  //   'date_time': DateTime.now().toIso8601String()
+  // });
 
   SharedPreferences prefs = await SharedPreferences.getInstance();
    prefs.setString("mobile", metric.mobile);
@@ -97,11 +106,11 @@ class MetricStore {
     
   // });
 
-    await  databaseReference.child(this.metric_value.mobile).child('spO2').once().then((DataSnapshot snapshot) {
+  //   await  databaseReference.child(this.metric_value.mobile).child('spO2').once().then((DataSnapshot snapshot) {
           
-    copy.spo2 = snapshot.value;
+  //   copy.spo2 = snapshot.value;
     
-  });
+  // });
 
 
   MetricRow metricRow = MetricRow(copy, timeInMillis.toInt());

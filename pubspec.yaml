@@ -65,9 +65,10 @@ dependencies:
 
   #Delayed Display
   delayed_display: ^1.0.3
-  firebase_database: ^3.1.6
-  firebase_core: ^0.4.4+3
+  firebase_database: ^4.3.0
+  firebase_core: ^0.5.2+1
   shared_preferences: ^0.5.12+4
+  cloud_firestore: ^0.14.3+1
 
 dev_dependencies:
   flutter_test:

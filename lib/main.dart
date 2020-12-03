@@ -18,8 +18,11 @@ import 'package:aware/motivation/mainScreen.dart';
 import 'package:aware/monitor/sensor.dart';
 import 'package:aware/content/contentScreen.dart';
 import 'package:aware/ui/widgets/learn.dart';
+import 'package:firebase_core/firebase_core.dart';
 
 void main() {
+
+
   runApp(MaterialApp(
     title: 'Drawer App',
     debugShowCheckedModeBanner: false,
@@ -53,6 +56,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   void initState() {
     super.initState();
+      Firebase.initializeApp();
     stateWise = widget.statesData;
     dailyStateWise = widget.dailyStateData;
     tActive = int.parse(widget.statesData[0]['active']);
