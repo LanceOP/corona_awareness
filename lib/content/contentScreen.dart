@@ -38,7 +38,7 @@ class HomeRoute extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Content',style: GoogleFonts.montserrat(fontWeight: FontWeight.bold),),
+        title: Text('Tips',style: GoogleFonts.montserrat(fontWeight: FontWeight.bold),),
         centerTitle: true,
         backgroundColor: Colors.lightBlue,
       ),

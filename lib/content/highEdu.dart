@@ -22,11 +22,22 @@ class _HighEduState extends State<HighEdu> {
   String translatedText4;
   String translatedText5;
   String translatedText6;
+  String translatedText7;
+  String translatedText8;
+  String translatedText9;
+  String translatedText10;
+  String translatedText11;
+  String translatedText12;
+  String translatedText13;
+  String translatedText14;
+  String translatedText15;
+
   String translatedTh1;
   String translatedTh2;
   String translatedTh3;
   String translatedTh4;
   String translatedTh5;
+  String translatedDc;
 
   @override
   void initState() {
@@ -124,11 +135,47 @@ class _HighEduState extends State<HighEdu> {
                                 to: LanguageCodes.launguage_codes[newValue]);
 
                                 Translation translated10 = await translator.translate(
-                                LanguageCodes.highSchoolh5,
+                                LanguageCodes.hightSchoolText6,
                                 to: LanguageCodes.launguage_codes[newValue]);
 
                                 Translation translated11 = await translator.translate(
-                                LanguageCodes.hightSchoolText6,
+                                LanguageCodes.hightSchoolText7,
+                                to: LanguageCodes.launguage_codes[newValue]);
+
+                                Translation translated12 = await translator.translate(
+                                LanguageCodes.hightSchoolText8,
+                                to: LanguageCodes.launguage_codes[newValue]);
+
+                                Translation translated13 = await translator.translate(
+                                LanguageCodes.hightSchoolText9,
+                                to: LanguageCodes.launguage_codes[newValue]);
+
+                                Translation translated14 = await translator.translate(
+                                LanguageCodes.hightSchoolText10,
+                                to: LanguageCodes.launguage_codes[newValue]);
+
+                                Translation translated15 = await translator.translate(
+                                LanguageCodes.hightSchoolText11,
+                                to: LanguageCodes.launguage_codes[newValue]);
+
+                                Translation translated16 = await translator.translate(
+                                LanguageCodes.hightSchoolText12,
+                                to: LanguageCodes.launguage_codes[newValue]);
+
+                                Translation translated17 = await translator.translate(
+                                LanguageCodes.hightSchoolText13,
+                                to: LanguageCodes.launguage_codes[newValue]);
+
+                                Translation translated18 = await translator.translate(
+                                LanguageCodes.hightSchoolText14,
+                                to: LanguageCodes.launguage_codes[newValue]);
+
+                                Translation translated19 = await translator.translate(
+                                LanguageCodes.hightSchoolText15,
+                                to: LanguageCodes.launguage_codes[newValue]);
+
+                                Translation translateddc = await translator.translate(
+                                LanguageCodes.highSchooldc,
                                 to: LanguageCodes.launguage_codes[newValue]);
 
                             setState(() {
@@ -142,8 +189,18 @@ class _HighEduState extends State<HighEdu> {
                               translatedText4 = translated7.text;
                               translatedTh4 = translated8.text;
                               translatedText5 = translated9.text;
-                              translatedTh5 = translated10.text;
-                              translatedText6 = translated11.text;
+                              translatedText6 = translated10.text;
+                              translatedText7 = translated11.text;
+                              translatedText8 = translated12.text;
+                              translatedText9 = translated13.text;
+                              translatedText10 = translated14.text;
+                              translatedText11 = translated15.text;
+                              translatedText12 = translated16.text;
+                              translatedText13 = translated17.text;
+                              translatedText14 = translated18.text;
+                              translatedText15 = translated19.text;
+
+                              translatedDc = translateddc.text;
                               _loading = false;
                             });
                           },
@@ -170,6 +227,13 @@ class _HighEduState extends State<HighEdu> {
                 ),
               ],
             ),
+
+            Padding(
+              padding: EdgeInsets.all(10),
+              child: Text(translatedDc ?? "", style: TextStyle(fontSize: 12, fontStyle: FontStyle.italic, color: Colors.grey,)),
+            ), 
+
+
             Padding(
               padding: EdgeInsets.all(10),
               child: _loading
@@ -213,14 +277,58 @@ class _HighEduState extends State<HighEdu> {
               padding: EdgeInsets.all(10),
               child: Text(translatedText5 ?? "", style: TextStyle(fontSize: 18)),
             ),
-            Padding(
-              padding: EdgeInsets.all(10),
-              child: Text(translatedTh5 ?? "", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
-            ),
+            
             Padding(
               padding: EdgeInsets.all(10),
               child: Text(translatedText6 ?? "", style: TextStyle(fontSize: 18)),
             ),
+
+            Padding(
+              padding: EdgeInsets.all(10),
+              child: Text(translatedText7 ?? "", style: TextStyle(fontSize: 18)),
+            ),
+
+            Padding(
+              padding: EdgeInsets.all(10),
+              child: Text(translatedText8 ?? "", style: TextStyle(fontSize: 18)),
+            ),
+
+            Padding(
+              padding: EdgeInsets.all(10),
+              child: Text(translatedText9 ?? "", style: TextStyle(fontSize: 18)),
+            ),
+
+            Padding(
+              padding: EdgeInsets.all(10),
+              child: Text(translatedText10 ?? "", style: TextStyle(fontSize: 18)),
+            ),
+
+            Padding(
+              padding: EdgeInsets.all(10),
+              child: Text(translatedText11 ?? "", style: TextStyle(fontSize: 18)),
+            ),
+
+            Padding(
+              padding: EdgeInsets.all(10),
+              child: Text(translatedText12 ?? "", style: TextStyle(fontSize: 18)),
+            ),
+
+            Padding(
+              padding: EdgeInsets.all(10),
+              child: Text(translatedText13 ?? "", style: TextStyle(fontSize: 18)),
+            ),
+
+            Padding(
+              padding: EdgeInsets.all(10),
+              child: Text(translatedText14 ?? "", style: TextStyle(fontSize: 18)),
+            ),
+
+            Padding(
+              padding: EdgeInsets.all(10),
+              child: Text(translatedText15 ?? "", style: TextStyle(fontSize: 18)),
+            ),
+
+
 
 
                   ],),

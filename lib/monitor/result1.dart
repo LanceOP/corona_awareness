@@ -6,22 +6,22 @@ import 'constantsResultWindow.dart';
 class Result1 extends StatelessWidget {
   MetricStore store;
   Result1({this.store});
-  String checkFever(){
+  List checkFever(){
     MetricRow latest = store.fetchLatest();
     if(latest != null){
       double temp = latest.metric.temperature;
       double spo2 = latest.metric.spo2;
       if((temp>=36 && temp<=37) && (spo2>=90 && spo2<=100)){
-        return 'You don\'t have risk of Covid-19 infection';
+        return ['You don\'t have risk of Covid-19 infection', Colors.green];
       }else if((temp>37 || temp<36) && (spo2<90 || spo2>100))
       {
-        return 'Enter correct range of values';
+        return ['Enter correct range of values', Colors.yellow];
       }
       else{
-        return 'You have risk of Covid-19 infection.';
+        return ['You have risk of Covid-19 infection.', Colors.red];
       }
     }
-    return "No data found\n";
+    return ["No data found\n", Colors.black];
   }
   @override
   Widget build(BuildContext context) {
@@ -34,27 +34,25 @@ class Result1 extends StatelessWidget {
       ),
 
       body: Padding(
-        padding: const EdgeInsets.all(80.0),
+        padding: const EdgeInsets.all(60.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text('Body Temperature',style: TextStyle(fontSize: 25,fontWeight:FontWeight.bold,),maxLines:2,overflow:TextOverflow.ellipsis,),
+            Text('Body Temperature =>',style: TextStyle(fontSize: 25,fontWeight:FontWeight.bold,),maxLines:2,overflow:TextOverflow.ellipsis,),
             SizedBox(height: 5,),
-            Text(latest.metric.temperature.toString(), style: TextStyle(fontSize: 22)),
+            Text(latest.metric.temperature.toString()+ " \u2103", style: TextStyle(fontSize: 22)),
             SizedBox(height: 10,),
-            Text('% SpO2',style:TextStyle(fontSize: 25,fontWeight:FontWeight.bold,),maxLines:2,overflow:TextOverflow.ellipsis,),
+Divider(),
+            Text('SpO2 =>',style:TextStyle(fontSize: 25,fontWeight:FontWeight.bold,),maxLines:2,overflow:TextOverflow.ellipsis,),
             SizedBox(height: 5,),
-            Text(latest.metric.spo2.toString(), style: TextStyle(fontSize: 22)),
+            Text(latest.metric.spo2.toString() + "%", style: TextStyle(fontSize: 22)),
             SizedBox(height: 20,),
-            Text(checkFever(),style:TextStyle(fontSize: 25,fontWeight:FontWeight.bold,),maxLines:2,overflow:TextOverflow.ellipsis,),
+            Divider(),
             Text(
-              'Hello',
-              style:TextStyle(
-                fontSize:30,
-                fontWeight: FontWeight.bold,
-                color: Colors.redAccent,
-              ),
-            ),
+              checkFever()[0],
+              style:TextStyle(fontSize: 25,fontWeight:FontWeight.bold, color: checkFever()[1]),maxLines:2, textAlign: TextAlign.center,overflow:TextOverflow.ellipsis,),
+              
+            
           ],
         ),
       ),

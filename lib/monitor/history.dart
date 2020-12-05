@@ -31,6 +31,7 @@ class _HistoryState extends State<History> {
     
     FirebaseFirestore.instance
         .collection(mobile_number)
+        .orderBy('date_time', descending: true)
         .snapshots()
         .listen((data) {
       if (dateModelList != null) {
@@ -83,8 +84,8 @@ class _HistoryState extends State<History> {
               )),
           DataTable(
             columns: [
-              DataColumn(label: Text('Temperature')),
-              DataColumn(label: Text('Spo2')),
+              DataColumn(label: Text('Temperature'+ '(' + '\u2103' + ')')),
+              DataColumn(label: Text('Spo2'+ '(%)')),
               DataColumn(label: Text('Date')),
             ],
             rows: dateModelList.map((e) => DataRow(

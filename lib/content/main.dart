@@ -53,7 +53,7 @@ class HomeRoute extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Content'),
+        title: Text('Tips'),
         backgroundColor: Colors.lightBlue,
       ),
       body: Container(

@@ -24,7 +24,7 @@ void main() {
 
 
   runApp(MaterialApp(
-    title: 'Drawer App',
+    title: 'Corona Monitor',
     debugShowCheckedModeBanner: false,
     initialRoute: '/',
     routes: {
@@ -211,7 +211,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Homepage',style: GoogleFonts.montserrat(fontWeight: FontWeight.bold),),
+        title: Text('Corona Monitor',style: GoogleFonts.montserrat(fontWeight: FontWeight.bold),),
         centerTitle: true,
       //  backgroundColor: Colors.deepOrange,
       ),
@@ -440,14 +440,14 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                     Padding(
                       padding: const EdgeInsets.all(8.0),
-                      child: Text('Awareness and Monitor',style:TextStyle(color:Colors.white,fontSize:20),),
+                      child: Text('Awareness and Monitor',style:TextStyle(color:Colors.white,fontSize:18),),
                     ),
                   ],
                 ),
               ),
 
             ),
-            CustomListTile(Icons.article_outlined,'Motivational content',()=>{
+            CustomListTile(Icons.article_outlined,'Content',()=>{
               Navigator.popAndPushNamed(context,'/content')
             }),
             CustomListTile(Icons.format_quote,'Inspiring quotes',()=>{

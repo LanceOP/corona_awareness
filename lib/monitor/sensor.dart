@@ -3,6 +3,7 @@ import 'package:aware/monitor/result1.dart';
 import 'package:aware/monitor/history.dart';
 import 'package:aware/monitor/analysis.dart';
 import 'package:validators/validators.dart' as validator;
+import 'analysis.dart';
 import 'model.dart';
 import 'constantsResultWindow.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -12,7 +13,7 @@ class Sensor extends StatelessWidget {
 
     return Scaffold(
         appBar: AppBar(
-          title: Text('Monitoring',style: GoogleFonts.montserrat(fontWeight: FontWeight.bold),),
+          title: Text('Monitoring System',style: GoogleFonts.montserrat(fontWeight: FontWeight.bold),),
           centerTitle: true,
           actions: <Widget>[
             PopupMenuButton<String>(
@@ -95,7 +96,7 @@ class _TestFormState extends State<TestForm> {
             padding: const EdgeInsets.fromLTRB(25,0,25,0),
             child: TextFormField(
               decoration: InputDecoration(
-                labelText: 'SpO2',
+                labelText: 'SpO2(%)',
                 border: OutlineInputBorder(),
               ),
               validator: (String value){
@@ -119,7 +120,7 @@ class _TestFormState extends State<TestForm> {
             padding: const EdgeInsets.fromLTRB(25,0,25,0),
             child: TextFormField(
               decoration: InputDecoration(
-                labelText: 'Mobile No',
+                labelText: 'Mobile No.',
                 border: OutlineInputBorder(),
               ),
               validator: (String value){
@@ -139,9 +140,10 @@ class _TestFormState extends State<TestForm> {
             ),
           ),
 
-
           RaisedButton(
             color: Colors.blueAccent,
+            
+            padding: const EdgeInsets.all(12),
             onPressed: () {
               if (_formKey.currentState.validate()) {
                 _formKey.currentState.save();
@@ -152,9 +154,11 @@ class _TestFormState extends State<TestForm> {
 
             },
             child: Text(
-              'Get result',
+              'Get Result',
               style: TextStyle(
                 color: Colors.white,
+                fontWeight: FontWeight.bold,
+                fontSize: 20,
               ),
             ),
           ),

@@ -20,6 +20,7 @@ class _SeniorState extends State<Senior> {
   String translatedText2;
   String translatedTh2;
   String translatedText3;
+  String translatedText12;
   String translatedTh3;
   String translatedText4;
   String translatedTh4;
@@ -30,6 +31,7 @@ class _SeniorState extends State<Senior> {
   String translatedText7;
   String translatedTh7;
   String translatedText8;
+  String translatedDc;
 
   @override
   void initState() {
@@ -58,7 +60,7 @@ class _SeniorState extends State<Senior> {
  Container(
    height: MediaQuery.of(context).size.height*0.4,
                   child: InAppWebView(
-                    initialUrl: LanguageCodes.collegeText10,
+                    initialUrl: LanguageCodes.ytretured,
                     
                     onLoadStart: (InAppWebViewController controller, String url) {
 
@@ -78,7 +80,7 @@ class _SeniorState extends State<Senior> {
                     child: Text(
                       "Motivation",
                       style:
-                          TextStyle(fontWeight: FontWeight.bold, fontSize: 22),
+                          TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
                     ),
                   ),
                 ),
@@ -90,7 +92,7 @@ class _SeniorState extends State<Senior> {
                         child: DropdownButton<String>(
                           hint: Text(
                             "English",
-                            style: TextStyle(fontSize:18),
+                            style: TextStyle(fontSize:16),
                           ),
                           iconDisabledColor: Colors.transparent,
                           value: _currentSelectedValue,
@@ -111,12 +113,8 @@ class _SeniorState extends State<Senior> {
                                 LanguageCodes.retiredText2,
                                 to: LanguageCodes.launguage_codes[newValue]);
 
-                                Translation translated4 = await translator.translate(
-                                LanguageCodes.retiredh2,
-                                to: LanguageCodes.launguage_codes[newValue]);
-
-                                Translation translated5 = await translator.translate(
-                                LanguageCodes.retiredText3,
+                                Translation translated21 = await translator.translate(
+                                LanguageCodes.retiredText12,
                                 to: LanguageCodes.launguage_codes[newValue]);
 
                                 Translation translated6 = await translator.translate(
@@ -156,7 +154,11 @@ class _SeniorState extends State<Senior> {
                                 to: LanguageCodes.launguage_codes[newValue]);
 
                                 Translation translated15 = await translator.translate(
-                                LanguageCodes.retiredText7,
+                                LanguageCodes.retiredText8,
+                                to: LanguageCodes.launguage_codes[newValue]);
+
+                                Translation translateddc = await translator.translate(
+                                LanguageCodes.retireddc,
                                 to: LanguageCodes.launguage_codes[newValue]);
 
                             setState(() {
@@ -164,8 +166,8 @@ class _SeniorState extends State<Senior> {
                               translatedTh1 = translated1.text;
                               translatedText1 = translated2.text;
                               translatedText2 = translated3.text;
-                              translatedTh2 = translated4.text;
-                              translatedText3 = translated5.text;
+                              
+                              translatedText12 = translated21.text;
                               translatedTh3 = translated6.text;
                               translatedText4 = translated7.text;
                               translatedTh4 = translated8.text;
@@ -176,6 +178,7 @@ class _SeniorState extends State<Senior> {
                               translatedText7 = translated13.text;
                               translatedTh7 = translated14.text;
                               translatedText8 = translated15.text;
+                              translatedDc = translateddc.text;
 
                               _loading = false;
                             });
@@ -203,6 +206,12 @@ class _SeniorState extends State<Senior> {
                 ),
               ],
             ),
+            
+            Padding(
+              padding: EdgeInsets.all(10),
+              child: Text(translatedDc ?? "", style: TextStyle(fontSize: 12, fontStyle: FontStyle.italic, color: Colors.grey,)),
+            ),
+
             Padding(
               padding: EdgeInsets.all(10),
               child: Column(children: <Widget>[
@@ -221,12 +230,9 @@ class _SeniorState extends State<Senior> {
             ),
             Padding(
               padding: EdgeInsets.all(10),
-              child: Text(translatedTh2 ?? "", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
+              child: Text(translatedText12 ?? "", style: TextStyle(fontSize: 18)),
             ),
-            Padding(
-              padding: EdgeInsets.all(10),
-              child: Text(translatedText3 ?? "", style: TextStyle(fontSize: 18)),
-            ),
+            
             Padding(
               padding: EdgeInsets.all(10),
               child: Text(translatedTh3 ?? "", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
