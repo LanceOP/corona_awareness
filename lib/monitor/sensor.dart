@@ -1,7 +1,9 @@
+import 'package:aware/monitor/login_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:aware/monitor/result1.dart';
 import 'package:aware/monitor/history.dart';
 import 'package:aware/monitor/analysis.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:validators/validators.dart' as validator;
 import 'analysis.dart';
 import 'model.dart';
@@ -17,12 +19,14 @@ class Sensor extends StatelessWidget {
           centerTitle: true,
           actions: <Widget>[
             PopupMenuButton<String>(
-              onSelected:(String choice){
+              onSelected:(String choice) async {
                   if(choice == Constants.History){
                     Navigator.push(context,MaterialPageRoute(builder: (context) => History()));
                   }
-                  else if(choice == Constants.Analysis){
-                    Navigator.push(context,MaterialPageRoute(builder: (context) => Analysis()));
+                  else if(choice == Constants.Logout){
+                      SharedPreferences prefs = await SharedPreferences.getInstance();
+                      prefs.setString("mobile", null);
+                    Navigator.pushReplacement(context,MaterialPageRoute(builder: (context) => LoginScreen()));
                   }
                 },
               itemBuilder: (BuildContext context){
@@ -116,40 +120,19 @@ class _TestFormState extends State<TestForm> {
             ),
           ),
           SizedBox(height:15,),
-          Padding(
-            padding: const EdgeInsets.fromLTRB(25,0,25,0),
-            child: TextFormField(
-              decoration: InputDecoration(
-                labelText: 'Mobile No.',
-                border: OutlineInputBorder(),
-              ),
-              validator: (String value){
-                if(value.isEmpty){
-                  return 'Enter valid mobile no';
-                }
-                return null;
-              },
-              onSaved: (String value){
-                setState(() {
-                  metric.mobile = value;
-                });
-
-              },
-              keyboardType: TextInputType.number,
-              controller: txtController3,
-            ),
-          ),
+       
 
           RaisedButton(
             color: Colors.blueAccent,
             
             padding: const EdgeInsets.all(12),
-            onPressed: () {
+            onPressed: () async {
+               
               if (_formKey.currentState.validate()) {
                 _formKey.currentState.save();
                 txtClear();
-                this.store.store(this.metric, DateTime.now().millisecondsSinceEpoch);
-                Navigator.push(context,MaterialPageRoute(builder: (context) => Result1(store: this.store)));
+                
+                Navigator.push(context,MaterialPageRoute(builder: (context) => Result1(store: this.store, metric: this.metric)));
               }
 
             },

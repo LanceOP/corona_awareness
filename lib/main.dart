@@ -19,6 +19,9 @@ import 'package:aware/monitor/sensor.dart';
 import 'package:aware/content/contentScreen.dart';
 import 'package:aware/ui/widgets/learn.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+
+import 'monitor/login_screen.dart';
 
 void main() {
 
@@ -34,6 +37,7 @@ void main() {
       '/news':(context) => NewsScreen(),
       '/quote': (context) => Quotes(),
       '/sensor':(context) => Sensor(),
+      '/LoginScreen':(context) => LoginScreen(),
     },
   ));
 }
@@ -459,8 +463,15 @@ class _HomeScreenState extends State<HomeScreen> {
             CustomListTile(Icons.medical_services,'Health assessment',()=>{
               Navigator.pushNamed(context,'/health')
             }),
-            CustomListTile(Icons.monitor,'Monitor',()=>{
-              Navigator.popAndPushNamed(context,'/sensor')
+            CustomListTile(Icons.monitor,'Monitor',() async {
+              SharedPreferences prefs = await SharedPreferences.getInstance();
+              String mobile_number = prefs.getString("mobile");
+              if(mobile_number == null){
+                Navigator.pushNamed(context,'/LoginScreen');
+              }else{
+                Navigator.pushNamed(context,'/sensor');
+              }
+              
             }),
           ],
         ),
