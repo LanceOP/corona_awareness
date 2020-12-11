@@ -127,11 +127,6 @@ class _HousewivesState extends State<Housewives> {
                                 LanguageCodes.housewifeh2,
                                 to: LanguageCodes.launguage_codes[newValue]);
 
-                                Translation translateddc = await translator.translate(
-                                LanguageCodes.housewifedc,
-                                to: LanguageCodes.launguage_codes[newValue]);
-
-
 
                             setState(() {
                               _currentSelectedValue = newValue;
@@ -146,7 +141,7 @@ class _HousewivesState extends State<Housewives> {
 
                               translatedTh1 = translated7.text;
                               translatedTh2 = translated8.text;
-                              translatedDc = translateddc.text;
+                     
                               _loading = false;
                             });
                           },
@@ -173,12 +168,7 @@ class _HousewivesState extends State<Housewives> {
                 ),
               ],
             ),
-            
-            Padding(
-              padding: EdgeInsets.all(10),
-              child: Text(translatedDc ?? "", style: TextStyle(fontSize: 12, fontStyle: FontStyle.italic, color: Colors.grey,)),
-            ),
-
+         
             Padding(
               padding: EdgeInsets.all(10),
               child: _loading

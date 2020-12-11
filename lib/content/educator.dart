@@ -200,9 +200,6 @@ class _InstructorState extends State<Instructor> {
                                 LanguageCodes.instructorh11,
                                 to: LanguageCodes.launguage_codes[newValue]);
 
-                                Translation translateddc = await translator.translate(
-                                LanguageCodes.instructordc,
-                                to: LanguageCodes.launguage_codes[newValue]);
 
                             setState(() {
                               _currentSelectedValue = newValue;
@@ -231,8 +228,7 @@ class _InstructorState extends State<Instructor> {
                               translatedTh9 = translated22.text;
                               translatedTh10 = translated23.text;
                               translatedTh11 = translated24.text;
-                              translatedDc = translateddc.text;
-
+                          
                               _loading = false;
                             });
                           },
@@ -259,12 +255,6 @@ class _InstructorState extends State<Instructor> {
                 ),
               ],
             ),
-
-            Padding(
-              padding: EdgeInsets.all(10),
-              child: Text(translatedDc ?? "", style: TextStyle(fontSize: 12, fontStyle: FontStyle.italic, color: Colors.grey,)),
-            ), 
-
 
             Padding(
 

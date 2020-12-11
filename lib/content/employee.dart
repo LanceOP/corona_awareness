@@ -138,10 +138,6 @@ class _EmployeeState extends State<Employee> {
                                 LanguageCodes.jobText4,
                                 to: LanguageCodes.launguage_codes[newValue]);
 
-                                Translation translated9 = await translator.translate(
-                                LanguageCodes.jobdc,
-                                to: LanguageCodes.launguage_codes[newValue]);
-
                             setState(() {
                               _currentSelectedValue = newValue;
                               translatedTh1 = translated1.text;
@@ -156,8 +152,7 @@ class _EmployeeState extends State<Employee> {
                               translatedText33 = translated63.text;
                               translatedTh4 = translated7.text;
                               translatedText4 = translated8.text;
-                              translatedDc = translated9.text;
-
+                        
                               _loading = false;
                             });
                           },
@@ -185,11 +180,6 @@ class _EmployeeState extends State<Employee> {
               ],
             ),
 
-            Padding(
-              padding: EdgeInsets.all(10),
-              child: Text(translatedDc ?? "", style: TextStyle(fontSize: 12, fontStyle: FontStyle.italic, color: Colors.grey,)),
-            ),
-            
             Padding(
 
               padding: EdgeInsets.all(10),

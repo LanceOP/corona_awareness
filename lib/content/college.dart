@@ -22,11 +22,16 @@ class _CollegeState extends State<College> {
   String translatedText32;
   String translatedText4;
   String translatedText5;
+  String translatedText52;
   String translatedText6;
   String translatedText7;
   String translatedText8;
   String translatedText9;
   String translatedText10;
+  String translatedText11;
+  String translatedText12;
+  String translatedText13;
+  String translatedText14;
   
   
   String translatedTh1;
@@ -39,8 +44,7 @@ class _CollegeState extends State<College> {
   String translatedTh8;
   String translatedTh9;
   String translatedTh10;
-
-  String translatedDc;
+  String translatedTh11;
   
   
 
@@ -131,6 +135,10 @@ class _CollegeState extends State<College> {
                                 LanguageCodes.collegeText51,
                                 to: LanguageCodes.launguage_codes[newValue]);
 
+                                Translation translated52 = await translator.translate(
+                                LanguageCodes.collegeText52,
+                                to: LanguageCodes.launguage_codes[newValue]);
+
                                 Translation translated6 = await translator.translate(
                                 LanguageCodes.collegeText61,
                                 to: LanguageCodes.launguage_codes[newValue]);
@@ -149,6 +157,22 @@ class _CollegeState extends State<College> {
 
                                 Translation translated10 = await translator.translate(
                                 LanguageCodes.collegeText101,
+                                to: LanguageCodes.launguage_codes[newValue]);
+
+                                Translation translated11 = await translator.translate(
+                                LanguageCodes.collegeText111,
+                                to: LanguageCodes.launguage_codes[newValue]);
+
+                                Translation translated12 = await translator.translate(
+                                LanguageCodes.collegeText12,
+                                to: LanguageCodes.launguage_codes[newValue]);
+
+                                Translation translated13 = await translator.translate(
+                                LanguageCodes.collegeText13,
+                                to: LanguageCodes.launguage_codes[newValue]);
+
+                                Translation translated14 = await translator.translate(
+                                LanguageCodes.collegeText14,
                                 to: LanguageCodes.launguage_codes[newValue]);
 
                                 
@@ -192,9 +216,10 @@ class _CollegeState extends State<College> {
                                 LanguageCodes.collegeh10,
                                 to: LanguageCodes.launguage_codes[newValue]);
 
-                                Translation translateddc = await translator.translate(
-                                LanguageCodes.collegedc,
+                                Translation translatedh11 = await translator.translate(
+                                LanguageCodes.collegeh11,
                                 to: LanguageCodes.launguage_codes[newValue]);
+
 
                             setState(() {
                               _currentSelectedValue = newValue;
@@ -205,11 +230,16 @@ class _CollegeState extends State<College> {
                               translatedText32 = translated32.text;
                               translatedText4 = translated4.text;
                               translatedText5 = translated5.text;
+                              translatedText52 = translated52.text;
                               translatedText6 = translated6.text;
                               translatedText7 = translated7.text;
                               translatedText8 = translated8.text;
                               translatedText9 = translated9.text;
                               translatedText10 = translated10.text;
+                              translatedText11 = translated11.text;
+                              translatedText12 = translated12.text;
+                              translatedText13 = translated13.text;
+                              translatedText14 = translated14.text;
                               
 
                               translatedTh1 = translatedh1.text;
@@ -222,8 +252,9 @@ class _CollegeState extends State<College> {
                               translatedTh8 = translatedh8.text;
                               translatedTh9 = translatedh9.text;
                               translatedTh10 = translatedh10.text;
+                              translatedTh11 = translatedh11.text;
 
-                              translatedDc = translateddc.text;
+                           
                               _loading = false;
                             });
                           },
@@ -250,12 +281,6 @@ class _CollegeState extends State<College> {
                 ),
               ],
             ),
-
-            Padding(
-              padding: EdgeInsets.all(10),
-              child: Text(translatedDc ?? "", style: TextStyle(fontSize: 12, fontStyle: FontStyle.italic, color: Colors.grey,)),
-            ), 
-
 
             Padding(
 
@@ -296,7 +321,7 @@ class _CollegeState extends State<College> {
               child: Text(translatedTh3 ?? "", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),),
             ),
 
-            Image.network('https://www.scripps.org/sparkle-assets/variants/hi_res_strike-a-pose-branded-9788899044413983540_desktop_x++-1200x1200.jpg'),
+            Image.network('https://www.webanywhere.co.uk/blog/wp-content/uploads/shutterstock364158869.jpg'),
 
             Padding(
               padding: EdgeInsets.all(10),
@@ -313,7 +338,7 @@ class _CollegeState extends State<College> {
               child: Text(translatedTh4 ?? "", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),),
             ),
 
-            Image.network('https://mindpowergolf.com/wp-content/uploads/2018/06/Meditation.jpg'),
+            Image.network('https://www.morganizewithme.com/wp-content/uploads/2014/01/FebABFOL1.jpg'),
 
             Padding(
               padding: EdgeInsets.all(10),
@@ -325,7 +350,7 @@ class _CollegeState extends State<College> {
               child: Text(translatedTh5 ?? "", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),),
             ),
 
-            Image.network('https://www.adityabirlacapital.com/healthinsurance/active-together/wp-content/uploads/2020/04/Healthy-food-1.jpg'),
+            Image.network('https://www.makemyassignments.com/blog/wp-content/uploads/2018/07/download-2.jpg'),
 
             Padding(
               padding: EdgeInsets.all(10),
@@ -334,10 +359,15 @@ class _CollegeState extends State<College> {
 
             Padding(
               padding: EdgeInsets.all(10),
+              child: Text(translatedText52 ?? "", style: TextStyle(fontSize: 18)),
+            ),
+
+            Padding(
+              padding: EdgeInsets.all(10),
               child: Text(translatedTh6 ?? "", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),),
             ),
 
-            Image.network('https://www.falmouth.ac.uk/sites/default/files/styles/focal_point___course_hero_image/public/image/ba_dance_choreography_143mjessop_copyjpg_75.jpg'),
+            Image.network('https://thumbor.forbes.com/thumbor/960x0/https%3A%2F%2Fblogs-images.forbes.com%2Fsamanthaharrington%2Ffiles%2F2016%2F11%2Fteach-me-1200x656.jpg'),
 
             Padding(
               padding: EdgeInsets.all(10),
@@ -349,7 +379,7 @@ class _CollegeState extends State<College> {
               child: Text(translatedTh7 ?? "", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),),
             ),
 
-            Image.network('https://www.calmsage.com/wp-content/uploads/2020/05/what-is-4me-time-and-10-ways-to-enjoy-your-me-time2-.jpg'),
+            Image.network('https://penmypaper.com/blog/wp-content/uploads/2018/10/take-reguler-break.jpg'),
 
             Padding(
               padding: EdgeInsets.all(10),
@@ -361,7 +391,7 @@ class _CollegeState extends State<College> {
               child: Text(translatedTh8 ?? "", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),),
             ),
 
-            Image.network('https://www.bleedingheartland.com/static/media/2020/09/shutterstock_1306792438-700x442.jpg'),
+            Image.network('https://martialartistsforchrist.org/wp-content/uploads/2018/03/Meditation-And-Exercise-800x500.jpg'),
 
             Padding(
               padding: EdgeInsets.all(10),
@@ -373,7 +403,7 @@ class _CollegeState extends State<College> {
               child: Text(translatedTh9 ?? "", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),),
             ),
 
-            Image.network('https://resize.indiatvnews.com/en/resize/newbucket/715_-/2020/03/watching-tv-1585122957.jpg'),
+            Image.network('https://singularityhub.com/wp-content/uploads/2019/02/learning-while-sleeping-neuroscience-shutterstock-686222875-1068x601.png'),
 
             Padding(
               padding: EdgeInsets.all(10),
@@ -385,12 +415,40 @@ class _CollegeState extends State<College> {
               child: Text(translatedTh10 ?? "", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),),
             ),
 
-            Image.network('https://www.howtogeek.com/wp-content/uploads/2018/11/shutterstock_507995524.png'),
+            Image.network('https://static0.makeuseofimages.com/wordpress/wp-content/uploads/2016/03/quit-social-media.jpg'),
 
 
             Padding(
               padding: EdgeInsets.all(10),
               child: Text(translatedText10 ?? "", style: TextStyle(fontSize: 18)),
+            ),
+
+            Padding(
+              padding: EdgeInsets.all(10),
+              child: Text(translatedTh11 ?? "", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),),
+            ),
+
+            Image.network('https://www.lloydlawcollege.edu.in/blog/blog_img/be-positive.jpg'),
+
+
+            Padding(
+              padding: EdgeInsets.all(10),
+              child: Text(translatedText11 ?? "", style: TextStyle(fontSize: 18)),
+            ),
+
+            Padding(
+              padding: EdgeInsets.all(10),
+              child: Text(translatedText12 ?? "", style: TextStyle(fontSize: 18)),
+            ),
+
+            Padding(
+              padding: EdgeInsets.all(10),
+              child: Text(translatedText13 ?? "", style: TextStyle(fontSize: 18)),
+            ),
+
+            Padding(
+              padding: EdgeInsets.all(10),
+              child: Text(translatedText14 ?? "", style: TextStyle(fontSize: 18)),
             ),
 
 

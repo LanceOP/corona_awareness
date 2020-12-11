@@ -178,10 +178,6 @@ class _SchoolState extends State<School> {
                                 LanguageCodes.middleSchoolh8,
                                 to: LanguageCodes.launguage_codes[newValue]);
 
-                            Translation translateddc = await translator.translate(
-                                LanguageCodes.middleSchooldc,
-                                to: LanguageCodes.launguage_codes[newValue]);                  
-
                             setState(() {
                               _currentSelectedValue = newValue;
                               
@@ -205,7 +201,7 @@ class _SchoolState extends State<School> {
                               translatedTh6 = translatedh6.text;
                               translatedTh7 = translatedh7.text;
                               translatedTh8 = translatedh8.text;
-                              translatedDc = translateddc.text;
+                      
 
                               _loading = false;
                             });
@@ -235,10 +231,6 @@ class _SchoolState extends State<School> {
               ],
             ),
 
-            Padding(
-              padding: EdgeInsets.all(10),
-              child: Text(translatedDc ?? "", style: TextStyle(fontSize: 12, fontStyle: FontStyle.italic, color: Colors.grey,)),
-            ), 
             Padding(
               padding: EdgeInsets.all(10),
               child : _loading

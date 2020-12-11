@@ -31,7 +31,8 @@ class _SeniorState extends State<Senior> {
   String translatedText7;
   String translatedTh7;
   String translatedText8;
-  String translatedDc;
+  String translatedTh8;
+  String translatedText9;
 
   @override
   void initState() {
@@ -157,8 +158,13 @@ class _SeniorState extends State<Senior> {
                                 LanguageCodes.retiredText8,
                                 to: LanguageCodes.launguage_codes[newValue]);
 
-                                Translation translateddc = await translator.translate(
-                                LanguageCodes.retireddc,
+                                Translation translated16 = await translator.translate(
+                                LanguageCodes.retiredh8,
+                                to: LanguageCodes.launguage_codes[newValue]);
+
+
+                                Translation translated17 = await translator.translate(
+                                LanguageCodes.retiredText9,
                                 to: LanguageCodes.launguage_codes[newValue]);
 
                             setState(() {
@@ -178,8 +184,9 @@ class _SeniorState extends State<Senior> {
                               translatedText7 = translated13.text;
                               translatedTh7 = translated14.text;
                               translatedText8 = translated15.text;
-                              translatedDc = translateddc.text;
-
+                              translatedTh8 = translated16.text;
+                              translatedText9 = translated17.text;
+                
                               _loading = false;
                             });
                           },
@@ -206,12 +213,7 @@ class _SeniorState extends State<Senior> {
                 ),
               ],
             ),
-            
-            Padding(
-              padding: EdgeInsets.all(10),
-              child: Text(translatedDc ?? "", style: TextStyle(fontSize: 12, fontStyle: FontStyle.italic, color: Colors.grey,)),
-            ),
-
+         
             Padding(
               padding: EdgeInsets.all(10),
               child: Column(children: <Widget>[
@@ -269,9 +271,20 @@ class _SeniorState extends State<Senior> {
               padding: EdgeInsets.all(10),
               child: Text(translatedTh7 ?? "", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
             ),
+            
             Padding(
               padding: EdgeInsets.all(10),
               child: Text(translatedText8 ?? "", style: TextStyle(fontSize: 18)),
+            ),
+
+            Padding(
+              padding: EdgeInsets.all(10),
+              child: Text(translatedTh8 ?? "", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
+            ),
+
+            Padding(
+              padding: EdgeInsets.all(10),
+              child: Text(translatedText9 ?? "", style: TextStyle(fontSize: 18)),
             ),
 
 

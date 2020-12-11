@@ -4,7 +4,7 @@ class LanguageCodes{
   
   static String ytmidschool = "https://www.youtube.com/watch?v=3qDnfdsjG70";
   static String ythighschool = "https://www.youtube.com/watch?v=JWTH94R3h40";
-  static String ytcollege = "https://www.youtube.com/watch?v=eanFkZDWMns";
+  static String ytcollege = "https://www.youtube.com/watch?v=osrs8UvST5A";
   static String ytinsturctor = "https://www.youtube.com/watch?v=esB6d5azGUc";
   static String ytjob = "https://www.youtube.com/watch?v=L4gEpPOhpAY";
   static String ythousewife = "https://www.youtube.com/watch?v=Z684BDjwTPw";
@@ -13,7 +13,6 @@ class LanguageCodes{
 
  static Map<String, String> launguage_codes = {'English': 'en', 'Hindi': 'hi', 'Marathi': 'mr', 'Punjabi': 'pa', 'Telugu': 'te', 'Tamil': 'ta'};
  
- static String middleSchooldc = "Data Analytics Observation - We carried out data analysis where we collected data from people in school from which we observed that most school kids attending online classes happen to exhaust while continuously on gadgets. The content below is derived by our data analysis.";
  static String middleSchoolh1 = "How to Prevent Zoom Fatigue for Students Enrolled in Online Learning Classes";
  static String middleSchoolh2 = "Why ‘Zoom Fatigue’ Happens";
  static String middleSchoolText1 = "As schools and unversities around the world grow accustomed to remote learning, people have had to find the new ways to communicate and collaborate with students and fellow educators. Naturally, the most popular tools to emerge are video conferencing platforms. Zoom, Google Meet, Skype are the most popular platforms being used by educators.";
@@ -35,7 +34,6 @@ class LanguageCodes{
  static String middleSchoolh8 = "Advocate For Yourself When You Feel Fatigued";
  static String middleSchoolText12 = "When you are stressed or tired, you might need to let your team know that you need a break or a mental health day. Setting boundaries, or letting people know where your needs and limits are, can often be stressful at first but will be well worth it.";
 
-  static String highSchooldc = "Data Analytics Observation -We carried out data analysis where we collected data from people in Higher Education Institutes from which we observed that most higher education students are disturbed about competitive exams happening duringpandemic.";
   static String highSchoolh1 = "Higher Education Life, Challenges and Solutions";
   static String highSchoolText1 = "Higher education has offered distance instruction as an option for decades. Now that the pandemic of COVID-19 has reached every state in the U.S., many colleges have suddenly shifted to a forced kind of distance education—to keep teaching while everyone stays at least six feet apart to avoid spreading the virus. ";
   static String highSchoolText2 = "You may already know what knowledge or skills you’re after, but if not, spend some time thinking about your goals. Most well-designed learning experiences will come out and state their intended learning objectives – essentially the knowledge and skills you’re meant to get out of the experience. You certainly don’t want to waste your time, so make sure the experience is aimed at moving you toward your learning goals. Earning a professional certification to advance in your current job. Many organizations provide free learning resources on a variety of topics to their employees to encourage professional development, so it is worth looking into what your organization already has, and whether it meets your learning needs. Finally, once you’ve decided on a learning experience, it’s important to set yourself up for success with good habits and make efforts to keep yourself motivated.";
@@ -52,40 +50,39 @@ class LanguageCodes{
   static String hightSchoolText10 = "5. Reward Yourself : \nFocusing on studying during a pandemic, especially under quarantine or shelter-in-place orders, comes with particular difficulties. If you’ve managed to study and focus for the duration of your goal time, be sure to reward yourself! The reward could be an extra hour of binge-watching your favorite show, eating an indulgent dessert, taking a nap or anything else that you enjoy. This will reinforce good study habits and, of course, it will be a well-deserved treat.";
   static String hightSchoolText11 = "6. Keep reading : \nWhether you’re reading for pleasure or for reference, keep at it. Reading has been proven to help with vocabulary, grammar and comprehension on standardised tests. It will also help to stimulate your mind in your downtime.";
   static String hightSchoolText12 = "7. Set Realistic Goals : \nWhen coming up with your study plan, be sure to set goals that you can actually achieve. If you plan to study for three hours a day while perhaps also juggling a full-time job that you’re now trying to do from home, you may fall short and lose motivation. Read some of our study and time management tips to help determine a manageable study schedule.";
-  static String hightSchoolText13 = "Aishi Sharma, \nA student who has taken a drop year to prepare for engineering entrances said about online coaching classes, I took a drop believing that soon this pandemic will be over and I’ll be able to go back to my coaching classes where they will be able to provide me with the best trainings for my upcoming examinations. But now that dream seems like a faraway reality. I have online classes the entire day. It’s very tiring and every night my head throbs like anything. I am not able to participate much since my connectivity isn’t that great. On top of that, I find it really hard to concentrate on a single voice for that long, especially when the teacher is explaining formulas. Learning mathematical theorems online is such a pain! Both my eyesight and my mind have increasingly been losing focus with each passing day.";
-  static String hightSchoolText14 = "Shreya, \nA second-year student from St. Xavier’s Kolkata shared: My eyes are exhausted every single day after my zoom classes. I have started using eye drops before bed in order to relax them at night as well as to get ready for the next day.";
-  static String hightSchoolText15 = "Aditi Rai, \nAn undergraduate student from Jamia Millia Islamia in Delhi feels similarly, It\’s exhausting having to pay attention in an online class, and sometimes I have to force myself to concentrate, which is a struggle. I have also developed acute back pain since I am sitting in front of my laptop for 4-6 hours straight. She added, Five months in, I am still facing trouble adapting to this new system.";
+  
 
-
-
-  static String collegedc = "Data Analytics Observation –We carried out data analysis where we collected data from people in college from which we observed that most college students are much relaxed as they study from home.";
   static String collegeh1 = "College Life, Challenges and Solutions";
-  static String collegeh2 = "How To Spend Time at Home During Lockdown?";
-  static String collegeText1 = "Every dark cloud has a silver lining. Yes, that is true even in the case of the ongoing coronavirus induced lockdown. As social beings, it is difficult for all of us to stay at home all the time, however, we can still make the best of this time by indulging ourselves in some essential and fun activities. Although not everyone can perform everything recommended as a lot of activities depend on various factors such as age, health, and so on. Therefore, we have come up with different ideas that you can easily pick amid this lockdown period due to Coronavirus. All these activities require no financial investment or need to step outside, hence, anyone and everyone can opt for these without any hassle.";
-  static String collegeText2 = "You can do these alone, with your family at home or even with your friends on call. Apart from keeping you mentally fit, the activities could bring the best out of you or can make something evolve that you can not think of as of now.";
-  static String collegeText3 = "Let’s Explore Simple Ways To Spend Your Free Time During Corona Virus (COVID-19) Lockdown";
-  static String collegeh3 = "1.	Work on Your Fitness Regime ";
-  static String collegeText31 = "There is nothing more precious and rewarding than a healthy and fit body. You can use this extra time given to us by the lockdown to work on your fitness regime. Being fit does not only mean exercising, but it also includes maintaining peace of mind via meditation and yoga.";
-  static String collegeText32 = "It is probably the best time you can indulge in doing exercise and ensuring that you remain healthy and fit. You can either start a new form of exercise or continue with your old workout routine. All that matters is that you exercise daily or at least 4 times a week.";
-  static String collegeh4 = "2. Meditate at Home During Lockdown";
-  static String collegeText41 = "If you want to experience mental peace, put on some music, and give meditation a try. Meditation will also help you reduce stress, increase energy, enhance the immune system, and benefit in a lot more ways.";
-  static String collegeh5 = "3.	Cook and Eat Healthy Food at Home During Lockdown";
-  static String collegeText51 = "You can also utilize this extra time to hone your cooking skills. If you do not know how to cook, begin with the easiest of recipes. If you already know how to cook, try dishes of other cuisines or try baking. The world of cooking is really huge. You can use this lockdown time to the best by exploring new dishes and new cooking styles.";
-  static String collegeh6 = "4.	Dance Your Heart Out";
-  static String collegeText61 = "Whether or not you are a fan of dancing, give it a try. You can also learn a new form of dance. It will not only enhance your mood, health, and fitness but also help you increase your confidence.";
-  static String collegeh7 = "5.	Spend Some “Me Time”";
-  static String collegeText71 = "Spend time with yourself. Yes, you read it right. In our busy lives, we often take out time for almost all important things and people except for ourselves. So, give yourself the much required ‘me time’. It could be anything, listening to good music, painting, or gardening.";
-  static String collegeh8 = "6.	Play Games at Home During Lockdown";
-  static String collegeText81 = "You can dedicate a specific time slot each day to play games such as hide and seek, charades, board games, Jenga, and numerous others with your entire family. Go and live your old childhood days.";
-  static String collegeh9 = "7.	Watch Movies at Home During Lockdown";
-  static String collegeText91 = "This is the idle time you can indulge in binge-watching old or new movies that you have never seen before. Pick a few good Hollywood or Bollywood movies, grab some popcorn, and call your family members to engage in this fun activity.";
-  static String collegeh10 = "8. Create Music";
-  static String collegeText101 = "Adults, as well as kids, love to try their hand at music. If you or your family have an interest in music, gather all your musical equipment in one place and start your musical experiments.";
+  static String collegeh2 = "Tips for Students to Prepare for Exam During COVID-19 Pandemic";
+  static String collegeText1 = "With numerous distractions, it is common to lose focus every few minutes and feel frustrated.";
+  static String collegeText2 = "This can lead to further stress, which reduces retention power. ";
+  static String collegeText3 = "So to help students, here are some tips to improve your concentration and make optimum use of your study hours during COVID-19 Pandemic by Dr. Sridhar. G, Founder, Deeksha.";
+  static String collegeh3 = "1.	Create a study environment";
+  static String collegeText31 = "A good study environment will allow students to maintain concentration and maximize learning efficiency. ";
+  static String collegeText32 = "Choose a place with proper ventilation, lighting, and minimal distractions where you can study peacefully. Try to keep your study place clean as this will help eradicate any distractions.";
+  static String collegeh4 = "2. Set realistic goals";
+  static String collegeText41 = "Set your goals according to your potential and priorities. Having realistic targets keeps you motivated and helps you focus better rather than getting worked up over unrealistic goals. Stick to specific short-term goals and work towards them with a proper study plan.";
+  static String collegeh5 = "3.	Set a time to complete a task";
+  static String collegeText51 = "Before you start any task evaluate the time required and efforts to complete it. Be determined to complete the task within the specified time. Plan and schedule your daily activities and try not to let anything interrupt your schedule.";
+  static String collegeText52 = "Using mnemonics to help build memory: Mnemonics are memory techniques that help us remember information by associating it to images, sentences, or words. There are many ways you can make mnemonics such as associating a concept to a visual image. You can build acronyms with the first letter of every word of a sentence or make a rhyme of all the words. This will help you retain and recollect a concept or formula with ease.";
+  static String collegeh6 = "4.	Discuss what you learnt";
+  static String collegeText61 = "Have a discussion with your peers on what you learnt that day. This helps you revise the day’s learnings and helps you retain it for a longer period. Peer discussions also help you check your progress and exchange knowledge while offering friendly/healthy competition.";
+  static String collegeh7 = "5.	Take Regular Breaks";
+  static String collegeText71 = "Taking regular breaks is very critical to enhance learning capacity. Ensure you take a short break after every hour to keep your brain from overworking. Use these short intervals to stretch, listen to a song, or relax for a few minutes. These short breaks will make your study time more efficient and productive.";
+  static String collegeh8 = "6.	Meditation and physical exercise";
+  static String collegeText81 = "Meditation can help calm your mind and improve your concentration power. Physical exercise relaxes and rejuvenates your body while enabling you to take your mind off things. Physical and mental exercise helps keep stress levels in check.";
+  static String collegeh9 = "7.	Sleep well";
+  static String collegeText91 = "Sleep improves attention and concentration. Lack of sleep affects your mood, focus, and motivation. Getting adequate sleep by going to bed early helps in better retention of all that is studied. Hence, ensure you sleep at least 7-8 hours every day.";
+  static String collegeh10 = "8. Keep away from social media";
+  static String collegeText101 = "The numerous distractions that come from your phone and other electronic gadgets are the biggest barriers to maintaining concentration. Engaging in such activities during your study time might break your focus. Refrain from using any gadgets during your study time except during breaks.";
+  static String collegeh11 = "9. Be Positive";
+  static String collegeText111 = "Always be positive and believe in yourself to achieve excellence in all that you do. Given the current pandemic and the uncertainties associated with it, students will likely be feeling stressed as their complete study schedule has turned topsy-turvy. As we are all adapting to the circumstances, we must recognise that it is a difficult situation and find ways to keep ourselves motivated and on track with our goals. Students must keep their long-term ambitions in mind and supplement their study efforts with a healthy diet, proper hydration, exercises, and fun activities to break the monotony.";
+  static String collegeText12 = "Aishi Sharma, \nA student who has taken a drop year to prepare for engineering entrances said about online coaching classes, I took a drop believing that soon this pandemic will be over and I’ll be able to go back to my coaching classes where they will be able to provide me with the best trainings for my upcoming examinations. But now that dream seems like a faraway reality. I have online classes the entire day. It’s very tiring and every night my head throbs like anything. I am not able to participate much since my connectivity isn’t that great. On top of that, I find it really hard to concentrate on a single voice for that long, especially when the teacher is explaining formulas. Learning mathematical theorems online is such a pain! Both my eyesight and my mind have increasingly been losing focus with each passing day.";
+  static String collegeText13 = "Shreya, \nA second-year student from St. Xavier’s Kolkata shared: My eyes are exhausted every single day after my zoom classes. I have started using eye drops before bed in order to relax them at night as well as to get ready for the next day.";
+  static String collegeText14 = "Aditi Rai, \nAn undergraduate student from Jamia Millia Islamia in Delhi feels similarly, It\’s exhausting having to pay attention in an online class, and sometimes I have to force myself to concentrate, which is a struggle. I have also developed acute back pain since I am sitting in front of my laptop for 4-6 hours straight. She added, Five months in, I am still facing trouble adapting to this new system.";
 
 
-
-  static String instructordc = "Data Analytics Observation - We carried out data analysis where we collected data from instructors from which we observed that most educators are finding stressful to teach from home."; 
-  static String instructorh1 = "Remote Learning Tips by Instructors, for Instructors";
+   static String instructorh1 = "Remote Learning Tips by Instructors, for Instructors";
   static String instructorh2 = "Could you walk us through a “day in the life” for you, as schools are shut down indefinitely?";
   static String instructorText1 = "All of the teachers mentioned the discomfort of being glued to the computers in their home office. Most were set up in their living room. Mike starts off his weekday mornings by preparing a lesson plan. After finishing, he uses a free web service to upload and assign the lesson to his students. In addition, Mike uses video conferencing software to check in with his students daily. Casey uses the same free web service in a similar fashion to distribute, collect, and grade his students’ assignments.";
   static String instructorh3 = "As a middle school/high school/college educator, how, if at all, are you currently using remote learning with your students?";
@@ -111,8 +108,7 @@ class LanguageCodes{
   static String instructorText13 = "As you get started with online teaching, just remember that the first and last thing you need to do is to keep your students engaged. Teaching online required me to rethink not only how I presented the course material but how I presented myself as a teacher. When teachers can't look at their students' faces or read their body language, it's tempting for them to focus only on the content and ignore whether students are engaging with the material.";
 
   
-  static String jobdc = "Data Analytics Observation - We carried out data analysis where we collected data from people in Job from which we observed that most Employees (mainly concerned of IT industry) happen to fear of losing jobs.";
-  static String jobh1 = "Jobs, Challenges and Solutions";
+   static String jobh1 = "Jobs, Challenges and Solutions";
   static String jobText1 = "As COVID-19 continues to impact the daily lives of millions of people around the world and in Australia, those of you looking for stable full time employment will be feeling the strain even more. What was already a demanding task has now become even more challenging, with hundreds of companies making workers redundant or standing them down and even shutting down operations completely.";
   static String jobText11 = "We don’t want you to feel disheartened, even though you would be forgiven for assuming that now is not a good time to be job-hunting, which is why we’ve pulled together some tips on how to stay motivated during job search phases, as well as positive and determined to emerge from the COVID-19 crisis with a better job you enjoy.";
   static String jobh2 = "Don’t panic – companies are still hiring";
@@ -126,7 +122,6 @@ class LanguageCodes{
   static String jobText4 = "1. Review all your direct debits and cut what is not necessary – Do you really need all your subscriptions to Netflix, Stan, Foxtel, Disney+, Spotify? \n2. Take the time and review your insurances – with everyone being in lockdown, do you have car insurance which you are paying for nothing? \n3.	If you are renting a property – ask for a rent relief from your landlord if you are in financial stress, most of the landlord would be compassionate in this difficult time. \n4.	If you own a property but have been stood down or made redundant, you would also be entitled to a mortgage payment deferment, however, interest may still apply. \n5.	Ask for help — There’s no shame in asking friends and family for a little support if you find yourself out of work suddenly. It doesn’t have to be a case of lending you cash, either, as maybe moving back home for a few months would take a huge burden off your shoulders?";
 
 
-  static String housewifedc = "Data Analytics Observation - We carried out data analysis where we collected data from Housewives from which we observed that most housewives are physically exhausted which also affect their mental health due to increased workloadas mostly maids are not coming for work due to pandemic.";
   static String housewifeh1 = "Housewives, Challenges and Solutions";
   static String housewifeText1 = "A homemaker’s work never ends. In between cleaning, cooking, mopping, taking care of the children, and sometimes care-giving for elders, her life is an endless whirl of chores to complete and things and people to take care of. Being a homemaker is a choice for some, and a necessity for many who do not have a support system to fall back upon.";
   static String housewifeText2 = "Homemakers, apart from taking on an additional workload of having a working spouse and children at home, also have the onus of keeping their families positive and in good health as we face uncertainty. They are also doing all they can to contribute their bit as society grapples with this pandemic. For instance, Puja Das, a homemaker from West Bengal’s South Dinajpur district, has been making masks and distributing them for free among the locals.  Others are helping the elderly in their communities by shopping for groceries and also providing them food.";
@@ -139,8 +134,7 @@ class LanguageCodes{
   static String housewifeText8 = "Most importantly make sure to take care of yourself, boost your immunity, and get enough sleep. It’s a time for everyone to develop new skills and work together to come out of this stronger.  "; 
   
 
-  static String retireddc = "Data Analytics Observation - We carried out data analysis where we collected data from Senior Citizens from which we observed that most senior citizens have mental stress because they fear of contracting coronavirus.";
-  static String retiredh1 = "Senior Citizens, Challenges and Solutions";
+   static String retiredh1 = "Senior Citizens, Challenges and Solutions";
   static String retiredText1 = "The coronavirus disease (COVID-19) pandemic has brought about unprecedented fear and uncertainty, especially among older adults. The elderly rely on social connection more than most and they need it now more than ever. The elderly and retired sometimes need a helping hand and they also often need to have people around them. With India practicing a nation-wide lock down and social distancing vulnerable seniors could be feeling more alone than usual.";
   static String retiredText2 = "There are several reasons why the elderly are somewhat more vulnerable - they have more chronic conditions than younger people, their aging immune system makes it harder to fight off diseases, infections and viruses. Recoveries are usually slower and more complicated.";
   static String retiredText12 = "Senior citizens might face anxiety because they live alone, are on a fixed income or pension, no longer drive and cannot take public transport, their routine health checkups are delayed. They could also have un-diagnosed or poorly managed depression. For millions of elderly COVID-19 has amplified their already-existing worries.";
@@ -154,7 +148,8 @@ class LanguageCodes{
   static String retiredText7 = "•	Try staying in touch with your doctors if they offer tele-medicine. \n•	As much as possible doctors and patients should communicate over video, email or other means rather than face-to-face.";
   static String retiredh7 = "Set up emergency contacts and speed dials";
   static String retiredText8 = "•	Identify one person nearby who you could rely on to care for you. \n•	Add the COVID-19 emergency helpline numbers to your contacts and speed dial.";
-
+  static String retiredh8 = "A Little Exercise Goes a Long Way";
+  static String retiredText9 = "The home quarantine is difficult for each and every individual. But there are many practices or activities one can adopted to stay healthy and happy. May it be a child or a senior citizen, exercise is a must. For the elderly, basic exercises such as just walking around the house or stretching can also prove helpful. Keep the limbs active and functioning to maintain a healthier body and immune system.";
 
   
 

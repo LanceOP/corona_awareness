@@ -158,25 +158,7 @@ class _HighEduState extends State<HighEdu> {
                                 LanguageCodes.hightSchoolText11,
                                 to: LanguageCodes.launguage_codes[newValue]);
 
-                                Translation translated16 = await translator.translate(
-                                LanguageCodes.hightSchoolText12,
-                                to: LanguageCodes.launguage_codes[newValue]);
-
-                                Translation translated17 = await translator.translate(
-                                LanguageCodes.hightSchoolText13,
-                                to: LanguageCodes.launguage_codes[newValue]);
-
-                                Translation translated18 = await translator.translate(
-                                LanguageCodes.hightSchoolText14,
-                                to: LanguageCodes.launguage_codes[newValue]);
-
-                                Translation translated19 = await translator.translate(
-                                LanguageCodes.hightSchoolText15,
-                                to: LanguageCodes.launguage_codes[newValue]);
-
-                                Translation translateddc = await translator.translate(
-                                LanguageCodes.highSchooldc,
-                                to: LanguageCodes.launguage_codes[newValue]);
+                              
 
                             setState(() {
                               _currentSelectedValue = newValue;
@@ -195,12 +177,7 @@ class _HighEduState extends State<HighEdu> {
                               translatedText9 = translated13.text;
                               translatedText10 = translated14.text;
                               translatedText11 = translated15.text;
-                              translatedText12 = translated16.text;
-                              translatedText13 = translated17.text;
-                              translatedText14 = translated18.text;
-                              translatedText15 = translated19.text;
-
-                              translatedDc = translateddc.text;
+                            
                               _loading = false;
                             });
                           },
