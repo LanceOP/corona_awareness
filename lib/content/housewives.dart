@@ -20,7 +20,12 @@ class _HousewivesState extends State<Housewives> {
   String translatedText3;
   String translatedText4;
   String translatedText5;
+  String translatedText6;
+  String translatedText7;
+  String translatedText8;
   String translatedTh1;
+  String translatedTh2;
+  String translatedDc;
 
   @override
   void initState() {
@@ -61,7 +66,7 @@ class _HousewivesState extends State<Housewives> {
                     child: Text(
                       "Motivation",
                       style:
-                          TextStyle(fontWeight: FontWeight.bold, fontSize: 22),
+                          TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
                     ),
                   ),
                 ),
@@ -73,7 +78,7 @@ class _HousewivesState extends State<Housewives> {
                         child: DropdownButton<String>(
                           hint: Text(
                             "English",
-                            style: TextStyle(fontSize: 18),
+                            style: TextStyle(fontSize: 16),
                           ),
                           iconDisabledColor: Colors.transparent,
                           value: _currentSelectedValue,
@@ -99,8 +104,33 @@ class _HousewivesState extends State<Housewives> {
                                 to: LanguageCodes.launguage_codes[newValue]);
 
                                 Translation translated5 = await translator.translate(
+                                LanguageCodes.housewifeText5,
+                                to: LanguageCodes.launguage_codes[newValue]);
+
+                                Translation translated6 = await translator.translate(
+                                LanguageCodes.housewifeText6,
+                                to: LanguageCodes.launguage_codes[newValue]);
+
+                                Translation translated9 = await translator.translate(
+                                LanguageCodes.housewifeText7,
+                                to: LanguageCodes.launguage_codes[newValue]);
+
+                                Translation translated10 = await translator.translate(
+                                LanguageCodes.housewifeText8,
+                                to: LanguageCodes.launguage_codes[newValue]);
+
+                                Translation translated7 = await translator.translate(
                                 LanguageCodes.housewifeh1,
                                 to: LanguageCodes.launguage_codes[newValue]);
+
+                                Translation translated8 = await translator.translate(
+                                LanguageCodes.housewifeh2,
+                                to: LanguageCodes.launguage_codes[newValue]);
+
+                                Translation translateddc = await translator.translate(
+                                LanguageCodes.housewifedc,
+                                to: LanguageCodes.launguage_codes[newValue]);
+
 
 
                             setState(() {
@@ -109,7 +139,14 @@ class _HousewivesState extends State<Housewives> {
                               translatedText2 = translated2.text;
                               translatedText3 = translated3.text;
                               translatedText4 = translated4.text;
-                              translatedTh1 = translated5.text;
+                              translatedText5 = translated5.text;
+                              translatedText6 = translated6.text;
+                              translatedText7 = translated9.text;
+                              translatedText8 = translated10.text;
+
+                              translatedTh1 = translated7.text;
+                              translatedTh2 = translated8.text;
+                              translatedDc = translateddc.text;
                               _loading = false;
                             });
                           },
@@ -124,7 +161,7 @@ class _HousewivesState extends State<Housewives> {
                               child: Text(
                                 value,
                                 style: TextStyle(
-                                  fontSize: 24.0,
+                                  fontSize: 16.0,
                                 ),
                               ),
                             );
@@ -136,6 +173,12 @@ class _HousewivesState extends State<Housewives> {
                 ),
               ],
             ),
+            
+            Padding(
+              padding: EdgeInsets.all(10),
+              child: Text(translatedDc ?? "", style: TextStyle(fontSize: 12, fontStyle: FontStyle.italic, color: Colors.grey,)),
+            ),
+
             Padding(
               padding: EdgeInsets.all(10),
               child: _loading
@@ -145,28 +188,46 @@ class _HousewivesState extends State<Housewives> {
                   ),
 
                   Padding(padding: EdgeInsets.all(10),
-                  child : Text(translatedText1 ??""),
+                  child : Text(translatedText1 ??"", style: TextStyle(fontSize: 18)),
                   ),
 
                   Image.network('https://images.yourstory.com/cs/4/8e7cc4102d6c11e9aa979329348d4c3e/Homemaker-Corona-1585571681072.png'),
 
                   Padding(padding: EdgeInsets.all(10),
                   
-                  child: Text(translatedText2 ?? ""),
+                  child: Text(translatedText2 ?? "", style: TextStyle(fontSize: 18)),
                   ),
                   
                   Padding(padding: EdgeInsets.all(10),
-                  child : Text(translatedText3 ??""),
+                  child : Text(translatedText3 ??"", style: TextStyle(fontSize: 18)),
                   ),
 
                   Image.network('https://images.yourstory.com/cs/4/8e7cc4102d6c11e9aa979329348d4c3e/WhatsAppImage2020-03-29at12-1585571851633.jpeg'),
 
                   Padding(padding: EdgeInsets.all(10),
-                  child: Text(translatedText4 ??""),
+                  child: Text(translatedText4 ??"", style: TextStyle(fontSize: 18)),
                   ),
 
                   Padding(padding: EdgeInsets.all(10),
-                  child: Text(translatedText5 ??""),
+                  child: Text(translatedTh2 ?? "", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20), ),
+                  ),
+
+                  Padding(padding: EdgeInsets.all(10),
+                  child: Text(translatedText5 ??"", style: TextStyle(fontSize: 18)),
+                  ),
+
+                  Image.network('https://i1.wp.com/aul.org/wp-content/uploads/2018/06/you-are-not-alone-1-e1528469033172.png'),
+
+                  Padding(padding: EdgeInsets.all(10),
+                  child: Text(translatedText6 ??"", style: TextStyle(fontSize: 18)),
+                  ),
+
+                  Padding(padding: EdgeInsets.all(10),
+                  child: Text(translatedText7 ??"", style: TextStyle(fontSize: 18)),
+                  ),
+
+                  Padding(padding: EdgeInsets.all(10),
+                  child: Text(translatedText8 ??"", style: TextStyle(fontSize: 18)),
                   ), 
 
  

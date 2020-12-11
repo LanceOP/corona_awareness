@@ -1,8 +1,11 @@
+import 'package:aware/monitor/login_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:aware/monitor/result1.dart';
 import 'package:aware/monitor/history.dart';
 import 'package:aware/monitor/analysis.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:validators/validators.dart' as validator;
+import 'analysis.dart';
 import 'model.dart';
 import 'constantsResultWindow.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -12,16 +15,18 @@ class Sensor extends StatelessWidget {
 
     return Scaffold(
         appBar: AppBar(
-          title: Text('Monitoring',style: GoogleFonts.montserrat(fontWeight: FontWeight.bold),),
+          title: Text('Monitoring System',style: GoogleFonts.montserrat(fontWeight: FontWeight.bold),),
           centerTitle: true,
           actions: <Widget>[
             PopupMenuButton<String>(
-              onSelected:(String choice){
+              onSelected:(String choice) async {
                   if(choice == Constants.History){
                     Navigator.push(context,MaterialPageRoute(builder: (context) => History()));
                   }
-                  else if(choice == Constants.Analysis){
-                    Navigator.push(context,MaterialPageRoute(builder: (context) => Analysis()));
+                  else if(choice == Constants.Logout){
+                      SharedPreferences prefs = await SharedPreferences.getInstance();
+                      prefs.setString("mobile", null);
+                    Navigator.pushReplacement(context,MaterialPageRoute(builder: (context) => LoginScreen()));
                   }
                 },
               itemBuilder: (BuildContext context){
@@ -53,9 +58,11 @@ class _TestFormState extends State<TestForm> {
   MetricStore store = MetricStore();
   var txtController1 = TextEditingController();
   var txtController2 = TextEditingController();
+  var txtController3 = TextEditingController();
   void txtClear(){
     txtController1.clear();
     txtController2.clear();
+    txtController3.clear();
   }
 
   @override
@@ -81,7 +88,7 @@ class _TestFormState extends State<TestForm> {
               },
               onSaved: (String value){
                  setState(() {
-                   metric.temperature = int.parse(value);
+                   metric.temperature = double.parse(value);
                  });
               },
               keyboardType: TextInputType.number,
@@ -93,7 +100,7 @@ class _TestFormState extends State<TestForm> {
             padding: const EdgeInsets.fromLTRB(25,0,25,0),
             child: TextFormField(
               decoration: InputDecoration(
-                labelText: 'SpO2',
+                labelText: 'SpO2(%)',
                 border: OutlineInputBorder(),
               ),
               validator: (String value){
@@ -104,7 +111,7 @@ class _TestFormState extends State<TestForm> {
               },
               onSaved: (String value){
                 setState(() {
-                  metric.spo2 = int.parse(value);
+                  metric.spo2 = double.parse(value);
                 });
 
               },
@@ -112,23 +119,29 @@ class _TestFormState extends State<TestForm> {
               controller: txtController2,
             ),
           ),
-
+          SizedBox(height:15,),
+       
 
           RaisedButton(
             color: Colors.blueAccent,
-            onPressed: () {
+            
+            padding: const EdgeInsets.all(12),
+            onPressed: () async {
+               
               if (_formKey.currentState.validate()) {
                 _formKey.currentState.save();
                 txtClear();
-                this.store.store(this.metric, DateTime.now().millisecondsSinceEpoch);
-                Navigator.push(context,MaterialPageRoute(builder: (context) => Result1(store: this.store)));
+                
+                Navigator.push(context,MaterialPageRoute(builder: (context) => Result1(store: this.store, metric: this.metric)));
               }
 
             },
             child: Text(
-              'Get result',
+              'Get Result',
               style: TextStyle(
                 color: Colors.white,
+                fontWeight: FontWeight.bold,
+                fontSize: 20,
               ),
             ),
           ),

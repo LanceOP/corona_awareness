@@ -18,7 +18,7 @@ class _PreventionState extends State<Prevention> {
         title: Text('Prevention',style:GoogleFonts.montserrat(fontWeight: FontWeight.bold),),
       ),
       body: Padding(
-        padding: const EdgeInsets.all(8.0),
+        padding: const EdgeInsets.all(15.0),
         child: Container(
           child: SingleChildScrollView(
             child: Column(
@@ -26,12 +26,9 @@ class _PreventionState extends State<Prevention> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 SizedBox(height: 5,),
-                Container(
-                  height: 300,
-                  child:PhotoView(
-                        imageProvider: NetworkImage('https://newsroom.clevelandclinic.org/wp-content/uploads/sites/4/2020/03/Prevention-graphic_cloth-mask-update_04_07_20-1536x1104.jpg'),
-                  ),
-                  ),
+                
+                Image.network("https://newsroom.clevelandclinic.org/wp-content/uploads/sites/4/2020/03/Prevention-graphic_cloth-mask-update_04_07_20-1536x1104.jpg"),
+                
                 SizedBox(height: 5,),
                 Text('$bullet'+'Wear a face mask to protect yourself and others when you’re out in public.',
                   overflow: TextOverflow.ellipsis,

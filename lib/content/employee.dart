@@ -17,13 +17,19 @@ class _EmployeeState extends State<Employee> {
   bool _loading = false;
   String _currentSelectedValue = 'English';
   String translatedText1;
+  String translatedText11;
   String translatedText2;
   String translatedText3;
+  String translatedText31;
+  String translatedText32;
+  String translatedText33;
   String translatedText4;
+
   String translatedTh1;
   String translatedTh2;
   String translatedTh3;
   String translatedTh4;
+  String translatedDc;
 
   @override
   void initState() {
@@ -63,7 +69,7 @@ class _EmployeeState extends State<Employee> {
                     child: Text(
                       "Motivation",
                       style:
-                          TextStyle(fontWeight: FontWeight.bold, fontSize: 22),
+                          TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
                     ),
                   ),
                 ),
@@ -75,7 +81,7 @@ class _EmployeeState extends State<Employee> {
                         child: DropdownButton<String>(
                           hint: Text(
                             "English",
-                            style: TextStyle(fontSize: 18),
+                            style: TextStyle(fontSize: 16),
                           ),
                           iconDisabledColor: Colors.transparent,
                           value: _currentSelectedValue,
@@ -90,6 +96,10 @@ class _EmployeeState extends State<Employee> {
 
                                 Translation translated2 = await translator.translate(
                                 LanguageCodes.jobText1,
+                                to: LanguageCodes.launguage_codes[newValue]);
+
+                                Translation translated21 = await translator.translate(
+                                LanguageCodes.jobText11,
                                 to: LanguageCodes.launguage_codes[newValue]);
 
                                 Translation translated3 = await translator.translate(
@@ -108,6 +118,18 @@ class _EmployeeState extends State<Employee> {
                                 LanguageCodes.jobText3,
                                 to: LanguageCodes.launguage_codes[newValue]);
 
+                                Translation translated61 = await translator.translate(
+                                LanguageCodes.jobText31,
+                                to: LanguageCodes.launguage_codes[newValue]);
+
+                                Translation translated62 = await translator.translate(
+                                LanguageCodes.jobText32,
+                                to: LanguageCodes.launguage_codes[newValue]);
+
+                                Translation translated63 = await translator.translate(
+                                LanguageCodes.jobText33,
+                                to: LanguageCodes.launguage_codes[newValue]);
+
                                 Translation translated7 = await translator.translate(
                                 LanguageCodes.jobh4,
                                 to: LanguageCodes.launguage_codes[newValue]);
@@ -116,16 +138,26 @@ class _EmployeeState extends State<Employee> {
                                 LanguageCodes.jobText4,
                                 to: LanguageCodes.launguage_codes[newValue]);
 
+                                Translation translated9 = await translator.translate(
+                                LanguageCodes.jobdc,
+                                to: LanguageCodes.launguage_codes[newValue]);
+
                             setState(() {
                               _currentSelectedValue = newValue;
                               translatedTh1 = translated1.text;
                               translatedText1 = translated2.text;
+                              translatedText11 = translated21.text;
                               translatedTh2 = translated3.text;
                               translatedText2 = translated4.text;
                               translatedTh3 = translated5.text;
                               translatedText3 = translated6.text;
+                              translatedText31 = translated61.text;
+                              translatedText32 = translated62.text;
+                              translatedText33 = translated63.text;
                               translatedTh4 = translated7.text;
                               translatedText4 = translated8.text;
+                              translatedDc = translated9.text;
+
                               _loading = false;
                             });
                           },
@@ -153,11 +185,14 @@ class _EmployeeState extends State<Employee> {
               ],
             ),
 
-
+            Padding(
+              padding: EdgeInsets.all(10),
+              child: Text(translatedDc ?? "", style: TextStyle(fontSize: 12, fontStyle: FontStyle.italic, color: Colors.grey,)),
+            ),
             
             Padding(
 
-              padding: EdgeInsets.all(20),
+              padding: EdgeInsets.all(10),
               child : _loading
                   ? Center(child: CircularProgressIndicator())
                   : Column(children: <Widget>[
@@ -168,12 +203,22 @@ class _EmployeeState extends State<Employee> {
                   child : Text(translatedText1 ??"", style: TextStyle(fontSize: 18)),
                   ),
 
-                  Image.network('https://www.adzuna.co.uk/wp-content/uploads/2020/03/do-not-give-up.jpg'),
+                  Image.network('https://www.adzuna.com.au/blog/wp-content/uploads/2020/04/Adzuna-job-search-motivation.jpg'),
+
+                  Padding(padding: EdgeInsets.all(10),
+                  child : Text(translatedText11 ??"", style: TextStyle(fontSize: 18)),
+                  ),
+
+                  Divider(),
 
                   Padding(padding: EdgeInsets.all(10),
                   
-                  child: Text(translatedTh2 ?? "", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
+                  child: Text(translatedTh2 ?? "" , style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
                   ),
+
+
+
+                  Image.network('https://www.adzuna.co.uk/wp-content/uploads/2020/03/do-not-give-up.jpg'),
                   
                   Padding(padding: EdgeInsets.all(10),
                   child : Text(translatedText2 ??"", style: TextStyle(fontSize: 18)),
@@ -186,10 +231,26 @@ class _EmployeeState extends State<Employee> {
                   Padding(padding: EdgeInsets.all(10),
                   child: Text(translatedText3 ??"", style: TextStyle(fontSize: 18)),
                   ),
+
+                  Image.network('https://www.adzuna.co.uk/wp-content/uploads/2020/03/redundancy.jpg'),
+
+                  Padding(padding: EdgeInsets.all(10),
+                  child: Text(translatedText31 ??"", style: TextStyle(fontSize: 18)),
+                  ),
+
+                  Padding(padding: EdgeInsets.all(10),
+                  child: Text(translatedText32 ??"", style: TextStyle(fontSize: 18)),
+                  ),
+
+                  Padding(padding: EdgeInsets.all(10),
+                  child: Text(translatedText33 ??"", style: TextStyle(fontSize: 18)),
+                  ),
                    
                   Padding(padding: EdgeInsets.all(10),
                   child: Text(translatedTh4 ?? "", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20), ),
                   ),
+
+                  Image.network('https://www.adzuna.co.uk/wp-content/uploads/2020/03/personal-finances.jpg'),
 
                   Padding(padding: EdgeInsets.all(10),
                   child: Text(translatedText4 ??"", style: TextStyle(fontSize: 18)),

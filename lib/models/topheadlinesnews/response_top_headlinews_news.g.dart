@@ -1,10 +1,6 @@
-// GENERATED CODE - DO NOT MODIFY BY HAND
 
 part of 'response_top_headlinews_news.dart';
 
-// **************************************************************************
-// JsonSerializableGenerator
-// **************************************************************************
 
 ResponseTopHeadlinesNews _$ResponseTopHeadlinesNewsFromJson(
     Map<String, dynamic> json) {

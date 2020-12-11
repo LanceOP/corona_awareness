@@ -113,7 +113,6 @@ class _LearnState extends State<Learn> {
             image: _buildImage('myth12'),
             decoration: pageDecoration,
           ),
-
         ],
 
         onDone: () => {},

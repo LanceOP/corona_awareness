@@ -17,7 +17,6 @@ class ChatBubble extends StatelessWidget {
           horizontal: width * 0.07, vertical: width * 0.025),
       padding: EdgeInsets.all(12),
       decoration: ShapeDecoration(
-        //color: isReply ? const Color(0xDD5785f3) : const Color(0xFFFFFFFF),
         gradient: isReply
             ? LinearGradient(
             colors: [const Color(0xFF0771f6), const Color(0xFF0762d5)])

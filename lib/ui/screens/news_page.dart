@@ -8,10 +8,8 @@ import 'package:aware/ui/widgets/noNetwork.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
-import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 final GlobalKey<ScaffoldState> scaffoldState = GlobalKey<ScaffoldState>();
@@ -126,7 +124,7 @@ class WidgetTitle extends StatelessWidget {
         text: TextSpan(
           children: [
             TextSpan(
-              text: 'C News\n',
+              text: 'News\n',
               style: Theme.of(context).textTheme.title.merge(
                     GoogleFonts.montserrat(
                       fontWeight: FontWeight.bold,

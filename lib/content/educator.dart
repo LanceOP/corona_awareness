@@ -20,6 +20,15 @@ class _InstructorState extends State<Instructor> {
   String translatedText3;
   String translatedText4;
   String translatedText5;
+  String translatedText6;
+  String translatedText7;
+  String translatedText8;
+  String translatedText9;
+  String translatedText10;
+  String translatedText11;
+  String translatedText12;
+  String translatedText13;
+
   
   String translatedTh1;
   String translatedTh2;
@@ -27,6 +36,14 @@ class _InstructorState extends State<Instructor> {
   String translatedTh4;
   String translatedTh5;
   String translatedTh6;
+  String translatedTh7;
+  String translatedTh8;
+  String translatedTh9;
+  String translatedTh10;
+  String translatedTh11;
+  String translatedDc;
+
+
 
   @override
   void initState() {
@@ -66,7 +83,7 @@ class _InstructorState extends State<Instructor> {
                     child: Text(
                       "Motivation",
                       style:
-                          TextStyle(fontWeight: FontWeight.bold, fontSize: 22),
+                          TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
                     ),
                   ),
                 ),
@@ -78,7 +95,7 @@ class _InstructorState extends State<Instructor> {
                         child: DropdownButton<String>(
                           hint: Text(
                             "English",
-                            style: TextStyle(fontSize: 18),
+                            style: TextStyle(fontSize: 16),
                           ),
                           iconDisabledColor: Colors.transparent,
                           value: _currentSelectedValue,
@@ -108,27 +125,83 @@ class _InstructorState extends State<Instructor> {
                                 to: LanguageCodes.launguage_codes[newValue]);
 
                                 Translation translated6 = await translator.translate(
-                                LanguageCodes.instructorh1,
+                                LanguageCodes.instructorText6,
                                 to: LanguageCodes.launguage_codes[newValue]);
 
                                 Translation translated7 = await translator.translate(
-                                LanguageCodes.instructorh2,
+                                LanguageCodes.instructorText7,
                                 to: LanguageCodes.launguage_codes[newValue]);
 
                                 Translation translated8 = await translator.translate(
-                                LanguageCodes.instructorh3,
+                                LanguageCodes.instructorText8,
                                 to: LanguageCodes.launguage_codes[newValue]);
 
                                 Translation translated9 = await translator.translate(
-                                LanguageCodes.instructorh4,
+                                LanguageCodes.instructorText9,
                                 to: LanguageCodes.launguage_codes[newValue]);
 
                                 Translation translated10 = await translator.translate(
-                                LanguageCodes.instructorh5,
+                                LanguageCodes.instructorText10,
                                 to: LanguageCodes.launguage_codes[newValue]);
 
                                 Translation translated11 = await translator.translate(
+                                LanguageCodes.instructorText11,
+                                to: LanguageCodes.launguage_codes[newValue]);
+
+                                Translation translated12 = await translator.translate(
+                                LanguageCodes.instructorText12,
+                                to: LanguageCodes.launguage_codes[newValue]);
+
+                                Translation translated13 = await translator.translate(
+                                LanguageCodes.instructorText13,
+                                to: LanguageCodes.launguage_codes[newValue]);
+
+                                Translation translated14 = await translator.translate(
+                                LanguageCodes.instructorh1,
+                                to: LanguageCodes.launguage_codes[newValue]);
+
+                                Translation translated15 = await translator.translate(
+                                LanguageCodes.instructorh2,
+                                to: LanguageCodes.launguage_codes[newValue]);
+
+                                Translation translated16 = await translator.translate(
+                                LanguageCodes.instructorh3,
+                                to: LanguageCodes.launguage_codes[newValue]);
+
+                                Translation translated17 = await translator.translate(
+                                LanguageCodes.instructorh4,
+                                to: LanguageCodes.launguage_codes[newValue]);
+
+                                Translation translated18 = await translator.translate(
+                                LanguageCodes.instructorh5,
+                                to: LanguageCodes.launguage_codes[newValue]);
+
+                                Translation translated19 = await translator.translate(
                                 LanguageCodes.instructorh6,
+                                to: LanguageCodes.launguage_codes[newValue]);
+
+                                Translation translated20 = await translator.translate(
+                                LanguageCodes.instructorh7,
+                                to: LanguageCodes.launguage_codes[newValue]);
+
+                                Translation translated21 = await translator.translate(
+                                LanguageCodes.instructorh8,
+                                to: LanguageCodes.launguage_codes[newValue]);
+
+                                Translation translated22 = await translator.translate(
+                                LanguageCodes.instructorh9,
+                                to: LanguageCodes.launguage_codes[newValue]);
+
+                                Translation translated23 = await translator.translate(
+                                LanguageCodes.instructorh10,
+                                to: LanguageCodes.launguage_codes[newValue]);
+
+                                Translation translated24 = await translator.translate(
+                                LanguageCodes.instructorh11,
+                                to: LanguageCodes.launguage_codes[newValue]);
+
+                                Translation translateddc = await translator.translate(
+                                LanguageCodes.instructordc,
                                 to: LanguageCodes.launguage_codes[newValue]);
 
                             setState(() {
@@ -138,12 +211,28 @@ class _InstructorState extends State<Instructor> {
                               translatedText3 = translated3.text;
                               translatedText4 = translated4.text;
                               translatedText5 = translated5.text;
-                              translatedTh1 = translated6.text;
-                              translatedTh2 = translated7.text;
-                              translatedTh3 = translated8.text;
-                              translatedTh4 = translated9.text;
-                              translatedTh5 = translated10.text;
-                              translatedTh6 = translated11.text;
+                              translatedText6 = translated6.text;
+                              translatedText7 = translated7.text;
+                              translatedText8 = translated8.text;
+                              translatedText9 = translated9.text;
+                              translatedText10 = translated10.text;
+                              translatedText11 = translated11.text;
+                              translatedText12 = translated12.text;
+                              translatedText13 = translated13.text;
+
+                              translatedTh1 = translated14.text;
+                              translatedTh2 = translated15.text;
+                              translatedTh3 = translated16.text;
+                              translatedTh4 = translated17.text;
+                              translatedTh5 = translated18.text;
+                              translatedTh6 = translated19.text;
+                              translatedTh7 = translated20.text;
+                              translatedTh8 = translated21.text;
+                              translatedTh9 = translated22.text;
+                              translatedTh10 = translated23.text;
+                              translatedTh11 = translated24.text;
+                              translatedDc = translateddc.text;
+
                               _loading = false;
                             });
                           },
@@ -158,7 +247,7 @@ class _InstructorState extends State<Instructor> {
                               child: Text(
                                 value,
                                 style: TextStyle(
-                                  fontSize: 24.0,
+                                  fontSize: 16.0,
                                 ),
                               ),
                             );
@@ -170,16 +259,23 @@ class _InstructorState extends State<Instructor> {
                 ),
               ],
             ),
+
+            Padding(
+              padding: EdgeInsets.all(10),
+              child: Text(translatedDc ?? "", style: TextStyle(fontSize: 12, fontStyle: FontStyle.italic, color: Colors.grey,)),
+            ), 
+
+
             Padding(
 
-              padding: EdgeInsets.all(20),
+              padding: EdgeInsets.all(10),
               child : _loading
                   ? Center(child: CircularProgressIndicator())
                   : Column(children: <Widget>[
 
                     Text(translatedTh1 ?? "Please Select Language", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 25)),
 
-                    Image.network('https://cdn.kastatic.org/ka-perseus-images/cce2aab9f08bb70fa8f98ad7eada4ddafc0d8de2.png'),
+                    Image.network('https://i1.wp.com/aul.org/wp-content/uploads/2018/06/you-are-not-alone-1-e1528469033172.png'),
 
                     Padding(padding: EdgeInsets.all(10),
                   child : Text(translatedTh2 ??"", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
@@ -219,6 +315,59 @@ class _InstructorState extends State<Instructor> {
 
                   Padding(padding: EdgeInsets.all(10),
                   child : Text(translatedText5 ??"", style: TextStyle(fontSize: 18)),
+                  ),
+
+                  Padding(padding: EdgeInsets.all(10),
+                  child : Text(translatedTh7 ??"", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
+                  ),
+
+                  Padding(padding: EdgeInsets.all(10),
+                  child : Text(translatedText6 ??"", style: TextStyle(fontSize: 18)),
+                  ),
+
+                  Padding(padding: EdgeInsets.all(10),
+                  child : Text(translatedText7 ??"", style: TextStyle(fontSize: 18)),
+                  ),
+
+                  Padding(padding: EdgeInsets.all(10),
+                  child : Text(translatedTh8 ??"", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
+                  ),
+
+                  Padding(padding: EdgeInsets.all(10),
+                  child : Text(translatedText8 ??"", style: TextStyle(fontSize: 18)),
+                  ),
+
+                  Padding(padding: EdgeInsets.all(10),
+                  child : Text(translatedText9 ??"", style: TextStyle(fontSize: 18)),
+                  ),
+
+                  Padding(padding: EdgeInsets.all(10),
+                  child : Text(translatedTh9 ??"", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
+                  ),
+
+                  Padding(padding: EdgeInsets.all(10),
+                  child : Text(translatedText10 ??"", style: TextStyle(fontSize: 18)),
+                  ),
+
+
+                  Padding(padding: EdgeInsets.all(10),
+                  child : Text(translatedTh10 ??"", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
+                  ),
+                  
+                  Padding(padding: EdgeInsets.all(10),
+                  child : Text(translatedText11 ??"", style: TextStyle(fontSize: 18)),
+                  ),
+
+                  Padding(padding: EdgeInsets.all(10),
+                  child : Text(translatedText12 ??"", style: TextStyle(fontSize: 18)),
+                  ),
+
+                  Padding(padding: EdgeInsets.all(10),
+                  child : Text(translatedTh11 ??"", style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20)),
+                  ),
+
+                  Padding(padding: EdgeInsets.all(10),
+                  child : Text(translatedText13 ??"", style: TextStyle(fontSize: 18)),
                   ),
                 
                   ],)
